@@ -1,0 +1,18 @@
+{
+    "is": {
+        "type": "language",
+        "title": "Danish"
+    },
+    "needs": [ {
+        "need": {
+            "type": "kit",
+            "title": "DanishLanguageKit"
+        }
+    } ],
+
+    "language-details": {
+		"translated-name": "Danish",
+		"iso-639-1-code": "da",
+		"translated-syntax-cue": "på dansk"
+    }
+}

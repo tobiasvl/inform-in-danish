@@ -1,0 +1,23 @@
+{
+    "is": {
+        "type": "kit",
+        "title": "DanishLanguageKit",
+        "version": "0.0.1"
+    },
+    "needs": [ {
+        "need": {
+            "type": "extension",
+            "title": "Danish Language",
+            "author": "Tobias Langhoff"
+        }
+    }, {
+        "need": {
+            "type": "extension",
+            "title": "version 1 of Default Responses Template",
+            "author": "Drew Cook"
+        }
+    } ],
+    "kit-details": {
+        "has-priority": 3
+    }
+}
