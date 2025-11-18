@@ -1,17 +1,8 @@
-version 1 of Default Responses Template by Drew Cook begins here.
+Version 1 of Danish Default Responses by Tobias Langhoff begins here.
 
-[
+"To replace the Default Responses with Danish versions."
 
-This is a list of built-in responses, with explanations where needed.
-
-To make adjustments, simply change the quoted text. Additional suggestions are below in the documentation section.
-
-This isn't meant to be a replacement for or rework of Nathanael Nerode's "Neutral Standard Responses," which includes rewritten responses and some useful code besides. My aim is to 1) offer more explanations regarding the use and triggering of messages and 2) provide players an easy way to write their own messages.
-
-I haven't yet decided to publish it. I don't think it does anything transformative, though so far as I know nobody has documentented methods for triggering every parser error.
-
-]
-
+[ Based on Default Responses Template by Drew Cook: https://kamin3ko.itch.io/default-reponses-template ]
 
 section 1 (parser errors related to NPCs)
 
@@ -98,7 +89,7 @@ The parser error internal rule response (E) is "[We] [can't] see any such thing.
 
 "examine all"]
 
-The parser error internal rule response (H) is "You can't use multiple objects with that verb.".
+The parser error internal rule response (H) is "Du kan ikke bruge flere objekter med det verbum.".
 
 [using a pronoun when Inform 7 can't discern what it is referring to.
 
@@ -197,7 +188,7 @@ The parser nothing error internal rule response (F) is "[The noun] [are] empty."
 
 [the printed name of a dark room. affects the status line only, not the room description]
 
-The darkness name internal rule response (A) is "Darkness".
+The darkness name internal rule response (A) is "Mørke".
 
 [attempting to correct something with "OOPS" when the command is fine, the correction is not allowed (out of world commands for instance, or the correction is wrong
 
@@ -356,16 +347,16 @@ The describe what's on mentioned supporters in room descriptions rule response (
 
 [unlike The darkness name internal rule response (A), this prints as a room name while looking, but doesn't change the status bar]
 
-The room description heading rule response (A) is "Darkness".
+The room description heading rule response (A) is "Mørke".
 
 [room description of a dark room]
 
-The room description body text rule response (A) is "[It] [are] pitch dark, and [we] [can't see] a thing.".
+The room description body text rule response (A) is "Det [if story tense is present tense]er[otherwise if story tense is past tense]var[end if] bælgmørkt, og [we] [if story tense is present tense]kan[otherwise if story tense is past tense]kunde[end if] ikke se noget.".
 
 [prints when a player is in or on an enterable container / supporter]
 
-The room description heading rule response (B) is " (on [the intermediate level])".
-The room description heading rule response (C) is " (in [the intermediate level])".
+The room description heading rule response (B) is " (på [the intermediate level])".
+The room description heading rule response (C) is " (indeni [the intermediate level])".
 
 Section 6 (looking, examining, and searching)
 
@@ -679,7 +670,7 @@ The adjust light rule response (A) is "[It] [are] [if story tense is present ten
 
 [this is what prints when attempting to interact with something that must be visible in a dark room]
 
-The basic visibility rule response (A) is "[It] [are] pitch dark, and [we] [can't see] a thing.".
+The basic visibility rule response (A) is "Det [if story tense is present tense]er[otherwise if story tense is past tense]var[end if] bælgmørkt, og [we] [if story tense is present tense]kan[otherwise if story tense is past tense]kunde[end if] ikke se noget.".
 
 [I've only triggered this one by trying to physically interact with a direction: "take south" for instance. Perhaps it could be applied to other nouns (a direction is a noun), but I've never seen it done. Note that you can circumvent this with a "before" rule, because visibility and accessibility are still mushy. For instance...
 
@@ -807,7 +798,7 @@ The parser error internal rule response (S) is "To repeat a command like 'frog, 
 
 
 
-Default Responses Template ends here.
+Danish Default Responses ends here.
 
 
 
