@@ -1,0 +1,16 @@
+{
+    "is": {
+        "type": "kit",
+        "title": "DanishLanguageKit",
+        "version": "0.0.1"
+    },
+    "needs": [
+        {
+            "need": {
+                "type": "extension",
+                "title": "Danish Language",
+                "author": "Tobias Langhoff"
+            }
+        }
+    ]
+}

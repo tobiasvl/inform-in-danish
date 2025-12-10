@@ -1,0 +1,12 @@
+{
+    "is": {
+        "type": "language",
+        "title": "Danish"
+    },
+    "language-details": {
+        "supports": [ "played" ],
+        "translated-name": "dansk",
+        "iso-639-1-code": "da",
+        "translated-syntax-cue": "på dansk"
+    }
+}

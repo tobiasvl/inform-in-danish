@@ -1,0 +1,9 @@
+Test: Abacus-G
+For: Glulx
+
+The Counting House is a room.
+
+An abacus is here. A man called the King is here. The King wears a crown.
+
+Test me with "showme / examine me / examine abacus / examine King / examine crown".
+

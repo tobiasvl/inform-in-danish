@@ -1,0 +1,22 @@
+language Danish
+
+<singular-noun-to-its-plural> ::=
+        ... <da-trie-plural-uninflected> |
+        ... <da-trie-plural-pronouns> |
+        ... <da-trie-plural-exceptions> |
+        ... <da-plural-by-ending> |
+        ... <da-plural-default>
+
+<da-trie-plural-uninflected> ::=
+        sau                     0
+
+
+<da-trie-plural-exceptions> ::=
+        får                     0
+
+
+<da-plural-by-ending> ::=
+        *k                      0+er
+
+<da-plural-default> ::=
+        *                       0er
