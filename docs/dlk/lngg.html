@@ -22,9 +22,11 @@
 <ul><li><a href="../danish/index.html">Danish Language</a></li>
 <li><a href="index.html"><span class="selectedlink">DanishLanguageKit</span></a></li>
 </ul><h2>Examples</h2><ul>
-<li><a href="../examples/kappe.html">Kappe</a></li>
+<li><a href="../examples/slor.html">Et slør af mørke</a></li>
 </ul><h2>Repository</h2><ul>
-<li><a href="https://github.com/tobiasvl/inform-in-danish"><img src="../docs-assets/github.png" height=15> github</a></li>
+<li><a href="https://github.com/tobiasvl/inform-in-danish"><img src="../docs-assets/github.png" height=15> GitHub</a></li>
+</ul><h2>Related projects</h2><ul>
+<li><a href="https://github.com/tobiasvl/preforge"><img src="../docs-assets/github.png" height=15> Preforge</a></li>
 </ul>
 		</nav>
 		<main role="main">
@@ -33,7 +35,7 @@
     <ul class="crumbs"><li><a href="../index.html">Inform in Danish</a></li><li><b>DanishLanguageKit</b></li></ul></div>
 <p class="purpose">The fundamental definitions needed by the parser and the verb library in order to specify Danish as the language of play -- that is, the language used for communications between the story file and the player.</p>
 
-<ul class="toc"><li><a href="lngg.html#SP1">&#167;1. Initialisation</a></li><li><a href="lngg.html#SP2">&#167;2. Vocabulary</a></li><li><a href="lngg.html#SP3">&#167;3. Pronouns</a></li><li><a href="lngg.html#SP4">&#167;4. GNA</a></li><li><a href="lngg.html#SP5">&#167;5. Nominative pronouns</a></li><li><a href="lngg.html#SP6">&#167;6. Descriptors</a></li><li><a href="lngg.html#SP7">&#167;7. Numbers</a></li><li><a href="lngg.html#SP8">&#167;8. Time</a></li><li><a href="lngg.html#SP9">&#167;9. Directions</a></li><li><a href="lngg.html#SP10">&#167;10. Translation</a></li><li><a href="lngg.html#SP11">&#167;11. Inflecting adjectives</a></li><li><a href="lngg.html#SP12">&#167;12. Default genders</a></li><li><a href="lngg.html#SP14">&#167;14. Articles</a></li><li><a href="lngg.html#SP15">&#167;15. Commands</a></li><li><a href="lngg.html#SP16">&#167;16. Stubs</a></li></ul><hr class="tocbar">
+<ul class="toc"><li><a href="lngg.html#SP1">&#167;1. Initialisation</a></li><li><a href="lngg.html#SP2">&#167;2. Vocabulary</a></li><li><a href="lngg.html#SP3">&#167;3. Pronouns</a></li><li><a href="lngg.html#SP4">&#167;4. GNA</a></li><li><a href="lngg.html#SP5">&#167;5. Nominative pronouns</a></li><li><a href="lngg.html#SP6">&#167;6. Descriptors</a></li><li><a href="lngg.html#SP7">&#167;7. Numbers</a></li><li><a href="lngg.html#SP8">&#167;8. Time</a></li><li><a href="lngg.html#SP9">&#167;9. Directions</a></li><li><a href="lngg.html#SP10">&#167;10. Translation</a></li><li><a href="lngg.html#SP11">&#167;11. Referring to indefinite objects</a></li><li><a href="lngg.html#SP12">&#167;12. Capitalizing nouns</a></li><li><a href="lngg.html#SP13">&#167;13. Default genders</a></li><li><a href="lngg.html#SP15">&#167;15. Articles</a></li><li><a href="lngg.html#SP16">&#167;16. Commands</a></li><li><a href="lngg.html#SP17">&#167;17. Stubs</a></li></ul><hr class="tocbar">
 
 <p class="commentary firstcommentary"><a id="SP1" class="paragraph-anchor"></a><b>&#167;1. Initialisation.</b>It used to be optional whether or not to include a function of this name in
 a language kit: it's now compulsory, even when (as now) it does nothing.
@@ -53,15 +55,15 @@ parser needs to recognize at a low level.
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">OOPS1__WD</span><span class="plain-syntax">      = </span><span class="character-syntax">'ups'</span><span class="plain-syntax">;</span>
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">OOPS2__WD</span><span class="plain-syntax">      = </span><span class="character-syntax">'o//'</span><span class="plain-syntax">;</span>
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">OOPS3__WD</span><span class="plain-syntax">      = </span><span class="character-syntax">'hovsa'</span><span class="plain-syntax">;</span>
-<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">UNDO1__WD</span><span class="plain-syntax">      = </span><span class="character-syntax">'undo'</span><span class="plain-syntax">;</span>
-<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">UNDO2__WD</span><span class="plain-syntax">      = </span><span class="character-syntax">'undo'</span><span class="plain-syntax">;</span>
+<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">UNDO1__WD</span><span class="plain-syntax">      = </span><span class="character-syntax">'fortryd'</span><span class="plain-syntax">;</span>
+<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">UNDO2__WD</span><span class="plain-syntax">      = </span><span class="character-syntax">'angre'</span><span class="plain-syntax">;</span>
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">UNDO3__WD</span><span class="plain-syntax">      = </span><span class="character-syntax">'undo'</span><span class="plain-syntax">;</span>
 
-<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">ALL1__WD</span><span class="plain-syntax">       = </span><span class="character-syntax">'all'</span><span class="plain-syntax">;</span>
-<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">ALL2__WD</span><span class="plain-syntax">       = </span><span class="character-syntax">'each'</span><span class="plain-syntax">;</span>
-<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">ALL3__WD</span><span class="plain-syntax">       = </span><span class="character-syntax">'every'</span><span class="plain-syntax">;</span>
-<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">ALL4__WD</span><span class="plain-syntax">       = </span><span class="character-syntax">'everything'</span><span class="plain-syntax">;</span>
-<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">ALL5__WD</span><span class="plain-syntax">       = </span><span class="character-syntax">'both'</span><span class="plain-syntax">;</span>
+<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">ALL1__WD</span><span class="plain-syntax">       = </span><span class="character-syntax">'al'</span><span class="plain-syntax">;</span>
+<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">ALL2__WD</span><span class="plain-syntax">       = </span><span class="character-syntax">'alt'</span><span class="plain-syntax">;</span>
+<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">ALL3__WD</span><span class="plain-syntax">       = </span><span class="character-syntax">'alle'</span><span class="plain-syntax">;</span>
+<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">ALL4__WD</span><span class="plain-syntax">       = </span><span class="character-syntax">'hver'</span><span class="plain-syntax">;</span>
+<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">ALL5__WD</span><span class="plain-syntax">       = </span><span class="character-syntax">'begge'</span><span class="plain-syntax">;</span>
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">AND1__WD</span><span class="plain-syntax">       = </span><span class="character-syntax">'og'</span><span class="plain-syntax">;</span>
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">AND2__WD</span><span class="plain-syntax">       = </span><span class="character-syntax">'&amp;'</span><span class="plain-syntax">;</span>
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">AND3__WD</span><span class="plain-syntax">       = </span><span class="character-syntax">'og'</span><span class="plain-syntax">;</span>
@@ -72,15 +74,15 @@ parser needs to recognize at a low level.
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">ME1__WD</span><span class="plain-syntax">        = </span><span class="character-syntax">'mig'</span><span class="plain-syntax">;</span>
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">ME2__WD</span><span class="plain-syntax">        = </span><span class="character-syntax">'mig selv'</span><span class="plain-syntax">;</span>
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">ME3__WD</span><span class="plain-syntax">        = </span><span class="character-syntax">'selv'</span><span class="plain-syntax">;</span>
-<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">OF1__WD</span><span class="plain-syntax">        = </span><span class="character-syntax">'of'</span><span class="plain-syntax">;</span>
+<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">OF1__WD</span><span class="plain-syntax">        = </span><span class="character-syntax">'af'</span><span class="plain-syntax">;</span>
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">OF2__WD</span><span class="plain-syntax">        = </span><span class="character-syntax">'of'</span><span class="plain-syntax">;</span>
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">OF3__WD</span><span class="plain-syntax">        = </span><span class="character-syntax">'of'</span><span class="plain-syntax">;</span>
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">OF4__WD</span><span class="plain-syntax">        = </span><span class="character-syntax">'of'</span><span class="plain-syntax">;</span>
-<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">OTHER1__WD</span><span class="plain-syntax">     = </span><span class="character-syntax">'another'</span><span class="plain-syntax">;</span>
-<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">OTHER2__WD</span><span class="plain-syntax">     = </span><span class="character-syntax">'other'</span><span class="plain-syntax">;</span>
+<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">OTHER1__WD</span><span class="plain-syntax">     = </span><span class="character-syntax">'en anden'</span><span class="plain-syntax">;</span>
+<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">OTHER2__WD</span><span class="plain-syntax">     = </span><span class="character-syntax">'anden'</span><span class="plain-syntax">;</span>
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">OTHER3__WD</span><span class="plain-syntax">     = </span><span class="character-syntax">'other'</span><span class="plain-syntax">;</span>
-<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">THEN1__WD</span><span class="plain-syntax">      = </span><span class="character-syntax">'then'</span><span class="plain-syntax">;</span>
-<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">THEN2__WD</span><span class="plain-syntax">      = </span><span class="character-syntax">'then'</span><span class="plain-syntax">;</span>
+<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">THEN1__WD</span><span class="plain-syntax">      = </span><span class="character-syntax">'derefter'</span><span class="plain-syntax">;</span>
+<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">THEN2__WD</span><span class="plain-syntax">      = </span><span class="character-syntax">'så'</span><span class="plain-syntax">;</span>
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">THEN3__WD</span><span class="plain-syntax">      = </span><span class="character-syntax">'then'</span><span class="plain-syntax">;</span>
 
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">NO1__WD</span><span class="plain-syntax">        = </span><span class="character-syntax">'n//'</span><span class="plain-syntax">;</span>
@@ -90,13 +92,13 @@ parser needs to recognize at a low level.
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">YES2__WD</span><span class="plain-syntax">       = </span><span class="character-syntax">'ja'</span><span class="plain-syntax">;</span>
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">YES3__WD</span><span class="plain-syntax">       = </span><span class="character-syntax">'jo'</span><span class="plain-syntax">;</span>
 
-<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">AMUSING__WD</span><span class="plain-syntax">    = </span><span class="character-syntax">'amusing'</span><span class="plain-syntax">;</span>
+<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">AMUSING__WD</span><span class="plain-syntax">    = </span><span class="character-syntax">'sjovt'</span><span class="plain-syntax">;</span>
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">FULLSCORE1__WD</span><span class="plain-syntax"> = </span><span class="character-syntax">'fullscore'</span><span class="plain-syntax">;</span>
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">FULLSCORE2__WD</span><span class="plain-syntax"> = </span><span class="character-syntax">'full'</span><span class="plain-syntax">;</span>
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">QUIT1__WD</span><span class="plain-syntax">      = </span><span class="character-syntax">'q//'</span><span class="plain-syntax">;</span>
-<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">QUIT2__WD</span><span class="plain-syntax">      = </span><span class="character-syntax">'quit'</span><span class="plain-syntax">;</span>
-<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">RESTART__WD</span><span class="plain-syntax">    = </span><span class="character-syntax">'restart'</span><span class="plain-syntax">;</span>
-<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">RESTORE__WD</span><span class="plain-syntax">    = </span><span class="character-syntax">'restore'</span><span class="plain-syntax">;</span>
+<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">QUIT2__WD</span><span class="plain-syntax">      = </span><span class="character-syntax">'afslut'</span><span class="plain-syntax">;</span>
+<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">RESTART__WD</span><span class="plain-syntax">    = </span><span class="character-syntax">'genstart'</span><span class="plain-syntax">;</span>
+<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">RESTORE__WD</span><span class="plain-syntax">    = </span><span class="character-syntax">'hent'</span><span class="plain-syntax">;</span>
 </pre>
 <p class="commentary firstcommentary"><a id="SP3" class="paragraph-anchor"></a><b>&#167;3. Pronouns.</b>Danish only has two grammatical genders: common and neuter. However, Informese
 supports three: male (masculine), female (feminine) and neuter. We have left
@@ -123,6 +125,7 @@ common gender.
 <span class="plain-syntax">  </span><span class="comment-syntax">            a     i</span>
 <span class="plain-syntax">  </span><span class="comment-syntax">            s  p  s  p</span>
 <span class="plain-syntax">  </span><span class="comment-syntax">            mfnmfnmfnmfn</span>
+<span class="plain-syntax">  </span><span class="comment-syntax">            0123456789AB</span>
 
 <span class="plain-syntax">    </span><span class="character-syntax">'ham'</span><span class="plain-syntax">     </span><span class="constant-syntax">$$100000000000</span><span class="plain-syntax">                    </span><span class="identifier-syntax">NULL</span>
 <span class="plain-syntax">    </span><span class="character-syntax">'hende'</span><span class="plain-syntax">   </span><span class="constant-syntax">$$010000000000</span><span class="plain-syntax">                    </span><span class="identifier-syntax">NULL</span>
@@ -140,6 +143,7 @@ common gender.
 <span class="plain-syntax">  </span><span class="comment-syntax">            a     i</span>
 <span class="plain-syntax">  </span><span class="comment-syntax">            s  p  s  p</span>
 <span class="plain-syntax">  </span><span class="comment-syntax">            mfnmfnmfnmfn</span>
+<span class="plain-syntax">  </span><span class="comment-syntax">            0123456789AB</span>
 
 <span class="plain-syntax">    </span><span class="character-syntax">'min'</span><span class="plain-syntax">     </span><span class="constant-syntax">$$110000110000</span><span class="plain-syntax">    </span><span class="identifier-syntax">POSSESS_PK</span><span class="plain-syntax">      </span><span class="constant-syntax">0</span>
 <span class="plain-syntax">    </span><span class="character-syntax">'mit'</span><span class="plain-syntax">     </span><span class="constant-syntax">$$001000001000</span><span class="plain-syntax">    </span><span class="identifier-syntax">POSSESS_PK</span><span class="plain-syntax">      </span><span class="constant-syntax">0</span>
@@ -191,14 +195,12 @@ format.
 
 <pre class="displayed-code all-displayed-code code-font">
 <span class="plain-syntax">[ </span><span class="identifier-syntax">LanguageDirection</span><span class="plain-syntax"> </span><span class="identifier-syntax">d</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">    </span><span class="reserved-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">d</span><span class="plain-syntax">.</span><span class="identifier-syntax">name</span><span class="plain-syntax"> == </span><span class="string-syntax">"nord"</span><span class="plain-syntax"> </span><span class="reserved-syntax">or</span><span class="plain-syntax"> </span><span class="string-syntax">"øst"</span><span class="plain-syntax"> </span><span class="reserved-syntax">or</span><span class="plain-syntax"> </span><span class="string-syntax">"vest"</span><span class="plain-syntax"> </span><span class="reserved-syntax">or</span><span class="plain-syntax"> </span><span class="string-syntax">"syd"</span><span class="plain-syntax">)</span>
+<span class="plain-syntax">    </span><span class="reserved-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">d</span><span class="plain-syntax"> == </span><span class="identifier-syntax">n_obj</span><span class="plain-syntax"> </span><span class="reserved-syntax">or</span><span class="plain-syntax"> </span><span class="identifier-syntax">e_obj</span><span class="plain-syntax"> </span><span class="reserved-syntax">or</span><span class="plain-syntax"> </span><span class="identifier-syntax">w_obj</span><span class="plain-syntax"> </span><span class="reserved-syntax">or</span><span class="plain-syntax"> </span><span class="identifier-syntax">s_obj</span><span class="plain-syntax">)</span>
 <span class="plain-syntax">        </span><span class="reserved-syntax">print</span><span class="plain-syntax"> (</span><span class="identifier-syntax">name</span><span class="plain-syntax">) </span><span class="identifier-syntax">d</span><span class="plain-syntax">, </span><span class="string-syntax">"på"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">    </span><span class="reserved-syntax">else</span><span class="plain-syntax"> </span><span class="reserved-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">d</span><span class="plain-syntax">.</span><span class="identifier-syntax">name</span><span class="plain-syntax"> == </span><span class="string-syntax">"op"</span><span class="plain-syntax"> </span><span class="reserved-syntax">or</span><span class="plain-syntax"> </span><span class="string-syntax">"ned"</span><span class="plain-syntax">)</span>
+<span class="plain-syntax">    </span><span class="reserved-syntax">else</span><span class="plain-syntax"> </span><span class="reserved-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">d</span><span class="plain-syntax"> == </span><span class="identifier-syntax">u_obj</span><span class="plain-syntax"> </span><span class="reserved-syntax">or</span><span class="plain-syntax"> </span><span class="identifier-syntax">d_obj</span><span class="plain-syntax">)</span>
 <span class="plain-syntax">        </span><span class="reserved-syntax">print</span><span class="plain-syntax"> (</span><span class="identifier-syntax">name</span><span class="plain-syntax">) </span><span class="identifier-syntax">d</span><span class="plain-syntax">, </span><span class="string-syntax">"ad"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">    </span><span class="reserved-syntax">else</span><span class="plain-syntax"> </span><span class="reserved-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">d</span><span class="plain-syntax">.</span><span class="identifier-syntax">name</span><span class="plain-syntax"> == </span><span class="string-syntax">"ud"</span><span class="plain-syntax">)</span>
-<span class="plain-syntax">        </span><span class="reserved-syntax">print</span><span class="plain-syntax"> (</span><span class="identifier-syntax">name</span><span class="plain-syntax">) </span><span class="identifier-syntax">d</span><span class="plain-syntax">, </span><span class="string-syntax">"enfor"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">    </span><span class="reserved-syntax">else</span><span class="plain-syntax"> </span><span class="reserved-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">d</span><span class="plain-syntax">.</span><span class="identifier-syntax">name</span><span class="plain-syntax"> == </span><span class="string-syntax">"ind"</span><span class="plain-syntax">)</span>
-<span class="plain-syntax">        </span><span class="reserved-syntax">print</span><span class="plain-syntax"> (</span><span class="identifier-syntax">name</span><span class="plain-syntax">) </span><span class="identifier-syntax">d</span><span class="plain-syntax">;</span>
+<span class="plain-syntax">    </span><span class="reserved-syntax">else</span><span class="plain-syntax"> </span><span class="reserved-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">d</span><span class="plain-syntax"> == </span><span class="identifier-syntax">in_obj</span><span class="plain-syntax"> </span><span class="reserved-syntax">or</span><span class="plain-syntax"> </span><span class="identifier-syntax">out_obj</span><span class="plain-syntax">)</span>
+<span class="plain-syntax">        </span><span class="reserved-syntax">print</span><span class="plain-syntax"> (</span><span class="identifier-syntax">name</span><span class="plain-syntax">) </span><span class="identifier-syntax">d</span><span class="plain-syntax">; </span><span class="comment-syntax">These are already called "indenfor" and "udenfor"</span>
 <span class="plain-syntax">    </span><span class="reserved-syntax">else</span>
 <span class="plain-syntax">        </span><span class="reserved-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"mod "</span><span class="plain-syntax">, (</span><span class="identifier-syntax">name</span><span class="plain-syntax">) </span><span class="identifier-syntax">d</span><span class="plain-syntax">;</span>
 <span class="plain-syntax">];</span>
@@ -212,48 +214,138 @@ format.
 <span class="plain-syntax">    </span><span class="comment-syntax">TODO: Is this needed?</span>
 <span class="plain-syntax">    </span><a href="https://www.inform-fiction.org/manual/html/s36.html" class="external">https://www.inform-fiction.org/manual/html/s36.html</a>
 
-<span class="plain-syntax">];</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">Here we could rewrite definiteness, turn imperative into infinitive, etc.</span>
 
-<span class="plain-syntax">[ </span><span class="identifier-syntax">LanguageRefers</span><span class="plain-syntax"> </span><span class="identifier-syntax">obj</span><span class="plain-syntax"> </span><span class="identifier-syntax">wnum</span><span class="plain-syntax">;</span>
-
-<span class="plain-syntax">    </span><span class="comment-syntax">Inflect? What is indirect_parser_inflection ?</span>
-
-<span class="plain-syntax">    </span><span class="reserved-syntax">return</span><span class="plain-syntax"> -1;</span>
 <span class="plain-syntax">];</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP11" class="paragraph-anchor"></a><b>&#167;11. Inflecting adjectives.</b>In English, Inform does not care about the difference between an adjective that
-is part of a noun's name, and a compound noun. It doesn't need to.
-</p>
-
-<p class="commentary">A "hot dog" is semantically ambiguous &mdash; it can either be a warm feline or a
-specific type of sausage &mdash; but syntactically it doesn't matter, since
-adjectives aren't inflected in English.
-</p>
-
-<p class="commentary">(Adjectives in English do inflect for degrees of comparison, so the dog can get
-hotter and hottest, which Inform does support &mdash; see <a href="../danish/index.html" class="internal">DanishLanguage</a> &mdash; but not
-when printing adjectives that are part of a noun's name.)
-</p>
-
-<p class="commentary">So in English, Inform simply inflects the last word in a noun's name for
-number, and leaves all other words alone: a hot dog, the hot dog, some hot
-dogs.
-</p>
-
-<p class="commentary">In Danish, however, we need to inflect adjectives for gender and
-number/definiteness (an adjective inflected in the definite or in the plural
-looks the same).
+<p class="commentary firstcommentary"><a id="SP11" class="paragraph-anchor"></a><b>&#167;11. Referring to indefinite objects.</b>We want players to be able to refer to things by their indefinite names.
 </p>
 
 <pre class="displayed-code all-displayed-code code-font">
-<span class="plain-syntax">[ </span><span class="identifier-syntax">LanguagePrintShortName</span><span class="plain-syntax"> </span><span class="identifier-syntax">obj</span><span class="plain-syntax">;</span>
+<span class="plain-syntax">[ </span><span class="identifier-syntax">LanguageRefers</span><span class="plain-syntax"> </span><span class="identifier-syntax">obj</span><span class="plain-syntax"> </span><span class="identifier-syntax">wnum</span><span class="plain-syntax">   </span><span class="identifier-syntax">k</span><span class="plain-syntax"> </span><span class="identifier-syntax">wd</span><span class="plain-syntax"> </span><span class="identifier-syntax">m</span><span class="plain-syntax"> </span><span class="identifier-syntax">l</span><span class="plain-syntax">;</span>
 
-<span class="plain-syntax">    </span><span class="comment-syntax">Inflect words as adjectives ! TODO</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">Inflect? What is indirect_parser_inflection ?</span>
 
-<span class="plain-syntax">    </span><span class="reserved-syntax">rfalse</span><span class="plain-syntax">;</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">TODO: add non-attributive names here - but how?</span>
+
+<span class="plain-syntax">     </span><span class="identifier-syntax">k</span><span class="plain-syntax"> = </span><span class="identifier-syntax">wn</span><span class="plain-syntax">; </span><span class="identifier-syntax">wn</span><span class="plain-syntax"> = </span><span class="identifier-syntax">wnum</span><span class="plain-syntax">; </span><span class="identifier-syntax">wd</span><span class="plain-syntax"> = </span><span class="identifier-syntax">NextWordStopped</span><span class="plain-syntax">(); </span><span class="identifier-syntax">wn</span><span class="plain-syntax"> = </span><span class="identifier-syntax">k</span><span class="plain-syntax">;</span>
+
+<span class="plain-syntax">    </span><span class="comment-syntax">or (k=0: k&lt;obj.#short_name_indef: k++)</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">   for (m=0: m&lt;WordLength(wnum): m++)</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">       for (l=1: l&lt;obj.short_name_indef-&gt;k--&gt;0: l++)</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">           if (obj.short_name_indef-&gt;k--&gt;l ~= WordAddress(wnum)-&gt;l) {</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">               !print (char) obj.short_name_indef-&gt;k--&gt;(l+1), "!=", (char) WordAddress(wnum)-&gt;l;</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">               rfalse;</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">           }</span>
+
+<span class="plain-syntax">    </span><span class="comment-syntax">f (WordInProperty(WordAddress(wnum), obj, short_name_indef)) rtrue;</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">f (WordInProperty(WordAddress(wnum), obj, short_name)) rtrue;</span>
+
+<span class="plain-syntax">    </span><span class="comment-syntax">f (obj has pluralname) {</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">   if (WordInProperty(wd, obj, plural_indef)) rtrue;</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">   if (WordInProperty(wd, obj, plural)) rtrue;</span>
+<span class="plain-syntax">    </span>
+
+<span class="plain-syntax">    </span><span class="comment-syntax"> = short_name_indef;</span>
+<span class="plain-syntax">    </span><span class="comment-syntax"> = obj.&amp;m; l = (obj.#m)/WORDSIZE-1;</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">or (m=0 : m&lt;=l : m++)</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">   print "checking short_name_indef word:", k--&gt;m, "against", wd, "^";</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">   if (wd == k--&gt;m) {</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">       print "found short_name_indef";</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">       rtrue;</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">   }</span>
+<span class="plain-syntax">    </span><span class="comment-syntax"> = short_name;</span>
+<span class="plain-syntax">    </span><span class="comment-syntax"> = obj.&amp;m; l = (obj.#m)/WORDSIZE-1;</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">or (m=0 : m&lt;=l : m++)</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">   if (wd == k--&gt;m) {</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">       print "found short_name";</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">       rtrue;</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">   }</span>
+<span class="plain-syntax">    </span><span class="comment-syntax"> = plural_indef;</span>
+<span class="plain-syntax">    </span><span class="comment-syntax"> = obj.&amp;m; l = (obj.#m)/WORDSIZE-1;</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">or (m=0 : m&lt;=l : m++)</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">   if (wd == k--&gt;m) {</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">       print "found plural_indef";</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">       rtrue;</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">   }</span>
+<span class="plain-syntax">    </span><span class="comment-syntax"> = plural;</span>
+<span class="plain-syntax">    </span><span class="comment-syntax"> = obj.&amp;m; l = (obj.#m)/WORDSIZE-1;</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">or (m=0 : m&lt;=l : m++)</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">   if (wd == k--&gt;m) {</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">       print "found plural";</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">       rtrue;</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">   }</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">rint "LanguageRefers failed with", parser_inflection, "^";</span>
+<span class="plain-syntax">    </span><span class="reserved-syntax">return</span><span class="plain-syntax"> -1;</span>
 <span class="plain-syntax">];</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP12" class="paragraph-anchor"></a><b>&#167;12. Default genders.</b>The default animate gender might as well be male, as it is in English Inform,
+<p class="commentary firstcommentary"><a id="SP12" class="paragraph-anchor"></a><b>&#167;12. Capitalizing nouns.</b>This routine handles the capitalization of nouns in some situations (definite
+nouns without articles, and archaic capitalized nouns).
+</p>
+
+<p class="commentary">This routine is a hook called by STANDARD_NAME_PRINTING_R (the standard
+name printing rule). We'll only use it to capitalize the name if needed, because
+the standard name printing rule defers only to <span class="extract"><span class="extract-syntax">cap_short_name</span></span> for that, but we
+want to print the capitalized version of any name in some circumstances.
+</p>
+
+<p class="commentary">In an ideal world, we would also use this routine to inflect adjectives, but
+that currently doesn't work, so we have to use say phrases as a fallback (see
+TODO: Adjectives).
+</p>
+
+<p class="commentary">Note that for Z-machine games, we should be able to use CPrintOrRun instead of
+what we do here, but that routine doesn't work for Glulx games, so we do it a
+bit more manually here, which should work for both. CPrintOrRun not working for
+Glulx might be a bug in Inform, and has been reported as <a href="https://inform7.atlassian.net/browse/I7-2642" class="external">I7-2642</a>.
+</p>
+
+<p class="commentary">TODO: If the capitalized nouns option is active, we should capitalize the last
+word in the name, to handle names with adjectives properly. Currently it only
+works for non-attributive nouns.
+</p>
+
+<pre class="displayed-code all-displayed-code code-font">
+<span class="plain-syntax">[ </span><span class="identifier-syntax">LanguagePrintShortName</span><span class="plain-syntax"> </span><span class="identifier-syntax">obj</span><span class="plain-syntax">  </span><span class="identifier-syntax">k</span><span class="plain-syntax"> </span><span class="identifier-syntax">m</span><span class="plain-syntax"> </span><span class="identifier-syntax">wnum</span><span class="plain-syntax"> </span><span class="identifier-syntax">l</span><span class="plain-syntax">  </span><span class="identifier-syntax">i</span><span class="plain-syntax"> </span><span class="identifier-syntax">prop</span><span class="plain-syntax">;</span>
+<span class="plain-syntax">    </span><span class="reserved-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">caps_mode</span><span class="plain-syntax"> || </span><span class="identifier-syntax">DanishLanguageKit</span><span class="plain-syntax">`</span><span class="identifier-syntax">CAPITALIZED_NOUNS_CFGF</span><span class="plain-syntax">) {</span>
+<span class="plain-syntax">        </span><span class="reserved-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">indef_mode</span><span class="plain-syntax"> &amp;&amp; </span><span class="identifier-syntax">obj</span><span class="plain-syntax"> </span><span class="reserved-syntax">provides</span><span class="plain-syntax"> </span><span class="identifier-syntax">short_name_indef</span><span class="plain-syntax">) {</span>
+<span class="plain-syntax">            </span><span class="identifier-syntax">prop</span><span class="plain-syntax"> = </span><span class="identifier-syntax">short_name_indef</span><span class="plain-syntax">;</span>
+<span class="plain-syntax">        } </span><span class="reserved-syntax">else</span><span class="plain-syntax"> {</span>
+<span class="plain-syntax">            </span><span class="reserved-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">obj</span><span class="plain-syntax"> </span><span class="reserved-syntax">provides</span><span class="plain-syntax"> </span><span class="identifier-syntax">cap_short_name</span><span class="plain-syntax"> &amp;&amp; </span><span class="identifier-syntax">PrintOrRun</span><span class="plain-syntax">(</span><span class="identifier-syntax">obj</span><span class="plain-syntax">, </span><span class="identifier-syntax">cap_short_name</span><span class="plain-syntax">, </span><span class="reserved-syntax">true</span><span class="plain-syntax">) ~= </span><span class="constant-syntax">0</span><span class="plain-syntax">) {</span>
+<span class="plain-syntax">                </span><span class="identifier-syntax">caps_mode</span><span class="plain-syntax"> = </span><span class="reserved-syntax">false</span><span class="plain-syntax">;</span>
+<span class="plain-syntax">                </span><span class="reserved-syntax">rtrue</span><span class="plain-syntax">;</span>
+<span class="plain-syntax">            } </span><span class="reserved-syntax">else</span><span class="plain-syntax"> {</span>
+<span class="plain-syntax">                </span><span class="identifier-syntax">prop</span><span class="plain-syntax"> = </span><span class="identifier-syntax">short_name</span><span class="plain-syntax">;</span>
+<span class="plain-syntax">            }</span>
+<span class="plain-syntax">        }</span>
+
+<span class="plain-syntax">        </span><span class="comment-syntax">Here we capitalize the first letter of the relevant printed name.</span>
+<span class="plain-syntax">        #</span><span class="identifier-syntax">Ifdef</span><span class="plain-syntax"> </span><span class="identifier-syntax">TARGET_GLULX</span><span class="plain-syntax">;</span>
+<span class="plain-syntax">            </span><span class="identifier-syntax">TEXT_TY_Say_Capitalised</span><span class="plain-syntax">(</span><span class="identifier-syntax">obj</span><span class="plain-syntax">.</span><span class="identifier-syntax">prop</span><span class="plain-syntax">);</span>
+<span class="plain-syntax">        #</span><span class="identifier-syntax">Ifnot</span><span class="plain-syntax">;</span>
+<span class="plain-syntax">            </span><span class="identifier-syntax">CPrintOrRun</span><span class="plain-syntax">(</span><span class="identifier-syntax">obj</span><span class="plain-syntax">, </span><span class="identifier-syntax">prop</span><span class="plain-syntax">);</span>
+<span class="plain-syntax">        #</span><span class="identifier-syntax">Endif</span><span class="plain-syntax">;</span>
+
+<span class="plain-syntax">        </span><span class="comment-syntax"> Here's the old code that manually capitalized the first letter.</span>
+<span class="plain-syntax">        </span><span class="comment-syntax"> Indefinite names are usually shorter than the definite names (ie.</span>
+<span class="plain-syntax">        </span><span class="comment-syntax"> "short names"), so we assume StorageForShortName is big enough.</span>
+<span class="plain-syntax">        </span><span class="comment-syntax"> TODO: This might not hold for plural definite names.</span>
+<span class="plain-syntax">        </span><span class="comment-syntax">VM_PrintToBuffer(StorageForShortName, obj.prop--&gt;0, obj, prop);</span>
+<span class="plain-syntax">        </span><span class="comment-syntax">StorageForShortName--&gt;1 = VM_LowerToUpperCase(StorageForShortName--&gt;1);</span>
+<span class="plain-syntax">        </span><span class="comment-syntax">for (i = 1: i &lt; StorageForShortName--&gt;0 - 1: i++) {</span>
+<span class="plain-syntax">        </span><span class="comment-syntax">    print (char) StorageForShortName--&gt;i;</span>
+<span class="plain-syntax">        </span><span class="comment-syntax">}</span>
+
+<span class="plain-syntax">        </span><span class="identifier-syntax">caps_mode</span><span class="plain-syntax"> = </span><span class="reserved-syntax">false</span><span class="plain-syntax">;</span>
+<span class="plain-syntax">        </span><span class="reserved-syntax">rtrue</span><span class="plain-syntax">;</span>
+<span class="plain-syntax">    }</span>
+
+<span class="plain-syntax">    </span><span class="reserved-syntax">rfalse</span><span class="plain-syntax">;</span>
+
+<span class="plain-syntax">    </span><span class="comment-syntax">TODO: What about plurals?</span>
+<span class="plain-syntax">];</span>
+</pre>
+<p class="commentary firstcommentary"><a id="SP13" class="paragraph-anchor"></a><b>&#167;13. Default genders.</b>The default animate gender might as well be male, as it is in English Inform,
 although there are more female Danes than male. Let's chalk it up to
 "historical reasons".
 </p>
@@ -261,7 +353,7 @@ although there are more female Danes than male. Let's chalk it up to
 <pre class="displayed-code all-displayed-code code-font">
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">LanguageAnimateGender</span><span class="plain-syntax">   = </span><span class="identifier-syntax">male</span><span class="plain-syntax">;</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP13" class="paragraph-anchor"></a><b>&#167;13. </b>The default inanimate gender is the common grammatical gender. Common nouns are
+<p class="commentary firstcommentary"><a id="SP14" class="paragraph-anchor"></a><b>&#167;14. </b>The default inanimate gender is the common grammatical gender. Common nouns are
 more common than neuter, comprising about 75% of Danish nouns.
 </p>
 
@@ -269,7 +361,7 @@ more common than neuter, comprising about 75% of Danish nouns.
 <span class="identifier-syntax">Attribute</span><span class="plain-syntax"> </span><span class="identifier-syntax">common</span><span class="plain-syntax"> </span><span class="identifier-syntax">alias</span><span class="plain-syntax"> </span><span class="identifier-syntax">male</span><span class="plain-syntax">;</span>
 <span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">LanguageInanimateGender</span><span class="plain-syntax"> = </span><span class="identifier-syntax">common</span><span class="plain-syntax">;</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP14" class="paragraph-anchor"></a><b>&#167;14. Articles.</b></p>
+<p class="commentary firstcommentary"><a id="SP15" class="paragraph-anchor"></a><b>&#167;15. Articles.</b></p>
 
 <pre class="displayed-code all-displayed-code code-font">
 <span class="reserved-syntax">Array</span><span class="plain-syntax"> </span><span class="identifier-syntax">LanguageArticles</span><span class="plain-syntax"> --&gt;</span>
@@ -286,7 +378,7 @@ more common than neuter, comprising about 75% of Danish nouns.
 
 <span class="reserved-syntax">Array</span><span class="plain-syntax"> </span><span class="identifier-syntax">LanguageGNAsToArticles</span><span class="plain-syntax"> --&gt;  </span><span class="constant-syntax">0</span><span class="plain-syntax"> </span><span class="constant-syntax">0</span><span class="plain-syntax"> </span><span class="constant-syntax">1</span><span class="plain-syntax"> </span><span class="constant-syntax">2</span><span class="plain-syntax"> </span><span class="constant-syntax">2</span><span class="plain-syntax"> </span><span class="constant-syntax">2</span><span class="plain-syntax"> </span><span class="constant-syntax">0</span><span class="plain-syntax"> </span><span class="constant-syntax">0</span><span class="plain-syntax"> </span><span class="constant-syntax">1</span><span class="plain-syntax"> </span><span class="constant-syntax">2</span><span class="plain-syntax"> </span><span class="constant-syntax">2</span><span class="plain-syntax"> </span><span class="constant-syntax">2</span><span class="plain-syntax">;</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP15" class="paragraph-anchor"></a><b>&#167;15. Commands.</b><span class="extract"><span class="extract-syntax">LanguageVerbLikesAdverb</span></span> is called by <span class="extract"><span class="extract-syntax">PrintCommand</span></span> when printing an <span class="extract"><span class="extract-syntax">UPTO_PE</span></span>
+<p class="commentary firstcommentary"><a id="SP16" class="paragraph-anchor"></a><b>&#167;16. Commands.</b><span class="extract"><span class="extract-syntax">LanguageVerbLikesAdverb</span></span> is called by <span class="extract"><span class="extract-syntax">PrintCommand</span></span> when printing an <span class="extract"><span class="extract-syntax">UPTO_PE</span></span>
 error or an inference message.  Words which are intransitive verbs, i.e.,
 which require a direction name as an adverb ("walk west"), not a noun
 ("I only understood you as far as wanting to touch the ground"), should
@@ -304,16 +396,10 @@ adjective in a <span class="extract"><span class="extract-syntax">name</span></s
 <pre class="displayed-code all-displayed-code code-font">
 <span class="plain-syntax">[ </span><span class="identifier-syntax">LanguageVerb</span><span class="plain-syntax"> </span><span class="identifier-syntax">i</span><span class="plain-syntax">;</span>
 <span class="plain-syntax">    </span><span class="reserved-syntax">switch</span><span class="plain-syntax"> (</span><span class="identifier-syntax">i</span><span class="plain-syntax">) {</span>
-<span class="comment-syntax">! These will need to be connected to the actual commands:</span>
-<span class="comment-syntax">     'i//', 'inv', 'inventar', 't//':     print "status";</span>
-<span class="comment-syntax">     'k//', 'l//':     print "se";</span>
-<span class="comment-syntax">     'u//', 'x//':     print "undersøg";</span>
-<span class="comment-syntax">     'z//':            print "vent";</span>
-<span class="plain-syntax">      </span><span class="character-syntax">'i//'</span><span class="plain-syntax">,</span><span class="character-syntax">'inv'</span><span class="plain-syntax">,</span><span class="character-syntax">'inventory'</span><span class="plain-syntax">:</span>
-<span class="plain-syntax">               </span><span class="reserved-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"take inventory"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">      </span><span class="character-syntax">'l//'</span><span class="plain-syntax">:   </span><span class="reserved-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"look"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">      </span><span class="character-syntax">'x//'</span><span class="plain-syntax">:   </span><span class="reserved-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"examine"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">      </span><span class="character-syntax">'z//'</span><span class="plain-syntax">:   </span><span class="reserved-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"wait"</span><span class="plain-syntax">;</span>
+<span class="plain-syntax">      </span><span class="character-syntax">'i//'</span><span class="plain-syntax">, </span><span class="character-syntax">'inv'</span><span class="plain-syntax">, </span><span class="character-syntax">'inventar'</span><span class="plain-syntax">, </span><span class="character-syntax">'t//'</span><span class="plain-syntax">:     </span><span class="reserved-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"status"</span><span class="plain-syntax">;</span>
+<span class="plain-syntax">      </span><span class="character-syntax">'k//'</span><span class="plain-syntax">, </span><span class="character-syntax">'l//'</span><span class="plain-syntax">:     </span><span class="reserved-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"se"</span><span class="plain-syntax">;</span>
+<span class="plain-syntax">      </span><span class="character-syntax">'u//'</span><span class="plain-syntax">, </span><span class="character-syntax">'x//'</span><span class="plain-syntax">:     </span><span class="reserved-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"undersøg"</span><span class="plain-syntax">;</span>
+<span class="plain-syntax">      </span><span class="character-syntax">'z//'</span><span class="plain-syntax">:            </span><span class="reserved-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"vent"</span><span class="plain-syntax">;</span>
 <span class="plain-syntax">      </span><span class="reserved-syntax">default</span><span class="plain-syntax">: </span><span class="reserved-syntax">rfalse</span><span class="plain-syntax">;</span>
 <span class="plain-syntax">    }</span>
 <span class="plain-syntax">    </span><span class="reserved-syntax">rtrue</span><span class="plain-syntax">;</span>
@@ -331,16 +417,17 @@ adjective in a <span class="extract"><span class="extract-syntax">name</span></s
 <span class="plain-syntax">    </span><span class="reserved-syntax">rfalse</span><span class="plain-syntax">;</span>
 <span class="plain-syntax">];</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP16" class="paragraph-anchor"></a><b>&#167;16. Stubs.</b>To reduce the need for conditional compilation, we provide these stub
+<p class="commentary firstcommentary"><a id="SP17" class="paragraph-anchor"></a><b>&#167;17. Stubs.</b>To reduce the need for conditional compilation, we provide these stub
 routines:
 </p>
 
 <pre class="displayed-code all-displayed-code code-font">
 <span class="plain-syntax">[ </span><span class="identifier-syntax">LanguageIsVerb</span><span class="plain-syntax"> </span><span class="identifier-syntax">buffer</span><span class="plain-syntax"> </span><span class="identifier-syntax">parse</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb_wordnum</span><span class="plain-syntax">;</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">TODO: remove a trailing -e from the word to naively convert it from infinitive to imperative and see if that's a command verb</span>
 <span class="plain-syntax">    </span><span class="reserved-syntax">rfalse</span><span class="plain-syntax">;</span>
 <span class="plain-syntax">];</span>
 
-<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">LanguageContractionForms</span><span class="plain-syntax"> = </span><span class="constant-syntax">1</span><span class="plain-syntax">; </span><span class="comment-syntax">Danish doesn't use article contractions, so it only has one form</span>
+<span class="reserved-syntax">Constant</span><span class="plain-syntax"> </span><span class="identifier-syntax">LanguageContractionForms</span><span class="plain-syntax"> = </span><span class="constant-syntax">1</span><span class="plain-syntax">;</span>
 
 <span class="plain-syntax">[ </span><span class="identifier-syntax">LanguageContraction</span><span class="plain-syntax">;</span>
 <span class="plain-syntax">    </span><span class="reserved-syntax">rfalse</span><span class="plain-syntax">;</span>

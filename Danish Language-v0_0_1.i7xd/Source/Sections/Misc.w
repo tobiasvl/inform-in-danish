@@ -18,10 +18,19 @@ To say plural of (name of kind of value K):
 =
 Volume - Misc
 
-When play begins:
-	say the list of verbs in brace notation;
-	say "[adapt the verb være in present tense]".
+@
 
+This enables the player to refer to objects by either their definite name (that's already the case by default) or their indefinite name. However, it
+only works if the player writes the entire property. So both "pigen" and
+"pige" will match the object pigen, but "lille" and "pige" will match
+"den lille pige" (because they both appear in the definite name), while
+"pigen" will not. We will need to fix this in ||DanishLanguageKit|| with
+some Inter code.
+=
+Understand the printed indefinite name property as describing a thing.
+Understand the printed indefinite name property as describing a room.
+Understand the printed plural indefinite name property as describing a thing.
+Understand the printed plural indefinite name property as describing a room.
 
 @
 Force a useful "missing verb" error message. From https://intfiction.org/t/6m62-no-verb-oddness/78143/12.

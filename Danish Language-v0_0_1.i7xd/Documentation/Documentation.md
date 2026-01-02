@@ -1,28 +1,23 @@
 # Inform in Danish
 
-Chapter: Usage
+# Usage
 
 This extension lays the foundations of making Danish stories in Inform
 (by translating English Language by Graham Nelson, as well as certain parts of
 Basic Inform by Graham Nelson), but its bedrock is the Danish language kit,
 which is also needed.
 
-In addition, you will want the extension Danish Default Responses by Tobias
-Langhoff, where all the English parser responses in the Standard Rules by
-Graham Nelson have been collected and translated, for easier upkeep.
-
-All of these parts (this extension, DanishLanguageKit, and Danish Default
-Responses by Tobias Langhoff) are collected in a language pack located at
-https://github.com/tobiasvl/inform-danish - if you're missing something,
+These parts are collected in a language pack located at
+https://github.com/tobiasvl/inform-in-danish - if you're missing something,
 download it from there.
 
 To use this language pack, don't simply "Include" this extension in your story
 file. Instead, write " (in Danish)" after your story heading at the top of the
 story file.
 
-Chapter - Grammar
+# Grammar
 
-Section - Gender
+## Gender
 
 Danish has two grammatical genders: common (fælleskøn/utrum) and neuter
 (intetkøn/neutrum). In this extension, common gender is called masculine gender

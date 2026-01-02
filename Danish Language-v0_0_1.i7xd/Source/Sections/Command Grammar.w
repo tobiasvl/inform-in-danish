@@ -1,238 +1,246 @@
 Command Grammar.
 
-Command Grammar.
+The Danish grammar for parsing typed commands in play.
 
 @h Command Grammar.
+
+We redefine all the commands from the standard rules here.
 =
 Part - Command Grammar (in place of Part Six - Grammar in Standard Rules by Graham Nelson)
 
-[ The Danish grammar for parsing typed commands in play.]
+Understand "tag [things]" as taking.
+Understand "tag [things] op" as taking.
+Understand "tag op [things]" as taking.
+Understand "tag af [something]" as taking off.
+Understand "tag [something] af" as taking off.
+Understand "tag [things inside] fra [something]" as removing it from.
+Understand "tag [something] fra [something]" as removing it from. [ For better error messages. ]
+Understand "tag [things inside] af [something]" as removing it from.
+Understand "tag [something] af [something]" as removing it from. [ For better error messages. ]
+Understand "tag på [something preferably held]" as wearing.
+Understand "tag [something preferably held] på" as wearing.
+Understand the commands "ta'", "ta", "bær" and "hold" as "tag".
 
-Understand "take [things]" as taking.
-Understand "take off [something]" as taking off.
-Understand "take [something] off" as taking off.
-Understand "take [things inside] from [something]" as removing it from.
-Understand "take [something] from [something]" as removing it from. [ For better error messages. ]
-Understand "take [things inside] off [something]" as removing it from.
-Understand "take [something] off [something]" as removing it from. [ For better error messages. ]
-Understand "take inventory" as taking inventory.
-Understand the commands "carry" and "hold" as "take".
+Understand "gå ind" as entering.
+Understand "gå ud/ned/op ad/af/--" as exiting.
+Understand "gå ind/indeni på/i/-- [something]" as entering.
+Understand "gå ud/ned/op ad/af/-- [something]" as getting off.
+Understand "gå gennem/igennem [something]" as entering.
+Understand "gå til [something]" as going.
 
-Understand "get in/on" as entering.
-Understand "get out/off/down/up" as exiting.
-Understand "get [things]" as taking.
-Understand "get in/into/on/onto [something]" as entering.
-Understand "get off/down [something]" as getting off.
-Understand "get [things inside] from [something]" as removing it from.
-Understand "get [something] from [something]" as removing it from. [ For better error messages. ]
+Understand "pluk op [things]" or "pluk [things] op" as taking.
 
-Understand "pick up [things]" or "pick [things] up" as taking.
+Understand "stå" or "stå op" as exiting.
+Understand "stå på [something]" as entering.
 
-Understand "stand" or "stand up" as exiting.
-Understand "stand on [something]" as entering.
+Understand "fjern [something preferably held]" as taking off.
+Understand "fjern [things inside] fra [something]" as removing it from.
+Understand "fjern [something] fra [something]" as removing it from. [ For better error messages. ]
 
-Understand "remove [something preferably held]" as taking off.
-Understand "remove [things inside] from [something]" as removing it from.
-Understand "remove [something] from [something]" as removing it from. [ For better error messages. ]
+Understand "iklæ [something preferably held]" as wearing.
+Understand "afklæ [something preferably held]" as taking off.
 
-Understand "shed [something preferably held]" as taking off.
-Understand the commands "doff" and "disrobe" as "shed".
+Understand "læg [other things] in/indeni/i [something]" as inserting it into.
+Understand "læg [other things] på/ovenpå [something]" as putting it on.
+Understand "læg ned [things preferably held]" or "læg [things preferably held] ned" as dropping.
 
-Understand "wear [something preferably held]" as wearing.
-Understand the command "don" as "wear".
+Understand "sæt [other things] in/inside/into [something]" as inserting it into.
+Understand "læg [other things] på/ovenpå [something]" as putting it on.
+Understand "læg ned [things preferably held]" or "læg [things preferably held] ned" as dropping.
 
-Understand "put [other things] in/inside/into [something]" as inserting it into.
-Understand "put [other things] on/onto [something]" as putting it on.
-Understand "put on [something preferably held]" as wearing.
-Understand "put [something preferably held] on" as wearing.
-Understand "put down [things preferably held]" or "put [things preferably held] down" as dropping.
+Understand "smid [things preferably held]" as dropping.
+Understand "smid [other things] in/into/down [something]" as inserting it into.
+Understand "smid [other things] on/onto [something]" as putting it on.
+Understand "smid [something preferably held] at/against [something]" as throwing it at.
+Understand the commands "kast" and "slip" and "tab" as "smid".
 
-Understand "insert [other things] in/into [something]" as inserting it into.
+Understand "giv [something preferably held] to [someone]" as giving it to.
+Understand "giv [someone] [something preferably held]" as giving it to (with nouns reversed).
+Understand the commands "gi'", "gi", "pay" and "offer" and "feed" as "giv".
 
-Understand "drop [things preferably held]" as dropping.
-Understand "drop [other things] in/into/down [something]" as inserting it into.
-Understand "drop [other things] on/onto [something]" as putting it on.
-Understand "drop [something preferably held] at/against [something]" as throwing it at.
-Understand the commands "throw" and "discard" as "drop".
+Understand "vis [someone] [something preferably held]" as showing it to (with nouns reversed).
+Understand "vis [something preferably held] til [someone]" as showing it to.
+Understand the commands "præsenter" and "fremvis" as "vis".
 
-Understand "give [something preferably held] to [someone]" as giving it to.
-Understand "give [someone] [something preferably held]" as giving it to (with nouns reversed).
-Understand the commands "pay" and "offer" and "feed" as "give".
-
-Understand "show [someone] [something preferably held]" as showing it to (with nouns reversed).
-Understand "show [something preferably held] to [someone]" as showing it to.
-Understand the commands "present" and "display" as "show".
-
-Understand "go" as going.
-Understand "go [direction]" as going.
-Understand "go [something]" as entering.
-Understand "go into/in/inside/through [something]" as entering.
-Understand the commands "walk" and "run" as "go".
+Understand "gå" as going.
+Understand "gå [direction]" as going.
+Understand "gå [something]" as entering.
+Understand "gå ind/indeni/på i/-- [something]" as entering.
+Understand "gå ud/ned/op ad/af/--" as exiting.
+Understand the commands "walk" and "løb" as "gå".
 
 Understand "inventory" as taking inventory.
-Understand the commands "i" and "inv" as "inventory".
+Understand the commands "status", "i" and "inv" as "inventory".
 
-Understand "look" as looking.
-Understand "look at [something]" as examining.
-Understand "look [something]" as examining.
-Understand "look inside/in/into/through [something]" as searching.
-Understand "look under [something]" as looking under.
-Understand "look up [text] in [something]" as consulting it about (with nouns reversed).
-Understand the command "l" as "look".
+Understand "se" as looking.
+Understand "se på [something]" as examining.
+Understand "se [something]" as examining.
+Understand "se indeni/ind/gennem/igennem [something]" as searching.
+Understand "se under [something]" as looking under.
+Understand the commands "kig" and "l" as "se".
 
-Understand "consult [something] on/about [text]" as consulting it about.
+Understand "konsulter [something] om/angående [text]" as consulting it about.
 
-Understand "open [something]" as opening.
-Understand "open [something] with [something preferably held]" as unlocking it with.
-Understand the commands "unwrap", "uncover" as "open".
+Understand "åbne [something]" as opening.
+Understand "åbne for [something]" as opening.
+Understand "åbne [something] med [something preferably held]" as unlocking it with.
+Understand "åbne for [something] med [something preferably held]" as unlocking it with.
+Understand the commands "åbn", "unwrap", "uncover" as "åbne".
 
-Understand "close [something]" as closing.
-Understand "close up [something]" as closing.
-Understand "close off [something]" as switching off.
-Understand the commands "shut" and "cover" as "close".
+Understand "luk [something]" as closing.
+Understand "luk for [something]" as closing.
+Understand "luk op [something]" as opening.
+Understand "luk op for [something]" as opening.
+Understand "luk for [something]" as switching off.
+Understand the commands "shut" and "cover" as "luk".
 
-Understand "enter" as entering.
-Understand "enter [something]" as entering.
-Understand the command "cross" as "enter".
+Understand "sid på toppen af [something]" as entering.
+Understand "sid på/i/indeni [something]" as entering.
 
-Understand "sit on top of [something]" as entering.
-Understand "sit on/in/inside [something]" as entering.
+Understand "undersøg [something]" as examining.
+Understand the commands "x", "watch", "describe" and "check" as "undersøg".
 
-Understand "exit" as exiting.
-Understand the commands "leave" and "out" as "exit".
+Understand "læs [something]" as examining.
+Understand "læs om [text] i [something]" as consulting it about (with nouns reversed).
+Understand "læs [text] i [something]" as consulting it about (with nouns reversed).
 
-Understand "examine [something]" as examining.
-Understand the commands "x", "watch", "describe" and "check" as "examine".
+Understand "ja" as saying yes.
+Understand the command "j" as "ja".
 
-Understand "read [something]" as examining.
-Understand "read about [text] in [something]" as consulting it about (with nouns reversed).
-Understand "read [text] in [something]" as consulting it about (with nouns reversed).
+Understand "nei" as saying no.
 
-Understand "yes" as saying yes.
-Understand the command "y" as "yes".
+Understand "unskyld", "beklager" and "omforladels" as saying sorry.
 
-Understand "no" as saying no.
+Understand "søg [something]" as searching.
+Understand "led i/indeni/efter/-- [something]" as searching.
 
-Understand "sorry" as saying sorry.
+Understand "vink" as waving hands.
 
-Understand "search [something]" as searching.
+Understand "vift [something]" as waving.
 
-Understand "wave" as waving hands.
+Understand "set [something] til [text]" as setting it to.
+Understand "stil ind [something] til [text]" as setting it to.
+Understand the command "indstil" as "set".
 
-Understand "wave [something]" as waving.
+Understand "træk [something]" as pulling.
+Understand the command "drag" as "træk".
 
-Understand "set [something] to [text]" as setting it to.
-Understand the command "adjust" as "set".
+Understand "skub [something]" as pushing.
+Understand "skub [something] [direction]" or "skub [something] til [direction]" as pushing it to.
+Understand the commands "flyt", "skift" as "skub".
 
-Understand "pull [something]" as pulling.
-Understand the command "drag" as "pull".
+Understand "vrid [something]" as turning.
+Understand the commands "rotere" and "skru" as "vrid".
 
-Understand "push [something]" as pushing.
-Understand "push [something] [direction]" or "push [something] to [direction]" as pushing it to.
-Understand the commands "move", "shift", "clear" and "press" as "push".
+Understand "tænd [something]" or "tænd for [something]" as switching on.
+Understand "tænd op [something]" as burning.
 
-Understand "turn [something]" as turning.
-Understand "turn [something] on" or "turn on [something]" as switching on.
-Understand "turn [something] off" or "turn off [something]" as switching off.
-Understand the commands "rotate", "twist", "unscrew" and "screw" as "turn".
+Understand "slå til [something]" as switching on.
+Understand "slå fra [something]" as switching off.
+Understand "slå for [something]" as closing.
+Understand "slå op [text] i [something]" as consulting it about (with nouns reversed).
+Understand "slå efter [text] i [something]" as consulting it about (with nouns reversed).
+Understand "slå [something]" as attacking.
+Understand "slå ihjel [someone]" as attacking.
+Understand "slå ned [someone]" as attacking.
+Understand "slå ud [someone]" as attacking.
+Understand "slå ind [something]" as attacking.
 
-Understand "switch [something switched on]" as switching off.
-Understand "switch [something]" or "switch on [something]" or "switch [something] on" as
-	switching on.
-Understand "switch [something] off" or "switch off [something]" as switching off.
+Understand "sluk [something]" or "sluk for [something]" as switching off.
 
-Understand "lock [something] with [something preferably held]" as locking it with.
+Understand "stop [something]" as switching off.
 
-Understand "unlock [something] with [something preferably held]" as unlocking it with.
+Understand "lås [something] med [something preferably held]" as locking it with.
 
-Understand "attack [something]" as attacking.
-Understand the commands "break", "smash", "hit", "fight", "torture", "wreck", "crack", "destroy",
-	"murder", "kill", "punch" and "thump" as "attack".
+Understand "lås op [something] med [something preferably held]" as unlocking it with.
 
-Understand "wait" as waiting.
-Understand the command "z" as "wait".
+Understand "angrib [something]" as attacking.
+Understand the commands "ødelæg", "myrd" and "dræb" as "angrib".
 
-Understand "answer [text] to [someone]" as answering it that (with nouns reversed).
-Understand the commands "say", "shout" and "speak" as "answer".
+Understand "vent" as waiting.
+Understand the command "z" as "vent".
 
-Understand "tell [someone] about [text]" as telling it about.
+Understand "svar [text] til [someone]" as answering it that (with nouns reversed).
+Understand the commands "sig", "råb" and "tal" as "svar".
 
-Understand "ask [someone] about [text]" as asking it about.
-Understand "ask [someone] for [something]" as asking it for.
+Understand "fortæl [someone] om [text]" as telling it about.
 
-Understand "eat [something preferably held]" as eating.
+Understand "spørg [someone] om [text]" as asking it about.
+Understand "spørg [someone] efter [something]" as asking it for.
+Understand "bed [someone] om [something]" as asking it for.
 
-Understand "sleep" as sleeping.
-Understand the command "nap" as "sleep".
+Understand "spis [something preferably held]" as eating.
+Understand the commands "æd" and "gnask" as "spis".
 
-Understand "climb [something]" or "climb up/over [something]" as climbing.
-Understand the command "scale" as "climb".
+Understand "sov" as sleeping.
+Understand the command "blund" as "sov".
 
-Understand "buy [something]" as buying.
-Understand the command "purchase" as "buy".
+Understand "klatre [something]" or "klatre op/over [something]" as climbing.
+Understand the command "klavre" as "klatre".
 
-Understand "squeeze [something]" as squeezing.
-Understand the command "squash" as "squeeze".
+Understand "køb [something]" as buying.
 
-Understand "swing [something]" or "swing on [something]" as swinging.
+Understand "klem [something]" as squeezing.
+Understand the command "press" and "knib" and "tryk" as "klem".
 
-Understand "wake" or "wake up" as waking up.
-Understand "wake [someone]" or "wake [someone] up" or "wake up [someone]" as waking.
-Understand the commands "awake" and "awaken" as "wake".
+Understand "gyng [something]" or "gyng på [something]" as swinging. [ TODO: What is this actually ]
 
-Understand "kiss [someone]" as kissing.
-Understand the commands "embrace" and "hug" as "kiss".
+Understand "vågn", "vågne", "vågn op" or "vågne op" as waking up.
 
-Understand "think" as thinking.
+Understand "væk [someone]" or "væk [someone] op" or "væk op [someone]" as waking.
+Understand the commands "opvæk" and "opvække" as "væk".
 
-Understand "smell" as smelling.
-Understand "smell [something]" as smelling.
-Understand the command "sniff" as "smell".
+Understand "kys [someone]" as kissing.
+Understand the commands "knus", "omfavn", "omfavne" and "kram" as "kys".
 
-Understand "listen" as listening to.
-Understand "hear [something]" as listening to.
-Understand "listen to [something]" as listening to.
+Understand "tænk" as thinking.
 
-Understand "taste [something]" as tasting.
+Understand "lugt" as smelling.
+Understand "lugt [something]" as smelling.
+Understand the command "sniff" as "lugt".
 
-Understand "touch [something]" as touching.
-Understand the command "feel" as "touch".
+Understand "lyt" as listening to.
+Understand "hør [something]" as listening to.
+Understand "lyt til [something]" as listening to.
 
-Understand "rub [something]" as rubbing.
-Understand the commands "shine", "polish", "sweep", "clean", "dust", "wipe" and "scrub" as "rub".
+Understand "smag på/-- [something]" as tasting.
 
-Understand "tie [something] to [something]" as tying it to.
-Understand the commands "attach" and "fasten" as "tie".
+Understand "rør ved/-- [something]" as touching.
+Understand the command "føl" as "rør".
 
-Understand "burn [something]" as burning.
-Understand the command "light" as "burn".
+Understand "gnid [something]" as rubbing.
+Understand the commands "gnub", "skrub", "skur" and "vask" as "gnid".
 
-Understand "drink [something]" as drinking.
-Understand the commands "swallow" and "sip" as "drink".
+Understand "bind [something] til [something]" as tying it to.
+Understand the command "fæst" as "bind".
 
-Understand "cut [something]" as cutting.
-Understand the commands "slice", "prune" and "chop" as "cut".
+Understand "brænd [something]" as burning.
+Understand the commands "fyr" and "antænd" as "brænd".
 
-Understand "jump" as jumping.
-Understand the commands "skip" and "hop" as "jump".
+Understand "drik [something]" as drinking.
+Understand the commands "svælg" and "søb" as "drik".
+
+Understand "skær [something]" as cutting.
+
+Understand "spring" as jumping.
+Understand the commands "hop" as "spring".
 
 Understand "score" as requesting the score.
-Understand "quit" or "q" as quitting the game.
-Understand "save" as saving the game.
-Understand "restart" as restarting the game.
-Understand "restore" as restoring the game.
-Understand "verify" as verifying the story file.
-Understand "version" as requesting the story file version.
-Understand "copyright" as requesting copyright licences. [ TODO: Will be released in the next Inform version]
-Understand "script" or "script on" or "transcript" or "transcript on" as switching the story
-	transcript on.
-Understand "script off" or "transcript off" as switching the story transcript off.
-Understand "superbrief" or "short" as preferring abbreviated room descriptions.
-Understand "verbose" or "long" as preferring unabbreviated room descriptions.
-Understand "brief" or "normal" as preferring sometimes abbreviated room descriptions.
-Understand "nouns" or "pronouns" as requesting the pronoun meanings.
-Understand "notify" or "notify on" as switching score notification on.
-Understand "notify off" as switching score notification off.
+Understand "afslut" or "q" as quitting the game.
+Understand "gem" as saving the game.
+Understand "genstart" as restarting the game.
+Understand "hent" as restoring the game.
+Understand "bekræft" as verifying the story file.
+Understand "version" or "udgave" as requesting the story file version.
+Understand "copyright" or "ophavsret" as requesting copyright licences. [ TODO: Will be released in the next Inform version]
+Understand "script" or "script on" or "transcript" or "transcript on" or "udskrift" or "udskrift til" as switching the story transcript on.
+Understand "script off" or "transcript off" or "udskrift fra" as switching the story transcript off.
+Understand "superbrief" or "short" or "kort" or "korte" as preferring abbreviated room descriptions.
+Understand "verbose" or "long" or "lang" or "lange" as preferring unabbreviated room descriptions.
+Understand "brief" or "normal" or "normale" as preferring sometimes abbreviated room descriptions.
+Understand "pronomen", "pronominer", "pronomener" or "stedord" as requesting the pronoun meanings.
+Understand "notify" or "notify on" or "meddelelser" or "meddelelser til" as switching score notification on.
+Understand "notify off" or "meddelelser fra" as switching score notification off.
 
 @h Dialogue-related grammar.
 
@@ -242,7 +250,9 @@ doesn't compile for me yet.
 = (text as code)
 Section 2 - Dialogue-related grammar (for dialogue language element only) (in place of Section 2 - Dialogue-related grammar in Standard Rules by Graham Nelson)
 
-Understand "ask about [concept]" as talking about.
-Understand "ask about [visible thing]" as talking about.
-Understand "talk about [concept]" as talking about.
-Understand "talk about [visible thing]" as talking about.
+Understand "spørg om [concept]" as talking about.
+Understand "spørg om [visible thing]" as talking about.
+Understand "tal om [concept]" as talking about.
+Understand "tal om [visible thing]" as talking about.
+Understand "snak om [concept]" as talking about.
+Understand "snak om [visible thing]" as talking about.

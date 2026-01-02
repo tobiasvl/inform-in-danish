@@ -12,5 +12,10 @@
                 "author": "Tobias Langhoff"
             }
         }
-    ]
+    ],
+    "kit-details": {
+        "configuration-values": [
+            "CAPITALIZED_NOUNS"
+        ]
+    }
 }

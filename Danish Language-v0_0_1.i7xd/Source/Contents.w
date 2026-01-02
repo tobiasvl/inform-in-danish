@@ -10,6 +10,9 @@ Version Number: 0.0.1
 
 Sections
 	Preamble
+	Directions
+	Numbers
+	Time
 	Gender
 	Articles
 	Nouns
@@ -19,4 +22,3 @@ Sections
 	Command Grammar
 	Responses
 	Misc
-Appendix A: Prior work

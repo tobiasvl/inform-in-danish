@@ -4,7 +4,7 @@ Colony {
     member: "index" at "Danish Language-v0_0_1.i7xd/Documentation/Documentation.md" to "index.html" breadcrumbs ""
     member: "DanishLanguage" at "Danish Language-v0_0_1.i7xd/Source" to "danish"
     member: "DanishLanguageKit" at "Danish Language-v0_0_1.i7xd/Materials/Inter/DanishLanguageKit" to "dlk"
-    member: "Kappe" at "Danish Language-v0_0_1.i7xd/Documentation/Examples/Kappe af Mørke.md" to "examples/kappe.html"
+    member: "Slør" at "Danish Language-v0_0_1.i7xd/Documentation/Examples/Et slør af mørke.md" to "examples/slor.html"
 
     Navigation {
         [[Home "<logo.png@150>" -> index]]
@@ -12,8 +12,10 @@ Colony {
         [[Item "Danish Language" -> //DanishLanguage//]]
         [[Item "DanishLanguageKit"]]
         [[Menu "Examples"]]
-        [[Item "Kappe"]]
+        [[Item "Et slør af mørke" -> //Slør//]]
         [[Menu "Repository"]]
-        [[Item "<github.png@15> github" -> https://github.com/tobiasvl/inform-in-danish]]
+        [[Item "<github.png@15> GitHub" -> https://github.com/tobiasvl/inform-in-danish]]
+        [[Menu "Related projects"]]
+        [[Item "<github.png@15> Preforge" -> https://github.com/tobiasvl/preforge]]
     }
 }

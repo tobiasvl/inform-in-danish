@@ -24,15 +24,15 @@ Constant AGAIN3__WD     = 'atter';
 Constant OOPS1__WD      = 'ups';
 Constant OOPS2__WD      = 'o//';
 Constant OOPS3__WD      = 'hovsa';
-Constant UNDO1__WD      = 'undo';
-Constant UNDO2__WD      = 'undo';
+Constant UNDO1__WD      = 'fortryd';
+Constant UNDO2__WD      = 'angre';
 Constant UNDO3__WD      = 'undo';
 
-Constant ALL1__WD       = 'all';
-Constant ALL2__WD       = 'each';
-Constant ALL3__WD       = 'every';
-Constant ALL4__WD       = 'everything';
-Constant ALL5__WD       = 'both';
+Constant ALL1__WD       = 'al';
+Constant ALL2__WD       = 'alt';
+Constant ALL3__WD       = 'alle';
+Constant ALL4__WD       = 'hver';
+Constant ALL5__WD       = 'begge';
 Constant AND1__WD       = 'og';
 Constant AND2__WD       = '&';
 Constant AND3__WD       = 'og';
@@ -43,15 +43,15 @@ Constant BY__WD         = 'af';
 Constant ME1__WD        = 'mig';
 Constant ME2__WD        = 'mig selv';
 Constant ME3__WD        = 'selv';
-Constant OF1__WD        = 'of';
+Constant OF1__WD        = 'af';
 Constant OF2__WD        = 'of';
 Constant OF3__WD        = 'of';
 Constant OF4__WD        = 'of';
-Constant OTHER1__WD     = 'another';
-Constant OTHER2__WD     = 'other';
+Constant OTHER1__WD     = 'en anden';
+Constant OTHER2__WD     = 'anden';
 Constant OTHER3__WD     = 'other';
-Constant THEN1__WD      = 'then';
-Constant THEN2__WD      = 'then';
+Constant THEN1__WD      = 'derefter';
+Constant THEN2__WD      = 'så';
 Constant THEN3__WD      = 'then';
 
 Constant NO1__WD        = 'n//';
@@ -61,13 +61,13 @@ Constant YES1__WD       = 'j//';
 Constant YES2__WD       = 'ja';
 Constant YES3__WD       = 'jo';
 
-Constant AMUSING__WD    = 'amusing';
+Constant AMUSING__WD    = 'sjovt';
 Constant FULLSCORE1__WD = 'fullscore';
 Constant FULLSCORE2__WD = 'full';
 Constant QUIT1__WD      = 'q//';
-Constant QUIT2__WD      = 'quit';
-Constant RESTART__WD    = 'restart';
-Constant RESTORE__WD    = 'restore';
+Constant QUIT2__WD      = 'afslut';
+Constant RESTART__WD    = 'genstart';
+Constant RESTORE__WD    = 'hent';
 
 @h Pronouns.
 
@@ -95,6 +95,7 @@ Array LanguagePronouns table
   !             a     i
   !             s  p  s  p
   !             mfnmfnmfnmfn
+  !             0123456789AB
 
     'ham'     $$100000000000                    NULL
     'hende'   $$010000000000                    NULL
@@ -112,6 +113,7 @@ Array LanguageDescriptors table
   !             a     i
   !             s  p  s  p
   !             mfnmfnmfnmfn
+  !             0123456789AB
 
     'min'     $$110000110000    POSSESS_PK      0
     'mit'     $$001000001000    POSSESS_PK      0
@@ -165,14 +167,12 @@ format.
 This routine takes a direction and gives the corresponding adverbial form.
 =
 [ LanguageDirection d;
-    if (d.name == "nord" or "øst" or "vest" or "syd")
+    if (d == n_obj or e_obj or w_obj or s_obj)
         print (name) d, "på";
-    else if (d.name == "op" or "ned")
+    else if (d == u_obj or d_obj)
         print (name) d, "ad";
-    else if (d.name == "ud")
-        print (name) d, "enfor";
-    else if (d.name == "ind")
-        print (name) d;
+    else if (d == in_obj or out_obj)
+        print (name) d; ! These are already called "indenfor" and "udenfor"
     else
         print "mod ", (name) d;
 ];
@@ -186,42 +186,131 @@ These "callback" functions are called by Inform when needed.
     ! TODO: Is this needed?
     ! https://www.inform-fiction.org/manual/html/s36.html
 
+    ! Here we could rewrite definiteness, turn imperative into infinitive, etc.
+
 ];
 
-[ LanguageRefers obj wnum;
+@h Referring to indefinite objects.
+
+We want players to be able to refer to things by their indefinite names.
+=
+[ LanguageRefers obj wnum   k wd m l;
 
     ! Inflect? What is indirect_parser_inflection ?
 
+    ! TODO: add non-attributive names here - but how?
+
+     k = wn; wn = wnum; wd = NextWordStopped(); wn = k;
+
+    !for (k=0: k<obj.#short_name_indef: k++)
+    !    for (m=0: m<WordLength(wnum): m++)
+    !        for (l=1: l<obj.short_name_indef->k-->0: l++)
+    !            if (obj.short_name_indef->k-->l ~= WordAddress(wnum)->l) {
+    !                !print (char) obj.short_name_indef->k-->(l+1), "!=", (char) WordAddress(wnum)->l;
+    !                rfalse;
+    !            }
+
+    !if (WordInProperty(WordAddress(wnum), obj, short_name_indef)) rtrue;
+    !if (WordInProperty(WordAddress(wnum), obj, short_name)) rtrue;
+
+    !if (obj has pluralname) {
+    !    if (WordInProperty(wd, obj, plural_indef)) rtrue;
+    !    if (WordInProperty(wd, obj, plural)) rtrue;
+    !}
+    
+    !m = short_name_indef;
+    !k = obj.&m; l = (obj.#m)/WORDSIZE-1;
+    !for (m=0 : m<=l : m++)
+    !    print "checking short_name_indef word:", k-->m, "against", wd, "^";
+    !    if (wd == k-->m) {
+    !        print "found short_name_indef";
+    !        rtrue;
+    !    }
+    !m = short_name;
+    !k = obj.&m; l = (obj.#m)/WORDSIZE-1;
+    !for (m=0 : m<=l : m++)
+    !    if (wd == k-->m) {
+    !        print "found short_name";
+    !        rtrue;
+    !    }
+    !m = plural_indef;
+    !k = obj.&m; l = (obj.#m)/WORDSIZE-1;
+    !for (m=0 : m<=l : m++)
+    !    if (wd == k-->m) {
+    !        print "found plural_indef";
+    !        rtrue;
+    !    }
+    !m = plural;
+    !k = obj.&m; l = (obj.#m)/WORDSIZE-1;
+    !for (m=0 : m<=l : m++)
+    !    if (wd == k-->m) {
+    !        print "found plural";
+    !        rtrue;
+    !    }
+    !print "LanguageRefers failed with", parser_inflection, "^";
     return -1;
 ];
 
-@h Inflecting adjectives.
+@h Capitalizing nouns.
 
-In English, Inform does not care about the difference between an adjective that
-is part of a noun's name, and a compound noun. It doesn't need to.
+This routine handles the capitalization of nouns in some situations (definite
+nouns without articles, and archaic capitalized nouns).
 
-A "hot dog" is semantically ambiguous -- it can either be a warm feline or a
-specific type of sausage -- but syntactically it doesn't matter, since
-adjectives aren't inflected in English.
+This routine is a hook called by STANDARD_NAME_PRINTING_R (the standard
+name printing rule). We'll only use it to capitalize the name if needed, because
+the standard name printing rule defers only to |cap_short_name| for that, but we
+want to print the capitalized version of any name in some circumstances.
 
-(Adjectives in English do inflect for degrees of comparison, so the dog can get
-hotter and hottest, which Inform does support -- see //DanishLanguage// -- but not
-when printing adjectives that are part of a noun's name.)
+In an ideal world, we would also use this routine to inflect adjectives, but
+that currently doesn't work, so we have to use say phrases as a fallback (see
+TODO: Adjectives).
 
-So in English, Inform simply inflects the last word in a noun's name for
-number, and leaves all other words alone: a hot dog, the hot dog, some hot
-dogs.
+Note that for Z-machine games, we should be able to use CPrintOrRun instead of
+what we do here, but that routine doesn't work for Glulx games, so we do it a
+bit more manually here, which should work for both. CPrintOrRun not working for
+Glulx might be a bug in Inform, and has been reported as //I7-2642 -> https://inform7.atlassian.net/browse/I7-2642//.
 
-In Danish, however, we need to inflect adjectives for gender and
-number/definiteness (an adjective inflected in the definite or in the plural
-looks the same).
-
+TODO: If the capitalized nouns option is active, we should capitalize the last
+word in the name, to handle names with adjectives properly. Currently it only
+works for non-attributive nouns.
 =
-[ LanguagePrintShortName obj;
+[ LanguagePrintShortName obj  k m wnum l  i prop;
+    if (caps_mode || DanishLanguageKit`CAPITALIZED_NOUNS_CFGF) {
+        if (indef_mode && obj provides short_name_indef) {
+            prop = short_name_indef;
+        } else {
+            if (obj provides cap_short_name && PrintOrRun(obj, cap_short_name, true) ~= 0) {
+                caps_mode = false;
+                rtrue;
+            } else {
+                prop = short_name;
+            }
+        }
 
-    ! Inflect words as adjectives ! TODO
+        ! Here we capitalize the first letter of the relevant printed name.
+        #Ifdef TARGET_GLULX;
+            TEXT_TY_Say_Capitalised(obj.prop);
+        #Ifnot;
+            CPrintOrRun(obj, prop);
+        #Endif;
 
+        !! Here's the old code that manually capitalized the first letter.
+        !! Indefinite names are usually shorter than the definite names (ie.
+        !! "short names"), so we assume StorageForShortName is big enough.
+        !! TODO: This might not hold for plural definite names.
+        ! VM_PrintToBuffer(StorageForShortName, obj.prop-->0, obj, prop);
+        ! StorageForShortName-->1 = VM_LowerToUpperCase(StorageForShortName-->1);
+        ! for (i = 1: i < StorageForShortName-->0 - 1: i++) {
+        !     print (char) StorageForShortName-->i;
+        ! }
+
+        caps_mode = false;
+        rtrue;
+    }
+    
     rfalse;
+
+    ! TODO: What about plurals?
 ];
 
 @h Default genders.
@@ -272,16 +361,10 @@ adjective in a |name| property.
 =
 [ LanguageVerb i;
     switch (i) {
-! ! These will need to be connected to the actual commands:
-!      'i//', 'inv', 'inventar', 't//':     print "status";
-!      'k//', 'l//':     print "se";
-!      'u//', 'x//':     print "undersøg";
-!      'z//':            print "vent";
-      'i//','inv','inventory':
-               print "take inventory";
-      'l//':   print "look";
-      'x//':   print "examine";
-      'z//':   print "wait";
+      'i//', 'inv', 'inventar', 't//':     print "status";
+      'k//', 'l//':     print "se";
+      'u//', 'x//':     print "undersøg";
+      'z//':            print "vent";
       default: rfalse;
     }
     rtrue;
@@ -305,10 +388,11 @@ routines:
 
 =
 [ LanguageIsVerb buffer parse verb_wordnum;
+    ! TODO: remove a trailing -e from the word to naively convert it from infinitive to imperative and see if that's a command verb
 	rfalse;
 ];
 
-Constant LanguageContractionForms = 1; ! Danish doesn't use article contractions, so it only has one form
+Constant LanguageContractionForms = 1;
 
 [ LanguageContraction;
     rfalse;

@@ -5,10 +5,12 @@
         "author": "Tobias Langhoff",
         "version": "0.0.1"
     },
-    "needs": [ {
-        "need": {
-            "type": "kit",
-            "title": "DanishLanguageKit"
+    "needs": [
+        {
+            "need": {
+                "type": "kit",
+                "title": "DanishLanguageKit"
+            }
         }
-    } ]
+    ]
 }
