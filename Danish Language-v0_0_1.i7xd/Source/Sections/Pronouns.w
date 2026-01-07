@@ -659,8 +659,6 @@ Include (-
 @h Announcing pronoun meanings.
 
 We redefine this just to replace the quotation marks with Danish ones.
-
-TODO: We should probably use the quotation marks that have been used.
 =
 Include (-
 	[ ANNOUNCE_PRONOUN_MEANINGS_R x y c d;
@@ -673,7 +671,10 @@ Include (-
 		if (c==0) { ANNOUNCE_PRONOUN_MEANINGS_RM('D'); rtrue; }
 
 		for (x = 1, d = 0 : x <= LanguagePronouns-->0: x = x+3) {
-			print "»", (address) LanguagePronouns-->x, "« ";
+			PrintQuoteOpen();
+			print (address) LanguagePronouns-->x;
+			PrintQuoteClose();
+			print " ";
 			y = LanguagePronouns-->(x+2);
 			if (y == NULL) ANNOUNCE_PRONOUN_MEANINGS_RM('C');
 			else { ANNOUNCE_PRONOUN_MEANINGS_RM('B'); print (the) y; }
@@ -685,7 +686,11 @@ Include (-
 			}
 		}
 		if (player ~= selfobj) {
-			print "»", (address) ME1__WD, "« "; ANNOUNCE_PRONOUN_MEANINGS_RM('B');
+			PrintQuoteOpen();
+			print (address) ME1__WD;
+			PrintQuoteClose();
+			print " ";
+			ANNOUNCE_PRONOUN_MEANINGS_RM('B');
 			c = player; player = selfobj;
 			print (the) c; player = c;
 		}

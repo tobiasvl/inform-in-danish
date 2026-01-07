@@ -249,17 +249,49 @@ To say kantet parentes -- running on: say bracket.
 To say luk kantet parentes -- running on: say close bracket.
 To say apostrof -- running on: say apostrophe.
 
-[ TODO make these customizable ]
-To say anførselstegn -- running on:
-	say unicode 8222.
-To say luk anførselstegn -- running on:
-	say unicode 8220.
 To say citat -- running on:
-	say unicode 8222.
-To say luk citat -- running on:
-	say unicode 8220.
+	if the angled quotes option is active:
+		say "»";
+	otherwise if the curly quotes option is active:
+		say "„";
+	otherwise:
+		say quotation mark.
+
 To say citat slut -- running on:
-	say unicode 8220.
+	if the angled quotes option is active:
+		say "«";
+	otherwise if the curly quotes option is active:
+		say "“";
+	otherwise:
+		say quotation mark.
+
+To say anførselstegn -- running on:
+	say citat.
+To say luk anførselstegn -- running on:
+	say citat slut.
+To say luk citat -- running on:
+	say citat slut.
+
+Use angled quotes translates as the configuration value QUOTE_STYLE = 1 in DanishLanguageKit.
+Use curly quotes translates as the configuration value QUOTE_STYLE = 2 in DanishLanguageKit.
+
+Include (-
+	[ PrintQuoteOpen;
+		switch (DanishLanguageKit`QUOTE_STYLE_CFGV) {
+			1: print "»";
+			2: print "„";
+			default: print "~";
+		}
+	];
+	
+	[ PrintQuoteClose;
+		switch (DanishLanguageKit`QUOTE_STYLE_CFGV) {
+			1: print "«";
+			2: print "“";
+			default: print "~";
+		}
+	];
+-).
 
 @h Final question.
 

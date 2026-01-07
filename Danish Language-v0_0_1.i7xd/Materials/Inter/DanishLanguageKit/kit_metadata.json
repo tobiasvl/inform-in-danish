@@ -15,7 +15,8 @@
     ],
     "kit-details": {
         "configuration-values": [
-            "CAPITALIZED_NOUNS"
+            "CAPITALIZED_NOUNS",
+            "QUOTE_STYLE"
         ]
     }
 }

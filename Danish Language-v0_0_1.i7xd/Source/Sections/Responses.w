@@ -102,7 +102,7 @@ The parser error internal rule response (H) is "Du kan ikke bruge flere objekter
 
 "examine her" when there is no "her" in the location
 =
-The parser error internal rule response (J) is "Jeg er ikke sikker på, hvem eller hvad »[pronoun i6 dictionary word]« refererer til.".
+The parser error internal rule response (J) is "Jeg er ikke sikker på, hvem eller hvad [citat][pronoun i6 dictionary word][citat slut] refererer til.".
 
 @ the last noun referred to is not in the current location, so Inform 7 doesn't understand the pronoun used
 
@@ -152,7 +152,7 @@ The parser error internal rule response (V) is "Du kan ikke tale med [substantiv
 
 "bob asldkf, jump"
 =
-The parser error internal rule response (W) is "For at tale til nogen, prøv »nogen, hej« eller noget i den stil.".
+The parser error internal rule response (W) is "For at tale til nogen, prøv [citat]nogen, hej[citat slut] eller noget i den stil.".
 
 @ enter an empty (blank) command
 =
@@ -202,7 +202,7 @@ The parser command internal rule response (B) is "Pyt, alt i orden.".
 
 "oops take ball"
 =
-The parser command internal rule response (C) is "»Ups« kan kun korrigere et enkelt ord.".
+The parser command internal rule response (C) is "[citat]Ups[citat slut] kan kun korrigere et enkelt ord.".
 
 @ using the again command on the first turn of a game. restoring a save should not have this effect since saves contain previous command information
 =
@@ -277,7 +277,7 @@ The immediately undo rule response (B) is "Du kan ikke fortryde det, der ikke er
 
 @ hopefully this never comes up, unless the project targets retro systems with limited resources. perhaps not even then. I'm not aware of a specific interpreter with this limitation, especially not one capable of running Glulx games.
 =
-The immediately undo rule response (C) is "Din fortolker understøtter ikke 'fortryd'. Beklager!".
+The immediately undo rule response (C) is "Din fortolker understøtter ikke [citat]fortryd[citat slut]. Beklager!".
 
 @ standard Undo response. If you want more control over undo behavior, I recommend the extension "undo output control" by nathanael nerode.
 =
@@ -285,7 +285,7 @@ The immediately undo rule response (E) is "[bracket]Forrige træk fortrudt.[clos
 
 @ the undo stack is held in memory, and the number of turns that can be undone will vary according to computing conditions. but once you're out, you're out.
 =
-The immediately undo rule response (F) is "'Undo' capacity exhausted. Sorry!".
+The immediately undo rule response (F) is "[citat]Fortryd[citat slut]-kapacitet udtømt. Beklager!".
 
 @ standard responses based on starting stopping etc
 =
@@ -305,11 +305,11 @@ The switch the story transcript off rule response (A) is "Transcripting is alrea
 The switch the story transcript off rule response (B) is "[line break]End of transcript.".
 The switch the story transcript off rule response (C) is "Attempt to end transcript failed.".
 
-@ changing room description preferences. rarely used these days.]
+@ changing room description preferences. rarely used these days.
 =
-The standard report preferring abbreviated room descriptions rule response (A) is " is now in its 'superbrief' mode, which always gives short descriptions of locations (even if you haven't been there before).".
-The standard report preferring unabbreviated room descriptions rule response (A) is " is now in its 'verbose' mode, which always gives long descriptions of locations (even if you've been there before).".
-The standard report preferring sometimes abbreviated room descriptions rule response (A) is " is now in its 'brief' printing mode, which gives long descriptions of places never before visited and short descriptions otherwise.".
+The standard report preferring abbreviated room descriptions rule response (A) is " er nu i [citat]superkort[citat slut]-tilstand, som altid giver korte beskrivelser af steder (selv hvis du ikke har været der før).".
+The standard report preferring unabbreviated room descriptions rule response (A) is " er nu i [citat]udførlig[citat slut]-tilstand, som altid giver lange beskrivelser af steder (selv hvis du har været der før).".
+The standard report preferring sometimes abbreviated room descriptions rule response (A) is " er nu i [citat]kort[citat slut]-tilstand, som giver lange beskrivelser af steder du ikke har besøgt før, og korte beskrivelser ellers.".
 
 @ pertaining to endings and final questions
 =
