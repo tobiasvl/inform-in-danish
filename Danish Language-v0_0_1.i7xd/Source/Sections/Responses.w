@@ -172,7 +172,7 @@ The parser nothing error internal rule response (C) is "[Substantivet] [har] int
 
 "put coin in sword"
 =
-The parser nothing error internal rule response (D) is "[regarding the noun][De] [kan] ikke indeholde noget.".
+The parser nothing error internal rule response (D) is "[om substantivet][De] [kan] ikke indeholde noget.".
 
 @ trying to take something from a closed opaque container, whether there's anything there or not. Alternately, trying to take all from an empty transparent container, because there's nothing there to create a "can't reach into containers" message. Trust me! If you want to account for both transparent and opaque contaienrs, here's an example with conditional text.
 =
@@ -334,7 +334,7 @@ The standard report switching score notification off rule response (A) is "Score
 =
 Section 5 (descriptions and appearances)
 
-@ when we have asserted an "initial appearance" for something, it will get its own paragraph in the room description. other litems will be listed, constructed from A through F]
+@ when we have asserted an "initial appearance" for something, it will get its own paragraph in the room description. other litems will be listed, constructed from A through F
 =
 The you-can-also-see rule response (A) is "[Du] [kan] ".
 The you-can-also-see rule response (B) is "På [the domain] [kan] [du] ".
@@ -404,30 +404,30 @@ Section 8 (taking, dropping, inserting, putting)
 =
 The can't take yourself rule response (A) is "[Du] [er] altid selvbevidste.".
 The can't take other people rule response (A) is "Jeg tror ikke, [substantivet] [vil] lide det.".
-The can't take component parts rule response (A) is "[regarding the noun][De] [virker] at være en del af [the whole].".
+The can't take component parts rule response (A) is "[om substantivet][De] [virker] at være en del af [the whole].".
 
 [ IMPORTANT: This rule only applies to TAKING things that are held by NPCs. REMOVING things, or TAKING things FROM is a separate action that has its own ruleset. Those cases are generally covered by the The can't remove from people rule response (A). If the NPC is not holding anything, a parser error is generated instead: the parser nothing error internal rule response (C).]
 
-The can't take people's possessions rule response (A) is "[regarding the noun][De] [virker] at høre til [the owner].".
-[ The can't take items out of play rule response (A) is "[regarding the noun][Those] [aren't] available.".] [ TODO has been removed ]
+The can't take people's possessions rule response (A) is "[om substantivet][De] [virker] at høre til [the owner].".
+[ The can't take items out of play rule response (A) is "[om substantivet][Those] [aren't] available.".] [ TODO has been removed ]
 The can't take what you're inside rule response (A) is "[Du] [vil] måtte gå [if noun is a supporter]af[otherwise]ud af[end if] [substantivet] først.".
-The can't take what's already taken rule response (A) is "[Du] [har] [regarding the noun][dem] allerede.".
-The can't take scenery rule response (A) is "[regarding the noun][De] [er] næppe bærbar[e].".
+The can't take what's already taken rule response (A) is "[Du] [har] [om substantivet][dem] allerede.".
+The can't take scenery rule response (A) is "[om substantivet][De] [er] næppe bærbar[e].".
 [ The can only take things rule response (A) is "[We] [cannot] carry [the noun].".] [ TODO has been removed ]
-The can't take what's fixed in place rule response (A) is "[regarding the noun][De] [er] ikke til at flytte.".
+The can't take what's fixed in place rule response (A) is "[om substantivet][De] [er] ikke til at flytte.".
 The use player's holdall to avoid exceeding carrying capacity rule response (A) is "(efter at have puttet [the transferred item] indeni [the current working sack] for at skabe plads)[command clarification break]".
 The can't exceed carrying capacity rule response (A) is "[Du] [bærer] allerede for mange ting.".
 The standard report taking rule response (A) is "Taget.".
 The standard report taking rule response (B) is "[The actor] [samler] op [substantivet].".
-The can't remove what's not inside rule response (A) is "Men [regarding the noun][de] [er] der ikke [nu].".
+The can't remove what's not inside rule response (A) is "Men [om substantivet][de] [er] der ikke [nu].".
 
 [ IMPORTANT: This rule only applies to REMOVING (or TAKING) things FROM NPCs. TAKING things that are held by an NPC involves a separate action that has its own ruleset. Those cases are generally covered by the The can't take people's possessions rule response (A). If the NPC is not holding anything, a parser error is generated instead: the parser nothing error internal rule response (C).]
 
-The can't remove from people rule response (A) is "[regarding the noun][De] [virker] at høre til [the owner].".
+The can't remove from people rule response (A) is "[om substantivet][De] [virker] at høre til [the owner].".
 The can't drop yourself rule response (A) is "[Du] [mangler] fingerfærdigheden.".
 The can't drop body parts rule response (A) is "[Du] [kan] ikke smide en del af [dig selv] selv.". [ TODO reflexive pronoun ]
 The can't drop what's already dropped rule response (A) is "[Substantivet] [er] allerede her.".
-The can't drop what's not held rule response (A) is "[Du] [har] ikke [regarding the noun][dem].".
+The can't drop what's not held rule response (A) is "[Du] [har] ikke [om substantivet][dem].".
 The can't drop clothes being worn rule response (A) is "(efter at have taget [substantivet] af)[command clarification break]".
 The can't drop if this exceeds carrying capacity rule response (A) is "[Der] [er] ikke mere plads på [the receptacle].".
 The can't drop if this exceeds carrying capacity rule response (B) is "[Der] [er] ikke mere plads i [the receptacle].".
@@ -435,7 +435,7 @@ The standard report dropping rule response (A) is "Smidt.".
 The standard report dropping rule response (B) is "[The actor] [lægger] ned [substantivet].".
 The can't put something on itself rule response (A) is "[Du] [kan] ikke lægge noget ovenpå sig selv.".
 The can't put onto what's not a supporter rule response (A) is "At lægge ting på [det andet substantiv] [vil] ikke opnå noget.".
-The can't put clothes being worn rule response (A) is "(efter at have taget [regarding the noun][dem] af)[command clarification break]".
+The can't put clothes being worn rule response (A) is "(efter at have taget [om substantivet][dem] af)[command clarification break]".
 The can't put if this exceeds carrying capacity rule response (A) is "[Der] [er] ikke mere plads på [det andet substantiv].".
 The concise report putting rule response (A) is "Gjort.".
 The standard report putting rule response (A) is "[The actor] [lægger] [substantivet] på [det andet substantiv].".
@@ -443,7 +443,7 @@ The can't insert what's already inserted rule response (A) is "[Substantivet] [e
 The can't insert something into itself rule response (A) is "[Du] [kan] ikke lægge noget indeni sig selv.".
 The can't insert into closed containers rule response (A) is "[Det andet substantiv] [er] lukket.".
 The can't insert into what's not a container rule response (A) is "[regarding the second noun][De] [kan] ikke indeholde ting.".
-The can't insert clothes being worn rule response (A) is "(efter at have taget [regarding the noun][dem] af)[command clarification break]".
+The can't insert clothes being worn rule response (A) is "(efter at have taget [om substantivet][dem] af)[command clarification break]".
 The can't insert if this exceeds carrying capacity rule response (A) is "[Der] [er] ikke mere plads i [det andet substantiv].".
 The concise report inserting rule response (A) is "Gjort.".
 The standard report inserting rule response (A) is "[The actor] [lægger] [substantivet] ind i [det andet substantiv].".
@@ -474,20 +474,20 @@ The describe room gone into rule response (K) is "[The actor] [går] gennem [the
 The describe room gone into rule response (L) is "[The actor] [ankommer] fra [the noun]".
 The describe room gone into rule response (M) is "på [the vehicle gone by]".
 The describe room gone into rule response (N) is "i [the vehicle gone by]".
-The describe room gone into rule response (O) is ", pushing [the thing gone with] in front, and [us] along too".
-The describe room gone into rule response (P) is ", pushing [the thing gone with] in front".
-The describe room gone into rule response (Q) is ", pushing [the thing gone with] away".
-The describe room gone into rule response (R) is ", pushing [the thing gone with] in".
-The describe room gone into rule response (S) is ", taking [us] along".
+The describe room gone into rule response (O) is ", mens [de] [skubber] [the thing gone with] foran, og [dig] med også". [ TODO: check if "[de]" is correct here]
+The describe room gone into rule response (P) is ", mens [de] [skubber] [the thing gone with] foran".
+The describe room gone into rule response (Q) is ", mens [de] [skubber] [the thing gone with] væk".
+The describe room gone into rule response (R) is ", mens [de] [skubber] [the thing gone with] ind".
+The describe room gone into rule response (S) is ", og [tager] [dig] med".
 The can't enter what's already entered rule response (A) is "Men [du] [er] allerede på [substantivet].".
 The can't enter what's already entered rule response (B) is "Men [du] [er] allerede i [substantivet].".
-The can't enter what's not enterable rule response (A) is "[regarding the noun][De] [er] ikke noget [du] [kan] stå på.".
-The can't enter what's not enterable rule response (B) is "[regarding the noun][De] [er] ikke noget [du] [kan] sidde på.".
-The can't enter what's not enterable rule response (C) is "[regarding the noun][De] [er] ikke noget [du] [kan] ligge på.".
-The can't enter what's not enterable rule response (D) is "[regarding the noun][De] [er] ikke noget [du] [kan] gå ind i.".
-The can't enter closed containers rule response (A) is "[Du] [kan] ikke gå ind i den lukkede [noun].".
-The can't enter if this exceeds carrying capacity rule response (A) is "[Der] [er] ikke mere plads på [the noun].".
-The can't enter if this exceeds carrying capacity rule response (B) is "[Der] [er] ikke mere plads i [the noun].".
+The can't enter what's not enterable rule response (A) is "[om substantivet][De] [er] ikke noget [du] [kan] stå på.".
+The can't enter what's not enterable rule response (B) is "[om substantivet][De] [er] ikke noget [du] [kan] sidde på.".
+The can't enter what's not enterable rule response (C) is "[om substantivet][De] [er] ikke noget [du] [kan] ligge på.".
+The can't enter what's not enterable rule response (D) is "[om substantivet][De] [er] ikke noget [du] [kan] gå ind i.".
+The can't enter closed containers rule response (A) is "[Du] [kan] ikke gå ind i [om substantivet][dem] lukkede [noun].". [ TODO fix article? ]
+The can't enter if this exceeds carrying capacity rule response (A) is "[Der] [er] ikke mere plads på [substantivet].".
+The can't enter if this exceeds carrying capacity rule response (B) is "[Der] [er] ikke mere plads i [substantivet].".
 The can't enter something carried rule response (A) is "[Du] [kan] kun komme ind i noget, der står frit.".
 The implicitly pass through other barriers rule response (A) is "(efter at have gået af [the current home])[command clarification break]".
 The implicitly pass through other barriers rule response (B) is "(efter at have gået ud af [the current home])[command clarification break]".
@@ -499,25 +499,25 @@ The standard report entering rule response (B) is "[Du] [kommer] ind i [substant
 The standard report entering rule response (C) is "[The actor] [kommer] ind i [substantivet].".
 The standard report entering rule response (D) is "[The actor] [kommer] op på [substantivet].".
 The can't exit when not inside anything rule response (A) is "Men [du] [er] ikke i noget [if story tense is present tense]i øjeblikket[otherwise]på tidspunktet[end if].".
-The can't exit closed containers rule response (A) is "You can't get out of the closed [cage].".
-The standard report exiting rule response (A) is "[We] [get] off [the container exited from].".
-The standard report exiting rule response (B) is "[We] [get] out of [the container exited from].".
-The standard report exiting rule response (C) is "[The actor] [get] out of [the container exited from].".
-The can't get off things rule response (A) is "But [we] [aren't] on [the noun] at the [if story tense is present tense]moment[otherwise]time[end if].".
-The standard report getting off rule response (A) is "[The actor] [get] off [the noun].".
+The can't exit closed containers rule response (A) is "[Du] [kan] ikke komme ud af [om substantivet][dem] lukkede [substantivet].".
+The standard report exiting rule response (A) is "[Du] [går] af [the container exited from].".
+The standard report exiting rule response (B) is "[Du] [går] ud af [the container exited from].".
+The standard report exiting rule response (C) is "[The actor] [går] ud af [the container exited from].".
+The can't get off things rule response (A) is "Men [du] [er] ikke på [substantivet] [if story tense is present tense]lige nu[otherwise]på tidspunktet[end if].".
+The standard report getting off rule response (A) is "[The actor] [går] af [substantivet].".
 
 @h Locks and locking.
 =
 Section 10 (locks and locking)
 
-The can't lock without a lock rule response (A) is "[regarding the noun][De] [ser] ikke ud til at være noget, [du] [kan] låse.".
-The can't lock what's already locked rule response (A) is "[regarding the noun][De] [er] låst [if story tense is present tense]i øjeblikket[otherwise]på tidspunktet[end if].".
+The can't lock without a lock rule response (A) is "[om substantivet][De] [ser] ikke ud til at være noget, [du] [kan] låse.".
+The can't lock what's already locked rule response (A) is "[om substantivet][De] [er] låst [if story tense is present tense]i øjeblikket[otherwise]på tidspunktet[end if].".
 The can't lock what's open rule response (A) is "Først [skal] [du] lukke [substantivet].".
 The can't lock without the correct key rule response (A) is "[regarding the second noun][De] [ser] ikke ud til at passe til låsen.".
 The standard report locking rule response (A) is "[Du] [låser] [substantivet].".
 The standard report locking rule response (B) is "[The actor] [låser] [substantivet].".
-The can't unlock without a lock rule response (A) is "[regarding the noun][De] [ser] ikke ud til at være noget, [du] [kan] låse op.".
-The can't unlock what's already unlocked rule response (A) is "[regarding the noun][De] [er] ulåst [if story tense is present tense]i øjeblikket[otherwise]på tidspunktet[end if].".
+The can't unlock without a lock rule response (A) is "[om substantivet][De] [ser] ikke ud til at være noget, [du] [kan] låse op.".
+The can't unlock what's already unlocked rule response (A) is "[om substantivet][De] [er] ulåst [if story tense is present tense]i øjeblikket[otherwise]på tidspunktet[end if].".
 The can't unlock without the correct key rule response (A) is "[regarding the second noun][De] [ser] ikke ud til at passe til låsen.".
 The standard report unlocking rule response (A) is "[Du] [låser] op [substantivet].".
 The standard report unlocking rule response (B) is "[The actor] [låser] op [substantivet].".
@@ -525,20 +525,20 @@ The standard report unlocking rule response (B) is "[The actor] [låser] op [sub
 =
 Section 11 (devices)
 
-The can't switch on unless switchable rule response (A) is "[regarding the noun][De] [er] ikke noget, [du] [kan] tænde.".
-The can't switch on what's already on rule response (A) is "[regarding the noun][De] [er] allerede tændt.".
+The can't switch on unless switchable rule response (A) is "[om substantivet][De] [er] ikke noget, [du] [kan] tænde.".
+The can't switch on what's already on rule response (A) is "[om substantivet][De] [er] allerede tændt.".
 The standard report switching on rule response (A) is "[The actor] [tænder] [substantivet].".
-The can't switch off unless switchable rule response (A) is "[regarding the noun][De] [er] ikke noget, [du] [kan] slukke.".
-The can't switch off what's already off rule response (A) is "[regarding the noun][De] [er] allerede slukket.".
+The can't switch off unless switchable rule response (A) is "[om substantivet][De] [er] ikke noget, [du] [kan] slukke.".
+The can't switch off what's already off rule response (A) is "[om substantivet][De] [er] allerede slukket.".
 The standard report switching off rule response (A) is "[The actor] [slukker] [substantivet].".
 
 @h Opening and closing.
 =
 Section 12 (opening and closing)
 
-The can't open unless openable rule response (A) is "[regarding the noun][De] [er] ikke noget, [du] [kan] åbne.".
-The can't open what's already open rule response (A) is "[regarding the noun][De] [er] allerede åbne.".
-The can't open what's locked rule response (A) is "[regarding the noun][De] [ser] ud til at være låst.".
+The can't open unless openable rule response (A) is "[om substantivet][De] [er] ikke noget, [du] [kan] åbne.".
+The can't open what's already open rule response (A) is "[om substantivet][De] [er] allerede åbne.".
+The can't open what's locked rule response (A) is "[om substantivet][De] [ser] ud til at være låst.".
 
 [ opening an opaque container that contains something]
 
@@ -546,8 +546,8 @@ The reveal any newly visible interior rule response (A) is "[Du] [åbner] [subst
 
 The standard report opening rule response (A) is "[Du] [åbner] [substantivet].".
 The standard report opening rule response (B) is "[The actor] [åbner] [substantivet].".
-The can't close unless openable rule response (A) is "[regarding the noun][De] [er] ikke noget, [du] [kan] lukke.".
-The can't close what's already closed rule response (A) is "[regarding the noun][De] [er] allerede lukke[t-de].".
+The can't close unless openable rule response (A) is "[om substantivet][De] [er] ikke noget, [du] [kan] lukke.".
+The can't close what's already closed rule response (A) is "[om substantivet][De] [er] allerede lukke[t-de].".
 The standard report closing rule response (A) is "[Du] [lukker] [substantivet].".
 The standard report closing rule response (B) is "[The actor] [lukker] [substantivet].".
 
@@ -555,9 +555,9 @@ The standard report closing rule response (B) is "[The actor] [lukker] [substant
 =
 Section 13 (wearing and taking off)
 
-The can't wear what's not clothing rule response (A) is "[Du] [kan] ikke tage [regarding the noun][dem] på!".
-[ The can't wear what's not held rule response (A) is "[Du] [holder] [regarding the noun][dem] ikke!". ] [ TODO removed in 10.2? ]
-The can't wear what's already worn rule response (A) is "[We]['re] already wearing [regarding the noun][those]!".
+The can't wear what's not clothing rule response (A) is "[Du] [kan] ikke tage [om substantivet][dem] på!".
+[ The can't wear what's not held rule response (A) is "[Du] [holder] [om substantivet][dem] ikke!". ] [ TODO removed in 10.2? ]
+The can't wear what's already worn rule response (A) is "[Du] [har] allerede [om substantivet][dem] på.".
 The standard report wearing rule response (A) is "[Du] [tager] [substantivet] på.".
 The standard report wearing rule response (B) is "[The actor] [tager] [substantivet] på.".
 The can't take off what's not worn rule response (A) is "[Du] [har] ikke [substantivet] på.".
@@ -585,23 +585,23 @@ The standard report giving rule response (C) is "[The actor] [giver] [substantiv
 =
 Section 15 (manipulating objects)
 
-The can't pull what's fixed in place rule response (A) is "[regarding the noun][De] [er] ikke til at flytte.".
+The can't pull what's fixed in place rule response (A) is "[om substantivet][De] [er] ikke til at flytte.".
 The can't pull scenery rule response (A) is "[Du] [kan] ikke.".
 The can't pull people rule response (A) is "[Substantivet] [kan] måske ikke lide det.".
 The report pulling rule response (A) is "Intet åbenbart [sker].".
 The report pulling rule response (B) is "[The actor] [trækker] [substantivet].".
-The can't push what's fixed in place rule response (A) is "[regarding the noun][De] [er] ikke til at flytte.".
+The can't push what's fixed in place rule response (A) is "[om substantivet][De] [er] ikke til at flytte.".
 The can't push scenery rule response (A) is "[Du] [kan] ikke.".
 The can't push people rule response (A) is "[Substantivet] [kan] måske ikke lide det.".
 The report pushing rule response (A) is "Intet åbenbart [sker].".
 The report pushing rule response (B) is "[The actor] [skubber] [substantivet].".
-The can't turn what's fixed in place rule response (A) is "[regarding the noun][De] [er] ikke til at flytte.".
+The can't turn what's fixed in place rule response (A) is "[om substantivet][De] [er] ikke til at flytte.".
 The can't turn scenery rule response (A) is "[Du] [kan] ikke.".
 The can't turn people rule response (A) is "[Substantivet] [kan] måske ikke lide det.".
 The report turning rule response (A) is "Intet åbenbart [sker].".
 The report turning rule response (B) is "[The actor] [drejer] [substantivet].".
 The can't push unpushable things rule response (A) is "[Substantivet] [kan] ikke  skubbes fra sted til sted.".
-The can't push to non-directions rule response (A) is "[regarding the noun][De] [er] ikke en retning.".
+The can't push to non-directions rule response (A) is "[om substantivet][De] [er] ikke en retning.".
 The can't push vertically rule response (A) is "[Substantivet] [kan] ikke skubbes op eller ned.".
 The can't push from within rule response (A) is "[Substantivet] [kan] ikke skubbes herfra.".
 The block pushing in directions rule response (A) is "[Substantivet] [kan] ikke skubbes fra sted til sted.".
@@ -626,7 +626,7 @@ The report touching other people rule response (B) is "[The actor] [rører] ved 
 The report touching other people rule response (C) is "[The actor] [rører] ved [substantivet].".
 The report touching things rule response (A) is "[Du] [føler] intet uventet.".
 The report touching things rule response (B) is "[The actor] [rører] ved [substantivet].".
-The can't wave what's not held rule response (A) is "Men [du] [bærer] [regarding the noun][dem] ikke.".
+The can't wave what's not held rule response (A) is "Men [du] [bærer] [om substantivet][dem] ikke.".
 The report waving things rule response (A) is "[Du] [vifter] med [substantivet].".
 The report waving things rule response (B) is "[The actor] [vifter] med [substantivet].".
 The innuendo about squeezing people rule response (A) is "[Substantivet] [kan] måske ikke lide det.".
@@ -641,7 +641,7 @@ The report listening rule response (A) is "[Du] [hører] intet uventet.".
 The report listening rule response (B) is "[The actor] [lytter].".
 The report tasting rule response (A) is "[Du] [smager] intet uventet.".
 The report tasting rule response (B) is "[The actor] [smager] på [substantivet].".
-The block cutting rule response (A) is "At skære [regarding the noun][dem] op [vil] ikke opnå meget.".
+The block cutting rule response (A) is "At skære [om substantivet][dem] op [vil] ikke opnå meget.".
 The report jumping rule response (A) is "[Du] [hopper] på stedet.".
 The report jumping rule response (B) is "[The actor] [hopper] på stedet.".
 The block tying rule response (A) is "[Du] [vil] ikke opnå noget ved dette.".
@@ -651,13 +651,13 @@ The block swinging rule response (A) is "[Der] er intet fornuftigt at svinge her
 The can't rub another person rule response (A) is "[Substantivet] [kan] måske ikke lide det.".
 The report rubbing rule response (A) is "[Du] [gnider] [substantivet].".
 The report rubbing rule response (B) is "[The actor] [gnider] [substantivet].".
-The block setting it to rule response (A) is "Nej, [du] [kan] ikke sætte [regarding the noun][dem] til noget.".
+The block setting it to rule response (A) is "Nej, [du] [kan] ikke sætte [om substantivet][dem] til noget.".
 The report waving hands rule response (A) is "[Du] [vinker].".
 The report waving hands rule response (B) is "[The actor] [vinker].".
 The block buying rule response (A) is "Intet [er] til salg.".
 The block climbing rule response (A) is "Ikke meget [kan] opnås ved det.".
 The block sleeping rule response (A) is "[Du] [føler] [dig] ikke særligt søvnig.".
-The can't eat unless edible rule response (A) is "[regarding the noun][De] [er] åbenbart ikke til at spise.".
+The can't eat unless edible rule response (A) is "[om substantivet][De] [er] åbenbart ikke til at spise.".
 The can't eat clothing without removing it first rule response (A) is "(efter at have taget [substantivet] af)[command clarification break]".
 The can't eat other people's food rule response (A) is "[The owner] [kan] måske ikke lide det.".
 The standard report eating rule response (A) is "[Du] [spiser] [substantivet]. Ikke dårligt.".
@@ -704,7 +704,7 @@ The basic accessibility rule response (A) is "Du må nævne noget mere substanti
 
 @ This is a strange one. Most often it results from code rather than player action, for instance redirecting an action to a noun that isn't present
 =
-The access through barriers rule response (A) is "[regarding the noun][De] [er] ikke tilgængelig[e].".
+The access through barriers rule response (A) is "[om substantivet][De] [er] ikke tilgængelig[e].".
 
 @ I believe this only prints when trying to manipulate an object inside (or from within) a closed, transparent container.
 
