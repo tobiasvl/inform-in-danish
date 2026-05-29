@@ -3,22 +3,27 @@
 	<head>
 		<title>Articles</title>
 <link href="../docs-assets/Breadcrumbs.css" rel="stylesheet" rev="stylesheet" type="text/css">
-<link href="../docs-assets/Navigation.css" rel="stylesheet" rev="stylesheet" type="text/css">
-<link href="../docs-assets/Fonts.css" rel="stylesheet" rev="stylesheet" type="text/css">
-<link href="../docs-assets/Progress.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<link href="../docs-assets/Base.css" rel="stylesheet" rev="stylesheet" type="text/css">
 		<meta name="viewport" content="width=device-width initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta http-equiv="Content-Language" content="en-gb">
 
-<link href="../docs-assets/Base.css" rel="stylesheet" rev="stylesheet" type="text/css">
 <link href="../docs-assets/Contents.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<link href="../docs-assets/Fonts.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<link href="../docs-assets/Navigation.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<link href="../docs-assets/Progress.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<link href="../docs-assets/Bigfoot.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"
+	integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+<script src="../docs-assets/Bigfoot.js"></script>
 <link href="../docs-assets/Colours.css" rel="stylesheet" rev="stylesheet" type="text/css">
 		
 	</head>
 	<body class="commentary-font">
 		<nav role="navigation">
-		<h1><a href="../index.html"><img src="../docs-assets/logo.png" height=150> </a></h1>
-<h1><a href="../index.html">Inform<br>in Danish</a></h1>
+		<h1><a href="index"><img src="../docs-assets/logo.png" height=150> </a></h1>
+<h1><a href="index">Inform<br>in Danish</a></h1>
 <ul><li><a href="index.html"><span class="selectedlink">Danish Language</span></a></li>
 <li><a href="../dlk/index.html">DanishLanguageKit</a></li>
 </ul><h2>Examples</h2><ul>
@@ -37,113 +42,96 @@
 
 <ul class="toc"><li><a href="artcl.html#SP1">&#167;1. Selective articles</a></li><li><a href="artcl.html#SP4">&#167;4. Adaptive text</a></li><li><a href="artcl.html#SP5">&#167;5. Articles</a></li><li><a href="artcl.html#SP6">&#167;6. Definite articles</a></li></ul><hr class="tocbar">
 
-<p class="commentary firstcommentary"><a id="SP1" class="paragraph-anchor"></a><b>&#167;1. Selective articles.</b>Just like English, Danish uses articles before nouns in the indefinite (a girl &mdash; en pige).
-</p>
-
-<p class="commentary">However, in the definite, it is more complicated.
-</p>
-
-<p class="commentary">If a noun is modified by attributive adjectives, it should have an article (the
-little girl &mdash; den lille pige). If it stands alone, with no adjectives, it
-should not have an article, but a suffix instead (the girl &mdash; pigen).
-</p>
-
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP1" class="paragraph-anchor"></a><b>&#167;1. Selective articles.</b>  Just like English, Danish uses articles before nouns in the indefinite (a girl -- en pige).</p>
+<p>However, in the definite, it is more complicated.</p>
+<p>If a noun is modified by attributive adjectives, it should have an article (the
+little girl -- den lille pige). If it stands alone, with no adjectives, it
+should not have an article, but a suffix instead (the girl -- pigen).</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
 <span class="identifier-syntax">To</span><span class="plain-syntax"> </span><span class="identifier-syntax">decide</span><span class="plain-syntax"> </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">O</span><span class="plain-syntax"> - </span><span class="identifier-syntax">an</span><span class="plain-syntax"> </span><span class="identifier-syntax">object</span><span class="plain-syntax">) </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">attributive</span><span class="plain-syntax">:</span>
 <span class="plain-syntax">    </span><span class="identifier-syntax">let</span><span class="plain-syntax"> </span><span class="identifier-syntax">N</span><span class="plain-syntax"> </span><span class="identifier-syntax">be</span><span class="plain-syntax"> </span><span class="identifier-syntax">the</span><span class="plain-syntax"> </span><span class="identifier-syntax">printed</span><span class="plain-syntax"> </span><span class="identifier-syntax">name</span><span class="plain-syntax"> </span><span class="identifier-syntax">of</span><span class="plain-syntax"> </span><span class="identifier-syntax">O</span><span class="plain-syntax">;</span>
 <span class="plain-syntax">    </span><span class="identifier-syntax">decide</span><span class="plain-syntax"> </span><span class="identifier-syntax">on</span><span class="plain-syntax"> </span><span class="identifier-syntax">whether</span><span class="plain-syntax"> </span><span class="identifier-syntax">or</span><span class="plain-syntax"> </span><span class="identifier-syntax">not</span><span class="plain-syntax"> </span><span class="identifier-syntax">the</span><span class="plain-syntax"> </span><span class="identifier-syntax">number</span><span class="plain-syntax"> </span><span class="identifier-syntax">of</span><span class="plain-syntax"> </span><span class="identifier-syntax">words</span><span class="plain-syntax"> </span><span class="identifier-syntax">in</span><span class="plain-syntax"> </span><span class="identifier-syntax">N</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">greater</span><span class="plain-syntax"> </span><span class="identifier-syntax">than</span><span class="plain-syntax"> </span><span class="constant-syntax">1</span><span class="plain-syntax">.</span>
 
 <span class="identifier-syntax">Include</span><span class="plain-syntax"> (-</span>
-<span class="plain-syntax">    </span><span class="comment-syntax">IsAttributive obj foo;</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">return</span><span class="plain-syntax"> (</span><span class="identifier-syntax">TEXT_TY_BlobAccess</span><span class="plain-syntax">(</span><span class="identifier-syntax">obj</span><span class="plain-syntax">.</span><span class="identifier-syntax">short_name</span><span class="plain-syntax">, </span><span class="identifier-syntax">WORD_BLOB</span><span class="plain-syntax">) &gt; </span><span class="constant-syntax">1</span><span class="plain-syntax">);</span>
-<span class="plain-syntax">    ];</span>
+<span class="plain-syntax">    </span>
+<span class="comment-syntax">[ IsAttributive obj foo;
+	return (TEXT_TY_BlobAccess(obj.short_name, WORD_BLOB) &gt; 1);	
+]</span><span class="plain-syntax">;</span>
 <span class="plain-syntax">-).</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP2" class="paragraph-anchor"></a><b>&#167;2. </b></p>
+<p class="commentary firstcommentary"><a id="SP2" class="paragraph-anchor"></a><b>&#167;2. </b> </p>
 
 <pre class="displayed-code all-displayed-code code-font">
 <span class="identifier-syntax">Include</span><span class="plain-syntax"> (-</span>
-<span class="plain-syntax">    </span><span class="comment-syntax">DefArt obj i s;</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">i</span><span class="plain-syntax"> = </span><span class="identifier-syntax">indef_mode</span><span class="plain-syntax">; </span><span class="identifier-syntax">indef_mode</span><span class="plain-syntax"> = </span><span class="identifier-syntax">false</span><span class="plain-syntax">; </span><span class="identifier-syntax">s</span><span class="plain-syntax"> = </span><span class="identifier-syntax">self</span><span class="plain-syntax">; </span><span class="identifier-syntax">self</span><span class="plain-syntax"> = </span><span class="identifier-syntax">obj</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">if</span><span class="plain-syntax"> ((~~</span><span class="identifier-syntax">obj</span><span class="plain-syntax"> </span><span class="identifier-syntax">ofclass</span><span class="plain-syntax"> </span><span class="identifier-syntax">Object</span><span class="plain-syntax">) || </span><span class="identifier-syntax">obj</span><span class="plain-syntax"> </span><span class="identifier-syntax">has</span><span class="plain-syntax"> </span><span class="identifier-syntax">proper</span><span class="plain-syntax">) {</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">indef_mode</span><span class="plain-syntax"> = </span><span class="identifier-syntax">NULL</span><span class="plain-syntax">; </span><span class="identifier-syntax">print</span><span class="plain-syntax"> (</span><span class="identifier-syntax">PSN__</span><span class="plain-syntax">) </span><span class="identifier-syntax">obj</span><span class="plain-syntax">; </span><span class="identifier-syntax">indef_mode</span><span class="plain-syntax"> = </span><span class="identifier-syntax">i</span><span class="plain-syntax">; </span><span class="identifier-syntax">self</span><span class="plain-syntax"> = </span><span class="identifier-syntax">s</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">return</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">        }</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">IsAttributive</span><span class="plain-syntax">(</span><span class="identifier-syntax">obj</span><span class="plain-syntax">)) {</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">PrefaceByArticle</span><span class="plain-syntax">(</span><span class="identifier-syntax">obj</span><span class="plain-syntax">, </span><span class="constant-syntax">1</span><span class="plain-syntax">);</span>
-<span class="plain-syntax">        } </span><span class="identifier-syntax">else</span><span class="plain-syntax"> {</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">print</span><span class="plain-syntax"> (</span><span class="identifier-syntax">PSN__</span><span class="plain-syntax">) </span><span class="identifier-syntax">obj</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">        }</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">indef_mode</span><span class="plain-syntax"> = </span><span class="identifier-syntax">i</span><span class="plain-syntax">; </span><span class="identifier-syntax">self</span><span class="plain-syntax"> = </span><span class="identifier-syntax">s</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">    ];</span>
+<span class="plain-syntax">    </span>
+<span class="comment-syntax">[ DefArt obj i s;
+	i = indef_mode; indef_mode = false; s = self; self = obj;
+	if ((~~obj ofclass Object) || obj has proper) {
+		indef_mode = NULL; print (PSN__) obj; indef_mode = i; self = s;
+		return;
+	}
+	if (IsAttributive(obj)) {
+		PrefaceByArticle(obj, 1);
+	} else {
+		print (PSN__) obj;
+	}
+	indef_mode = i; self = s;	
+]</span><span class="plain-syntax">;</span>
 <span class="plain-syntax">-) </span><span class="identifier-syntax">replacing</span><span class="plain-syntax"> </span><span class="string-syntax">"DefArt"</span><span class="plain-syntax">.</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP3" class="paragraph-anchor"></a><b>&#167;3. </b>This routine is complicated by having to capitalize the first letter of the
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP3" class="paragraph-anchor"></a><b>&#167;3. </b>  This routine is complicated by having to capitalize the first letter of the
 printed name if it shouldn't have an article. TODO: I'm not sure if this works
-on the Z-machine, but we should be able to just use CPrintOrRun there.
-</p>
-
+on the Z-machine, but we should be able to just use CPrintOrRun there.</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
 <span class="identifier-syntax">Include</span><span class="plain-syntax"> (-</span>
-<span class="plain-syntax">    </span><span class="comment-syntax">CDefArt obj i s  len;</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">i</span><span class="plain-syntax"> = </span><span class="identifier-syntax">indef_mode</span><span class="plain-syntax">; </span><span class="identifier-syntax">indef_mode</span><span class="plain-syntax"> = </span><span class="identifier-syntax">false</span><span class="plain-syntax">; </span><span class="identifier-syntax">s</span><span class="plain-syntax"> = </span><span class="identifier-syntax">self</span><span class="plain-syntax">; </span><span class="identifier-syntax">self</span><span class="plain-syntax"> = </span><span class="identifier-syntax">obj</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">if</span><span class="plain-syntax"> ((</span><span class="identifier-syntax">obj</span><span class="plain-syntax"> </span><span class="identifier-syntax">ofclass</span><span class="plain-syntax"> </span><span class="identifier-syntax">Object</span><span class="plain-syntax">) &amp;&amp; (</span><span class="identifier-syntax">obj</span><span class="plain-syntax"> </span><span class="identifier-syntax">has</span><span class="plain-syntax"> </span><span class="identifier-syntax">proper</span><span class="plain-syntax"> || </span><span class="identifier-syntax">obj</span><span class="plain-syntax"> == </span><span class="identifier-syntax">player</span><span class="plain-syntax">)) {</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">indef_mode</span><span class="plain-syntax"> = </span><span class="identifier-syntax">NULL</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">caps_mode</span><span class="plain-syntax"> = </span><span class="identifier-syntax">true</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">print</span><span class="plain-syntax"> (</span><span class="identifier-syntax">PSN__</span><span class="plain-syntax">) </span><span class="identifier-syntax">obj</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">indef_mode</span><span class="plain-syntax"> = </span><span class="identifier-syntax">i</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">caps_mode</span><span class="plain-syntax"> = </span><span class="identifier-syntax">false</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">self</span><span class="plain-syntax"> = </span><span class="identifier-syntax">s</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">return</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">        }</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">if</span><span class="plain-syntax"> ((~~</span><span class="identifier-syntax">obj</span><span class="plain-syntax"> </span><span class="identifier-syntax">ofclass</span><span class="plain-syntax"> </span><span class="identifier-syntax">Object</span><span class="plain-syntax">) || </span><span class="identifier-syntax">obj</span><span class="plain-syntax"> </span><span class="identifier-syntax">has</span><span class="plain-syntax"> </span><span class="identifier-syntax">proper</span><span class="plain-syntax">) {</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">indef_mode</span><span class="plain-syntax"> = </span><span class="identifier-syntax">NULL</span><span class="plain-syntax">; </span><span class="identifier-syntax">print</span><span class="plain-syntax"> (</span><span class="identifier-syntax">PSN__</span><span class="plain-syntax">) </span><span class="identifier-syntax">obj</span><span class="plain-syntax">; </span><span class="identifier-syntax">indef_mode</span><span class="plain-syntax"> = </span><span class="identifier-syntax">i</span><span class="plain-syntax">; </span><span class="identifier-syntax">self</span><span class="plain-syntax"> = </span><span class="identifier-syntax">s</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">return</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">        }</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">IsAttributive</span><span class="plain-syntax">(</span><span class="identifier-syntax">obj</span><span class="plain-syntax">)) {</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">PrefaceByArticle</span><span class="plain-syntax">(</span><span class="identifier-syntax">obj</span><span class="plain-syntax">, </span><span class="constant-syntax">0</span><span class="plain-syntax">);</span>
-<span class="plain-syntax">        } </span><span class="identifier-syntax">else</span><span class="plain-syntax"> {</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">caps_mode</span><span class="plain-syntax"> = </span><span class="identifier-syntax">true</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">print</span><span class="plain-syntax"> (</span><span class="identifier-syntax">PSN__</span><span class="plain-syntax">) </span><span class="identifier-syntax">obj</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">caps_mode</span><span class="plain-syntax"> = </span><span class="identifier-syntax">false</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">        }</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">indef_mode</span><span class="plain-syntax"> = </span><span class="identifier-syntax">i</span><span class="plain-syntax">; </span><span class="identifier-syntax">self</span><span class="plain-syntax"> = </span><span class="identifier-syntax">s</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">    ];</span>
+<span class="plain-syntax">    </span>
+<span class="comment-syntax">[ CDefArt obj i s  len;
+	i = indef_mode; indef_mode = false; s = self; self = obj;
+	if ((obj ofclass Object) &amp;&amp; (obj has proper || obj == player)) {
+		indef_mode = NULL;
+		caps_mode = true;
+		print (PSN__) obj;
+		indef_mode = i;
+		caps_mode = false;
+		self = s;
+		return;
+	}
+	if ((~~obj ofclass Object) || obj has proper) {
+		indef_mode = NULL; print (PSN__) obj; indef_mode = i; self = s;
+		return;
+	}
+	if (IsAttributive(obj)) {
+		PrefaceByArticle(obj, 0);
+	} else {
+		caps_mode = true;
+		print (PSN__) obj;
+		caps_mode = false;
+	}
+	indef_mode = i; self = s;	
+]</span><span class="plain-syntax">;</span>
 <span class="plain-syntax">-) </span><span class="identifier-syntax">replacing</span><span class="plain-syntax"> </span><span class="string-syntax">"CDefArt"</span><span class="plain-syntax">.</span>
 
 <span class="identifier-syntax">Include</span><span class="plain-syntax"> (-</span>
-<span class="plain-syntax">    </span><span class="comment-syntax">STANDARD_PLURAL_NAME_PRINTING_R obj;</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">obj</span><span class="plain-syntax"> = </span><span class="identifier-syntax">parameter_value</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (~</span><span class="identifier-syntax">indef_mode</span><span class="plain-syntax"> || </span><span class="identifier-syntax">obj</span><span class="plain-syntax"> </span><span class="identifier-syntax">hasnt</span><span class="plain-syntax"> </span><span class="identifier-syntax">plural_indef</span><span class="plain-syntax">) </span><span class="identifier-syntax">PrintOrRun</span><span class="plain-syntax">(</span><span class="identifier-syntax">obj</span><span class="plain-syntax">, </span><span class="identifier-syntax">plural</span><span class="plain-syntax">, </span><span class="identifier-syntax">true</span><span class="plain-syntax">);</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">else</span><span class="plain-syntax"> </span><span class="identifier-syntax">PrintOrRun</span><span class="plain-syntax">(</span><span class="identifier-syntax">obj</span><span class="plain-syntax">, </span><span class="identifier-syntax">plural_indef</span><span class="plain-syntax">, </span><span class="identifier-syntax">true</span><span class="plain-syntax">);</span>
-<span class="plain-syntax">    ];</span>
+<span class="plain-syntax">    </span>
+<span class="comment-syntax">[ STANDARD_PLURAL_NAME_PRINTING_R obj;
+	obj = parameter_value;
+	if (~indef_mode || obj hasnt plural_indef) PrintOrRun(obj, plural, true);
+	else PrintOrRun(obj, plural_indef, true);	
+]</span><span class="plain-syntax">;</span>
 <span class="plain-syntax">-) </span><span class="identifier-syntax">replacing</span><span class="plain-syntax"> </span><span class="string-syntax">"STANDARD_PLURAL_NAME_PRINTING_R"</span><span class="plain-syntax"> </span><span class="comment-syntax">[ in BasicInformKit ]</span><span class="plain-syntax">.</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP4" class="paragraph-anchor"></a><b>&#167;4. Adaptive text.</b>The first part is commented out because I'm not sure how to handle capitalized
-nouns. It should probably be handled in //DanishLanguageKit//'s
-<span class="extract"><span class="extract-syntax">LanguagePrintShortName</span></span>.
-</p>
-
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP4" class="paragraph-anchor"></a><b>&#167;4. Adaptive text.</b>  The first part is commented out because I'm not sure how to handle capitalized
+nouns. It should probably be handled in <a href="../dlk/index.html" class="internal">DanishLanguageKit</a>'s
+|LanguagePrintShortName|.</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
-<span class="comment-syntax">Section - Adaptive Text</span>
-<span class="plain-syntax">    (</span><span class="identifier-syntax">in</span><span class="plain-syntax"> </span><span class="identifier-syntax">place</span><span class="plain-syntax"> </span><span class="identifier-syntax">of</span><span class="plain-syntax"> </span><span class="identifier-syntax">Section</span><span class="plain-syntax"> </span><span class="constant-syntax">5</span><span class="plain-syntax"> - </span><span class="identifier-syntax">Adaptive</span><span class="plain-syntax"> </span><span class="identifier-syntax">Text</span><span class="plain-syntax"> </span><span class="identifier-syntax">in</span><span class="plain-syntax"> </span><span class="identifier-syntax">Basic</span><span class="plain-syntax"> </span><span class="identifier-syntax">Inform</span><span class="plain-syntax"> </span><span class="identifier-syntax">by</span><span class="plain-syntax"> </span><span class="identifier-syntax">Graham</span><span class="plain-syntax"> </span><span class="identifier-syntax">Nelson</span><span class="plain-syntax">)</span>
-
-<span class="identifier-syntax">To</span><span class="plain-syntax"> </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="identifier-syntax">substantiv</span><span class="plain-syntax">:</span>
-<span class="plain-syntax">    </span><span class="identifier-syntax">if</span><span class="plain-syntax"> </span><span class="identifier-syntax">capitalized</span><span class="plain-syntax"> </span><span class="identifier-syntax">nouns</span><span class="plain-syntax"> </span><span class="identifier-syntax">option</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">active</span><span class="plain-syntax">, </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="string-syntax">"[Noun]"</span><span class="plain-syntax"> </span><span class="identifier-syntax">in</span><span class="plain-syntax"> </span><span class="identifier-syntax">sentence</span><span class="plain-syntax"> </span><span class="identifier-syntax">case</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">    </span><span class="identifier-syntax">otherwise</span><span class="plain-syntax">, </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="string-syntax">"[noun]"</span><span class="plain-syntax">.</span>
-<span class="identifier-syntax">To</span><span class="plain-syntax"> </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="identifier-syntax">Substantiv</span><span class="plain-syntax">: </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="string-syntax">"[Noun]"</span><span class="plain-syntax"> </span><span class="identifier-syntax">in</span><span class="plain-syntax"> </span><span class="identifier-syntax">sentence</span><span class="plain-syntax"> </span><span class="identifier-syntax">case</span><span class="plain-syntax">.</span>
-<span class="identifier-syntax">To</span><span class="plain-syntax"> </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="identifier-syntax">substantivet</span><span class="plain-syntax">:</span>
-<span class="plain-syntax">    </span><span class="identifier-syntax">if</span><span class="plain-syntax"> </span><span class="identifier-syntax">capitalized</span><span class="plain-syntax"> </span><span class="identifier-syntax">nouns</span><span class="plain-syntax"> </span><span class="identifier-syntax">option</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">active</span><span class="plain-syntax">, </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="string-syntax">"[the Noun]"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">    </span><span class="identifier-syntax">otherwise</span><span class="plain-syntax">, </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="string-syntax">"[the noun]"</span><span class="plain-syntax">.</span>
-<span class="identifier-syntax">To</span><span class="plain-syntax"> </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="identifier-syntax">Substantivet</span><span class="plain-syntax">:</span>
-<span class="plain-syntax">    </span><span class="identifier-syntax">if</span><span class="plain-syntax"> </span><span class="identifier-syntax">capitalized</span><span class="plain-syntax"> </span><span class="identifier-syntax">nouns</span><span class="plain-syntax"> </span><span class="identifier-syntax">option</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">active</span><span class="plain-syntax">, </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="string-syntax">"[The Noun]"</span><span class="plain-syntax"> </span><span class="identifier-syntax">in</span><span class="plain-syntax"> </span><span class="identifier-syntax">sentence</span><span class="plain-syntax"> </span><span class="identifier-syntax">case</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">    </span><span class="identifier-syntax">otherwise</span><span class="plain-syntax">, </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="string-syntax">"[The noun]"</span><span class="plain-syntax">.</span>
-<span class="identifier-syntax">To</span><span class="plain-syntax"> </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="identifier-syntax">et</span><span class="plain-syntax"> </span><span class="identifier-syntax">substantiv</span><span class="plain-syntax">:</span>
-<span class="plain-syntax">    </span><span class="identifier-syntax">if</span><span class="plain-syntax"> </span><span class="identifier-syntax">capitalized</span><span class="plain-syntax"> </span><span class="identifier-syntax">nouns</span><span class="plain-syntax"> </span><span class="identifier-syntax">option</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">active</span><span class="plain-syntax">, </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="string-syntax">"[a Noun]"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">    </span><span class="identifier-syntax">otherwise</span><span class="plain-syntax">, </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="string-syntax">"[a noun]"</span><span class="plain-syntax">.</span>
-<span class="identifier-syntax">To</span><span class="plain-syntax"> </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="identifier-syntax">Et</span><span class="plain-syntax"> </span><span class="identifier-syntax">substantiv</span><span class="plain-syntax">:</span>
-<span class="plain-syntax">    </span><span class="identifier-syntax">if</span><span class="plain-syntax"> </span><span class="identifier-syntax">capitalized</span><span class="plain-syntax"> </span><span class="identifier-syntax">nouns</span><span class="plain-syntax"> </span><span class="identifier-syntax">option</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">active</span><span class="plain-syntax">, </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="string-syntax">"[A Noun]"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">    </span><span class="identifier-syntax">otherwise</span><span class="plain-syntax">, </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="string-syntax">"[A noun]"</span><span class="plain-syntax">. ]</span>
+<span class="comment-syntax">[ Section - Adaptive Text
+(in place of Section 5 - Adaptive Text in Basic Inform by Graham Nelson) ]</span>
 
 <span class="identifier-syntax">Section</span><span class="plain-syntax"> - </span><span class="identifier-syntax">Saying</span><span class="plain-syntax"> </span><span class="identifier-syntax">Names</span>
 
@@ -186,7 +174,7 @@ nouns. It should probably be handled in //DanishLanguageKit//'s
 <span class="identifier-syntax">To</span><span class="plain-syntax"> </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="identifier-syntax">Den</span><span class="plain-syntax"> (</span><span class="identifier-syntax">something</span><span class="plain-syntax"> - </span><span class="identifier-syntax">object</span><span class="plain-syntax">):</span>
 <span class="plain-syntax">        (- </span><span class="identifier-syntax">print</span><span class="plain-syntax"> (</span><span class="identifier-syntax">The</span><span class="plain-syntax">) {</span><span class="identifier-syntax">something</span><span class="plain-syntax">}; -).</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP5" class="paragraph-anchor"></a><b>&#167;5. Articles.</b></p>
+<p class="commentary firstcommentary"><a id="SP5" class="paragraph-anchor"></a><b>&#167;5. Articles.</b> </p>
 
 <pre class="displayed-code all-displayed-code code-font">
 <span class="identifier-syntax">Include</span><span class="plain-syntax"> (-</span>
@@ -209,9 +197,9 @@ nouns. It should probably be handled in //DanishLanguageKit//'s
 <span class="plain-syntax">                    </span><span class="identifier-syntax">de</span><span class="plain-syntax">   </span><span class="identifier-syntax">dem</span>
 <span class="plain-syntax">-) </span><span class="identifier-syntax">in</span><span class="plain-syntax"> </span><span class="identifier-syntax">the</span><span class="plain-syntax"> </span><span class="identifier-syntax">Preform</span><span class="plain-syntax"> </span><span class="identifier-syntax">grammar</span><span class="plain-syntax">.</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP6" class="paragraph-anchor"></a><b>&#167;6. Definite articles.</b>This is commented out because I'm not sure how to handle different genders here.
-</p>
-
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP6" class="paragraph-anchor"></a><b>&#167;6. Definite articles.</b>  This is commented out because I'm not sure how to handle different genders here.</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
 <span class="identifier-syntax">Include</span><span class="plain-syntax"> (-</span>
 <span class="plain-syntax">    </span><span class="identifier-syntax">language</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span>
@@ -226,7 +214,7 @@ nouns. It should probably be handled in //DanishLanguageKit//'s
 <span class="plain-syntax">-) </span><span class="identifier-syntax">in</span><span class="plain-syntax"> </span><span class="identifier-syntax">the</span><span class="plain-syntax"> </span><span class="identifier-syntax">Preform</span><span class="plain-syntax"> </span><span class="identifier-syntax">grammar</span><span class="plain-syntax">.</span>
 </pre>
 <nav role="progress"><div class="progresscontainer">
-    <ul class="progressbar"><li class="progressprev"><a href="gndr.html">&#10094;</a></li><li class="progresssection"><a href="prmbl.html">prmbl</a></li><li class="progresssection"><a href="drctn.html">drctn</a></li><li class="progresssection"><a href="nmbrs.html">nmbrs</a></li><li class="progresssection"><a href="tm.html">tm</a></li><li class="progresssection"><a href="gndr.html">gndr</a></li><li class="progresscurrent">artcl</li><li class="progresssection"><a href="nns.html">nns</a></li><li class="progresssection"><a href="adjct.html">adjct</a></li><li class="progresssection"><a href="vrbs.html">vrbs</a></li><li class="progresssection"><a href="prnns.html">prnns</a></li><li class="progresssection"><a href="cmgr.html">cmgr</a></li><li class="progresssection"><a href="rspns.html">rspns</a></li><li class="progresssection"><a href="msc.html">msc</a></li><li class="progressnext"><a href="nns.html">&#10095;</a></li></ul></div>
+    <ul class="progressbar"><li class="progressprev"><span class="nav-popup">Gender</span><a href="gndr.html">&#10094;</a></li><li class="progresssection"><span class="fullname-popup">Preamble</span><a href="prmbl.html">prmbl</a></li><li class="progresssection"><span class="fullname-popup">Directions</span><a href="drctn.html">drctn</a></li><li class="progresssection"><span class="fullname-popup">Numbers</span><a href="nmbrs.html">nmbrs</a></li><li class="progresssection"><span class="fullname-popup">Time</span><a href="tm.html">tm</a></li><li class="progresssection"><span class="fullname-popup">Gender</span><a href="gndr.html">gndr</a></li><li class="progresscurrent"><span class="current-fullname-popup">Articles</span>artcl</li><li class="progresssection"><span class="fullname-popup">Nouns</span><a href="nns.html">nns</a></li><li class="progresssection"><span class="fullname-popup">Adjectives</span><a href="adjct.html">adjct</a></li><li class="progresssection"><span class="fullname-popup">Verbs</span><a href="vrbs.html">vrbs</a></li><li class="progresssection"><span class="fullname-popup">Pronouns</span><a href="prnns.html">prnns</a></li><li class="progresssection"><span class="fullname-popup">Command Grammar</span><a href="cmgr.html">cmgr</a></li><li class="progresssection"><span class="fullname-popup">Responses</span><a href="rspns.html">rspns</a></li><li class="progresssection"><span class="fullname-popup">Misc</span><a href="msc.html">msc</a></li><li class="progressnext"><span class="nav-popup">Nouns</span><a href="nns.html">&#10095;</a></li></ul></div>
 </nav><!-- End of weave -->
 
 		</main>

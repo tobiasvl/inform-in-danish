@@ -3,22 +3,27 @@
 	<head>
 		<title>Verbs</title>
 <link href="../docs-assets/Breadcrumbs.css" rel="stylesheet" rev="stylesheet" type="text/css">
-<link href="../docs-assets/Navigation.css" rel="stylesheet" rev="stylesheet" type="text/css">
-<link href="../docs-assets/Fonts.css" rel="stylesheet" rev="stylesheet" type="text/css">
-<link href="../docs-assets/Progress.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<link href="../docs-assets/Base.css" rel="stylesheet" rev="stylesheet" type="text/css">
 		<meta name="viewport" content="width=device-width initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta http-equiv="Content-Language" content="en-gb">
 
-<link href="../docs-assets/Base.css" rel="stylesheet" rev="stylesheet" type="text/css">
 <link href="../docs-assets/Contents.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<link href="../docs-assets/Fonts.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<link href="../docs-assets/Navigation.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<link href="../docs-assets/Progress.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<link href="../docs-assets/Bigfoot.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"
+	integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+<script src="../docs-assets/Bigfoot.js"></script>
 <link href="../docs-assets/Colours.css" rel="stylesheet" rev="stylesheet" type="text/css">
 		
 	</head>
 	<body class="commentary-font">
 		<nav role="navigation">
-		<h1><a href="../index.html"><img src="../docs-assets/logo.png" height=150> </a></h1>
-<h1><a href="../index.html">Inform<br>in Danish</a></h1>
+		<h1><a href="index"><img src="../docs-assets/logo.png" height=150> </a></h1>
+<h1><a href="index">Inform<br>in Danish</a></h1>
 <ul><li><a href="index.html"><span class="selectedlink">Danish Language</span></a></li>
 <li><a href="../dlk/index.html">DanishLanguageKit</a></li>
 </ul><h2>Examples</h2><ul>
@@ -37,28 +42,26 @@
 
 <ul class="toc"><li><a href="vrbs.html#SP1">&#167;1. Basic Verbs</a></li><li><a href="vrbs.html#SP2">&#167;2. Modal verbs</a></li><li><a href="vrbs.html#SP3">&#167;3. Verbs needed for adaptive text</a></li><li><a href="vrbs.html#SP4">&#167;4. Manual verb conjugation</a></li><li><a href="vrbs.html#SP5">&#167;5. Automatic verb conjugation</a></li><li><a href="vrbs.html#SP6">&#167;6. Infinitive (form type 1)</a></li><li><a href="vrbs.html#SP7">&#167;7. Present participle (form type 2)</a></li><li><a href="vrbs.html#SP8">&#167;8. Past participle (form type 3)</a></li><li><a href="vrbs.html#SP9">&#167;9. Adjoint infinitive (form type 4)</a></li><li><a href="vrbs.html#SP10">&#167;10. Present tense (form type 5)</a></li><li><a href="vrbs.html#SP11">&#167;11. Past tense (form type 6)</a></li><li><a href="vrbs.html#SP12">&#167;12. Imperative mood (form type 7)</a></li><li><a href="vrbs.html#SP13">&#167;13. Verb form type definitions</a></li><li><a href="vrbs.html#SP14">&#167;14. Verb tense definitions</a></li><li><a href="vrbs.html#SP16">&#167;16. Verb conjugation grammar</a></li><li><a href="vrbs.html#SP17">&#167;17. Conjugating present participle</a></li><li><a href="vrbs.html#SP18">&#167;18. Conjugating past participle</a></li><li><a href="vrbs.html#SP19">&#167;19. Conjugating present tense</a></li><li><a href="vrbs.html#SP20">&#167;20. Conjugating past tense</a></li><li><a href="vrbs.html#SP21">&#167;21. Conjugation imperative mood</a></li><li><a href="vrbs.html#SP23">&#167;23. Print command so far</a></li><li><a href="vrbs.html#SP24">&#167;24. Showverb Command</a></li></ul><hr class="tocbar">
 
-<p class="commentary firstcommentary"><a id="SP1" class="paragraph-anchor"></a><b>&#167;1. Basic Verbs.</b>First we translate some important verbs that are defined in Basic Inform.
-</p>
-
-<p class="commentary">There's one snag: Inform doesn't let us define a Danish verb with the same
-infinitive form as the corresponding English verb. So this doesn't work:
-</p>
-
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP1" class="paragraph-anchor"></a><b>&#167;1. Basic Verbs.</b>  First we translate some important verbs that are defined in Basic Inform.</p>
+<p>There's one snag: Inform doesn't let us define a Danish verb with the same
+infinitive form as the corresponding English verb. So this doesn't work:</p>
+</div>
 <blockquote>
     <p>In Danish have is a verb meaning to have.</p>
 </blockquote>
 
-<p class="commentary">So instead we choose the informal contracted infinitive form "ha'".
-</p>
-
+<div class="lsmarkdown">
+<p>So instead we choose the informal contracted infinitive form &quot;ha'&quot;.</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
-<span class="comment-syntax">n Danish at have is a verb meaning to have.</span>
+<span class="comment-syntax">[In Danish at have is a verb meaning to have.]</span>
 <span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">ha</span><span class="plain-syntax">' </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">have</span><span class="plain-syntax">.</span>
 <span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">v</span><span class="plain-syntax">æ</span><span class="identifier-syntax">re</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">be</span><span class="plain-syntax">.</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP2" class="paragraph-anchor"></a><b>&#167;2. Modal verbs.</b>These modal verbs are defined in the English Language extension.
-</p>
-
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP2" class="paragraph-anchor"></a><b>&#167;2. Modal verbs.</b>  These modal verbs are defined in the English Language extension.</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
 <span class="identifier-syntax">Section</span><span class="plain-syntax"> - </span><span class="identifier-syntax">Modal</span><span class="plain-syntax"> </span><span class="identifier-syntax">verbs</span>
 
@@ -70,14 +73,14 @@ infinitive form as the corresponding English verb. So this doesn't work:
 <span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">burde</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">should</span><span class="plain-syntax">.</span>
 <span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">ville</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">would</span><span class="plain-syntax">.</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP3" class="paragraph-anchor"></a><b>&#167;3. Verbs needed for adaptive text.</b>These verbs are also defined in the English Language extension.
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP3" class="paragraph-anchor"></a><b>&#167;3. Verbs needed for adaptive text.</b>  These verbs are also defined in the English Language extension.
 They're used in <a href="rspns.html" class="internal">Responses</a>, and therefore need to be translated
 in order to be adaptive (ie. able to be inflected) in parser
-feedback.
-</p>
-
+feedback.</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
-<span class="identifier-syntax">Section</span><span class="plain-syntax"> - </span><span class="identifier-syntax">Verbs</span><span class="plain-syntax"> </span><span class="identifier-syntax">needed</span><span class="plain-syntax"> </span><span class="identifier-syntax">for</span><span class="plain-syntax"> </span><span class="identifier-syntax">adaptive</span><span class="plain-syntax"> </span><span class="identifier-syntax">text</span><span class="plain-syntax"> </span><span class="comment-syntax">TODO</span>
+<span class="identifier-syntax">Section</span><span class="plain-syntax"> - </span><span class="identifier-syntax">Verbs</span><span class="plain-syntax"> </span><span class="identifier-syntax">needed</span><span class="plain-syntax"> </span><span class="identifier-syntax">for</span><span class="plain-syntax"> </span><span class="identifier-syntax">adaptive</span><span class="plain-syntax"> </span><span class="identifier-syntax">text</span><span class="plain-syntax"> </span><span class="comment-syntax">[ TODO ]</span>
 
 <span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">opn</span><span class="plain-syntax">å </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">achieve</span><span class="plain-syntax">.</span>
 <span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">v</span><span class="plain-syntax">æ</span><span class="identifier-syntax">rds</span><span class="plain-syntax">æ</span><span class="identifier-syntax">tte</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">appreciate</span><span class="plain-syntax">.</span>
@@ -112,7 +115,7 @@ feedback.
 <span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">gnide</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">rub</span><span class="plain-syntax">.</span>
 <span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">sige</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">say</span><span class="plain-syntax">.</span>
 <span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">lede</span><span class="plain-syntax"> </span><span class="identifier-syntax">efter</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">search</span><span class="plain-syntax">.</span>
-<span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">se</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">see</span><span class="plain-syntax">. </span><span class="comment-syntax">TODO vs. look</span>
+<span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">se</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">see</span><span class="plain-syntax">. </span><span class="comment-syntax">[ TODO vs. look ]</span>
 <span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">virke</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">seem</span><span class="plain-syntax">.</span>
 <span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">s</span><span class="plain-syntax">æ</span><span class="identifier-syntax">tte</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">set</span><span class="plain-syntax">.</span>
 <span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">lugte</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">smell</span><span class="plain-syntax">.</span>
@@ -125,8 +128,8 @@ feedback.
 <span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">r</span><span class="plain-syntax">ø</span><span class="identifier-syntax">re</span><span class="plain-syntax"> </span><span class="identifier-syntax">ved</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">touch</span><span class="plain-syntax">.</span>
 <span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">dreje</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">turn</span><span class="plain-syntax">.</span>
 <span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">vente</span><span class="plain-syntax"> (</span><span class="identifier-syntax">han</span><span class="plain-syntax"> </span><span class="identifier-syntax">venter</span><span class="plain-syntax">, </span><span class="identifier-syntax">hun</span><span class="plain-syntax"> </span><span class="identifier-syntax">ventet</span><span class="plain-syntax">, </span><span class="identifier-syntax">de</span><span class="plain-syntax"> </span><span class="identifier-syntax">venter</span><span class="plain-syntax">, </span><span class="identifier-syntax">han</span><span class="plain-syntax"> </span><span class="identifier-syntax">er</span><span class="plain-syntax"> </span><span class="identifier-syntax">ventende</span><span class="plain-syntax">, </span><span class="identifier-syntax">han</span><span class="plain-syntax"> </span><span class="identifier-syntax">har</span><span class="plain-syntax"> </span><span class="identifier-syntax">ventet</span><span class="plain-syntax">, </span><span class="identifier-syntax">hun</span><span class="plain-syntax"> </span><span class="identifier-syntax">hadde</span><span class="plain-syntax"> </span><span class="identifier-syntax">ventet</span><span class="plain-syntax">) </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">wait</span><span class="plain-syntax">.</span>
-<span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">vifte</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">wave</span><span class="plain-syntax">. </span><span class="comment-syntax">TODO</span>
-<span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">vinke</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">wave</span><span class="plain-syntax">. </span><span class="comment-syntax">TODO</span>
+<span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">vifte</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">wave</span><span class="plain-syntax">. </span><span class="comment-syntax">[ TODO ]</span>
+<span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">vinke</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">wave</span><span class="plain-syntax">. </span><span class="comment-syntax">[ TODO ]</span>
 <span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">vinde</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">win</span><span class="plain-syntax">.</span>
 <span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">b</span><span class="plain-syntax">æ</span><span class="identifier-syntax">re</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">meaning</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">carry</span><span class="plain-syntax">.</span>
 
@@ -135,23 +138,21 @@ feedback.
 <span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">slukke</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax">.</span>
 <span class="identifier-syntax">In</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span><span class="plain-syntax"> </span><span class="identifier-syntax">komme</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax">.</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP4" class="paragraph-anchor"></a><b>&#167;4. Manual verb conjugation.</b>The author can, in the Inform source text, define some of the different verb forms explicitly when defining a verb:
-</p>
-
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP4" class="paragraph-anchor"></a><b>&#167;4. Manual verb conjugation.</b>  The author can, in the Inform source text, define some of the different verb forms explicitly when defining a verb:</p>
+</div>
 <blockquote>
     <p>In Danish vente (han venter, de venter, hun ventet, han er ventende) is a verb.</p>
 </blockquote>
 
-<p class="commentary">Each form needs to be preceded by a pronoun, and these forms are supported:
-</p>
-
-<ul class="items"><li>&#9679; present singular
-</li><li>&#9679; present plural
-</li><li>&#9679; past
-</li><li>&#9679; present participle
-</li><li>&#9679; past participle
-</li></ul>
-<p class="commentary">This syntax is tailored for English. In English, the present participle is more
+<div class="lsmarkdown">
+<p>Each form needs to be preceded by a pronoun, and these forms are supported:</p>
+<p>(*) present singular
+(<em>) present plural
+(<em>) past
+(</em>) present participle
+(</em>) past participle</p>
+<p>This syntax is tailored for English. In English, the present participle is more
 common (he is waiting), while it's rarely used in Danish. A bigger problem is
 that regular verb forms in English are more often identical to the infinitive
 (to wait, I wait), except for the second person singular present (he waits).
@@ -160,16 +161,13 @@ example, it's set to be the same as the infinitive. This works for English (to
 wait, they wait), but rarely works well for Danish (at vente, de vente), since
 it obviously should be the same as the other present tenses (han venter, de
 venter). For that reason, all tenses should probably be explicitly defined even
-though Danish doesn't conjugate verbs for plurality.
-</p>
-
-<p class="commentary">Note that this syntax is deprecated, because it generalises badly to other
+though Danish doesn't conjugate verbs for plurality.</p>
+<p>Note that this syntax is deprecated, because it generalises badly to other
 languages than English (as demonstrated), and the source text is only allowed
 to define some forms of the verb (for example, there's no way to define the
 imperative form). Still, we might as well support it, in case the author wants
-to make up a verb with very irregular forms.
-</p>
-
+to make up a verb with very irregular forms.</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
 <span class="identifier-syntax">Include</span><span class="plain-syntax"> (-</span>
 <span class="plain-syntax">    </span><span class="identifier-syntax">language</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span>
@@ -183,38 +181,31 @@ to make up a verb with very irregular forms.
 <span class="plain-syntax">        *** &lt;</span><span class="identifier-syntax">probable</span><span class="plain-syntax">-</span><span class="identifier-syntax">participle</span><span class="plain-syntax">&gt;</span>
 <span class="plain-syntax">-) </span><span class="identifier-syntax">in</span><span class="plain-syntax"> </span><span class="identifier-syntax">the</span><span class="plain-syntax"> </span><span class="identifier-syntax">Preform</span><span class="plain-syntax"> </span><span class="identifier-syntax">grammar</span><span class="plain-syntax">.</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP5" class="paragraph-anchor"></a><b>&#167;5. Automatic verb conjugation.</b>For the general Danish verbs you'll find in a dictionary, we'll write a
-producing Preform grammar which can construct all the forms automatically.
-</p>
-
-<p class="commentary">We will need the following verb forms:
-</p>
-
-<ul class="items"><li>(1) Infinitive
-</li><li>(2) Present participle [ TODO: gerund / verbal noun? ]
-</li><li>(2) Past participle
-</li><li>(3) Present tense
-</li><li>(4) Past tense
-</li><li>(5) Past perfect
-</li><li>(6) Imperative
-[ (7) Present participle?? TODO ]
-</li></ul>
-<p class="commentary firstcommentary"><a id="SP6" class="paragraph-anchor"></a><b>&#167;6. Infinitive (form type 1).</b>Inform reserves the first verb form for the infinitive, which is fine for
-Danish.
-</p>
-
-<p class="commentary">By default, Inform uses this as the base form of the verb as well ("form type
-0"), but it doesn't need to be identical to the infinitive. The imperative (see
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP5" class="paragraph-anchor"></a><b>&#167;5. Automatic verb conjugation.</b>  For the general Danish verbs you'll find in a dictionary, we'll write a
+producing Preform grammar which can construct all the forms automatically.</p>
+<p>We will need the following verb forms:</p>
+<p>(1) Infinitive
+(2) Present participle [ TODO: gerund / verbal noun? ]
+(2) Past participle
+(3) Present tense
+(4) Past tense
+(5) Past perfect
+(6) Imperative
+[ (7) Present participle?? TODO ]</p>
+</div>
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP6" class="paragraph-anchor"></a><b>&#167;6. Infinitive (form type 1).</b>  Inform reserves the first verb form for the infinitive, which is fine for
+Danish.</p>
+<p>By default, Inform uses this as the base form of the verb as well (&quot;form type
+0&quot;), but it doesn't need to be identical to the infinitive. The imperative (see
 below) could potentially have worked better as the base form; in Danish the
 imperative form of a verb is usually its stem, and the infinitive is the
 stem/imperative form plus an -e suffix. We'll still use the infinitive as the
-base form, but we'll define it based on the imperative.
-</p>
-
-<p class="commentary">We let authors define verbs by writing the infinitive form in the source code,
-either with or without the infinitive marker "at".
-</p>
-
+base form, but we'll define it based on the imperative.</p>
+<p>We let authors define verbs by writing the infinitive form in the source code,
+either with or without the infinitive marker &quot;at&quot;.</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
 <span class="identifier-syntax">Include</span><span class="plain-syntax"> (-</span>
 <span class="plain-syntax">    </span><span class="identifier-syntax">language</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span>
@@ -226,107 +217,88 @@ either with or without the infinitive marker "at".
 <span class="plain-syntax">        &lt;</span><span class="identifier-syntax">infinitive</span><span class="plain-syntax">-</span><span class="identifier-syntax">usage</span><span class="plain-syntax">&gt;</span>
 <span class="plain-syntax">-) </span><span class="identifier-syntax">in</span><span class="plain-syntax"> </span><span class="identifier-syntax">the</span><span class="plain-syntax"> </span><span class="identifier-syntax">Preform</span><span class="plain-syntax"> </span><span class="identifier-syntax">grammar</span><span class="plain-syntax">.</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP7" class="paragraph-anchor"></a><b>&#167;7. Present participle (form type 2).</b>[ TODO: gerund / verbal noun ]
-</p>
-
-<p class="commentary">Inform reserves the second verb form for the present participle. Present
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP7" class="paragraph-anchor"></a><b>&#167;7. Present participle (form type 2).</b>  [ TODO: gerund / verbal noun ]</p>
+<p>Inform reserves the second verb form for the present participle. Present
 participle is common in English (as what they, somewhat incorrectly
-linguistically speaking, call "gerund": "playing on computers is fun"), which
-isn't used in Danish, and as the finite progressive/continuous form ("they are
-always playing"), which is rarely used in Danish. However, the present
-participle is used adjectively in Danish ("the playing children", "de lekende
-børn"), so it's still useful for us here.
-</p>
-
-<p class="commentary">However, English conflates the gerund and the present participle. Inform calls
+linguistically speaking, call &quot;gerund&quot;: &quot;playing on computers is fun&quot;), which
+isn't used in Danish, and as the finite progressive/continuous form (&quot;they are
+always playing&quot;), which is rarely used in Danish. However, the present
+participle is used adjectively in Danish (&quot;the playing children&quot;, &quot;de lekende
+børn&quot;), so it's still useful for us here.</p>
+<p>However, English conflates the gerund and the present participle. Inform calls
 this form present participle, but it uses it as the gerund when defining verbs
-as actions:
-</p>
-
+as actions:</p>
+</div>
 <blockquote>
     <p>Smoothing is an action applying to one thing.</p>
 </blockquote>
 
-<p class="commentary">Here we obviously can't use the Danish present participle, we have to use the
+<div class="lsmarkdown">
+<p>Here we obviously can't use the Danish present participle, we have to use the
 verbal/gerundian noun (nomen actionis), as it is a verb acting as a noun. But
 Inform doesn't have a concept of the gerund and the present participle being
-different, so we'll have to separate them.
-</p>
-
-<p class="commentary firstcommentary"><a id="SP8" class="paragraph-anchor"></a><b>&#167;8. Past participle (form type 3).</b>Inform reserves the third verb form for the past participle. For Danish this is
+different, so we'll have to separate them.</p>
+</div>
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP8" class="paragraph-anchor"></a><b>&#167;8. Past participle (form type 3).</b>  Inform reserves the third verb form for the past participle. For Danish this is
 the perfect passive participle of the verb, which is used to form the past
-perfect ("har sunget") and the past pluperfect (plusquamperfect) ("havde
-sunget").
-</p>
-
-<p class="commentary firstcommentary"><a id="SP9" class="paragraph-anchor"></a><b>&#167;9. Adjoint infinitive (form type 4).</b>Inform reserves the fourth verb form for what it calls the "adjoint
-infinitive", which is when a modal verb construction is used and the second
-verb is in the infinitive ("be able to touch").
-</p>
-
-<p class="commentary firstcommentary"><a id="SP10" class="paragraph-anchor"></a><b>&#167;10. Present tense (form type 5).</b>Just like English Inform does, we define the fifth verb form to be the present
-tense.
-</p>
-
+perfect (&quot;har sunget&quot;) and the past pluperfect (plusquamperfect) (&quot;havde
+sunget&quot;).</p>
+</div>
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP9" class="paragraph-anchor"></a><b>&#167;9. Adjoint infinitive (form type 4).</b>  Inform reserves the fourth verb form for what it calls the &quot;adjoint
+infinitive&quot;, which is when a modal verb construction is used and the second
+verb is in the infinitive (&quot;be able to touch&quot;).</p>
+</div>
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP10" class="paragraph-anchor"></a><b>&#167;10. Present tense (form type 5).</b>  Just like English Inform does, we define the fifth verb form to be the present
+tense.</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
 <span class="identifier-syntax">To</span><span class="plain-syntax"> </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="identifier-syntax">present</span><span class="plain-syntax"> </span><span class="identifier-syntax">tense</span><span class="plain-syntax"> </span><span class="identifier-syntax">of</span><span class="plain-syntax"> (</span><span class="identifier-syntax">V</span><span class="plain-syntax"> - </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax">):</span>
 <span class="plain-syntax">    (- {</span><span class="identifier-syntax">V</span><span class="plain-syntax">}(5); -).</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP11" class="paragraph-anchor"></a><b>&#167;11. Past tense (form type 6).</b>And also just like English Inform, the sixth verb form is the past tense
-(preterite/imperfect).
-</p>
-
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP11" class="paragraph-anchor"></a><b>&#167;11. Past tense (form type 6).</b>  And also just like English Inform, the sixth verb form is the past tense
+(preterite/imperfect).</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
 <span class="identifier-syntax">To</span><span class="plain-syntax"> </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="identifier-syntax">past</span><span class="plain-syntax"> </span><span class="identifier-syntax">tense</span><span class="plain-syntax"> </span><span class="identifier-syntax">of</span><span class="plain-syntax"> (</span><span class="identifier-syntax">V</span><span class="plain-syntax"> - </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax">):</span>
 <span class="plain-syntax">    (- {</span><span class="identifier-syntax">V</span><span class="plain-syntax">}(6); -).</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP12" class="paragraph-anchor"></a><b>&#167;12. Imperative mood (form type 7).</b>In English, the imperative form is identical to the infinitive form, but in
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP12" class="paragraph-anchor"></a><b>&#167;12. Imperative mood (form type 7).</b>  In English, the imperative form is identical to the infinitive form, but in
 Danish it's different. We therefore define the seventh verb form as the
-imperative.
-</p>
-
-<p class="commentary">In Danish the imperative is finite, and it can't be conjugated. (Archaic Danish
+imperative.</p>
+<p>In Danish the imperative is finite, and it can't be conjugated. (Archaic Danish
 had a plural imperative, and also a passive imperative, but these are no longer
 used and we don't bother implementing them.) It's therefore not useful for
 adaptive text, ie. it can't be adapted to the story tense and story viewpoint.
 However, an author might still want to adapt verbs to the imperative manually,
 especially because the player is likely to write all their commands in the
-imperative.
-</p>
-
+imperative.</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
 <span class="identifier-syntax">Imperative</span><span class="plain-syntax"> </span><span class="identifier-syntax">tense</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">grammatical</span><span class="plain-syntax"> </span><span class="identifier-syntax">tense</span><span class="plain-syntax">.</span>
 
 <span class="identifier-syntax">To</span><span class="plain-syntax"> </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="identifier-syntax">the</span><span class="plain-syntax">/-- </span><span class="identifier-syntax">imperative</span><span class="plain-syntax"> </span><span class="identifier-syntax">mood</span><span class="plain-syntax">/-- </span><span class="identifier-syntax">of</span><span class="plain-syntax"> (</span><span class="identifier-syntax">V</span><span class="plain-syntax"> - </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">verb</span><span class="plain-syntax">):</span>
 <span class="plain-syntax">    (- {</span><span class="identifier-syntax">V</span><span class="plain-syntax">}(7); -).</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP13" class="paragraph-anchor"></a><b>&#167;13. Verb form type definitions.</b>As stated, Inform also reserves verb form type zero as the base form, but it
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP13" class="paragraph-anchor"></a><b>&#167;13. Verb form type definitions.</b>  As stated, Inform also reserves verb form type zero as the base form, but it
 will be identical to the infinitive (although that's not required to be the
-case). We then end up with these forms:
-</p>
-
-<pre class="definitions code-font"><span class="definition-keyword">define</span> <span class="identifier-syntax">BASE_FORM_TYPE</span><span class="plain-syntax"> </span><span class="constant-syntax">0</span>
-<span class="definition-keyword">define</span> <span class="identifier-syntax">INFINITIVE_FORM_TYPE</span><span class="plain-syntax"> </span><span class="constant-syntax">1</span>
-<span class="definition-keyword">define</span> <span class="identifier-syntax">PRESENT_PARTICIPLE_FORM_TYPE</span><span class="plain-syntax"> </span><span class="constant-syntax">2</span>
-<span class="definition-keyword">define</span> <span class="identifier-syntax">PAST_PARTICIPLE_FORM_TYPE</span><span class="plain-syntax"> </span><span class="constant-syntax">3</span>
-<span class="definition-keyword">define</span> <span class="identifier-syntax">ADJOINT_INFINITIVE_FORM_TYPE</span><span class="plain-syntax"> </span><span class="constant-syntax">4</span>
-<span class="definition-keyword">define</span> <span class="identifier-syntax">PRESENT_TENSE_FORM_TYPE</span><span class="plain-syntax"> </span><span class="constant-syntax">5</span>
-<span class="definition-keyword">define</span> <span class="identifier-syntax">PAST_TENSE_FORM_TYPE</span><span class="plain-syntax"> </span><span class="constant-syntax">6</span>
-<span class="definition-keyword">define</span> <span class="identifier-syntax">IMPERATIVE_FORM_TYPE</span><span class="plain-syntax"> </span><span class="constant-syntax">7</span>
-Or:
-</pre>
-<ul class="items"><li>(1) Infinitive
-</li><li>(2) Present participle (præsens partisipp) (syngende) &mdash; TODO: Is this only used adjectivally in Danish?
-</li><li>(3) Past participle (perfektum) (har + perfektum passiv partisipp)
-</li><li>(4) Adjoint infinitive
-</li><li>(5) Present (præsens/nutid)
-</li><li>(6) Past (præteritum/datid)
-</li><li>(7) Imperative
-</li></ul>
-<p class="commentary">These are referred to with their numbers in the conjugation tries below.
-</p>
-
-<p class="commentary firstcommentary"><a id="SP14" class="paragraph-anchor"></a><b>&#167;14. Verb tense definitions.</b></p>
+case). We then end up with these forms:</p>
+<p>(1) Infinitive
+(2) Present participle (præsens partisipp) (syngende) -- TODO: Is this only used adjectivally in Danish?
+(3) Past participle (perfektum) (har + perfektum passiv partisipp)
+(4) Adjoint infinitive
+(5) Present (præsens/nutid)
+(6) Past (præteritum/datid)
+(7) Imperative</p>
+<p>These are referred to with their numbers in the conjugation tries below.</p>
+</div>
+<p class="commentary firstcommentary"><a id="SP14" class="paragraph-anchor"></a><b>&#167;14. Verb tense definitions.</b> </p>
 
 <pre class="displayed-code all-displayed-code code-font">
 <span class="identifier-syntax">Include</span><span class="plain-syntax"> (-</span>
@@ -334,13 +306,14 @@ Or:
 
 <span class="plain-syntax">    &lt;</span><span class="identifier-syntax">verb</span><span class="plain-syntax">-</span><span class="identifier-syntax">conjugation</span><span class="plain-syntax">-</span><span class="identifier-syntax">instructions</span><span class="plain-syntax">&gt; ::=</span>
 <span class="plain-syntax">        </span><span class="identifier-syntax">v</span><span class="plain-syntax">æ</span><span class="identifier-syntax">re</span><span class="plain-syntax">            &lt;</span><span class="identifier-syntax">to</span><span class="plain-syntax">-</span><span class="identifier-syntax">be</span><span class="plain-syntax">-</span><span class="identifier-syntax">conjugation</span><span class="plain-syntax">&gt; |</span>
-<span class="plain-syntax">        </span><span class="comment-syntax">kunne ...  &lt;to-be-able-to-auxiliary&gt; </span><span class="extract"></span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">kunne</span><span class="plain-syntax">      &lt;</span><span class="identifier-syntax">to</span><span class="plain-syntax">-</span><span class="identifier-syntax">be</span><span class="plain-syntax">-</span><span class="identifier-syntax">able</span><span class="plain-syntax">-</span><span class="identifier-syntax">to</span><span class="plain-syntax">-</span><span class="identifier-syntax">conjugation</span><span class="plain-syntax">&gt; |</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">kunne</span><span class="plain-syntax">           &lt;</span><span class="identifier-syntax">modal</span><span class="plain-syntax">-</span><span class="identifier-syntax">conjugation</span><span class="plain-syntax">&gt; |</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">m</span><span class="plain-syntax">å</span><span class="identifier-syntax">tte</span><span class="plain-syntax">             &lt;</span><span class="identifier-syntax">modal</span><span class="plain-syntax">-</span><span class="identifier-syntax">conjugation</span><span class="plain-syntax">&gt; |</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">skulle</span><span class="plain-syntax">            &lt;</span><span class="identifier-syntax">modal</span><span class="plain-syntax">-</span><span class="identifier-syntax">conjugation</span><span class="plain-syntax">&gt; |</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">burde</span><span class="plain-syntax">          &lt;</span><span class="identifier-syntax">modal</span><span class="plain-syntax">-</span><span class="identifier-syntax">conjugation</span><span class="plain-syntax">&gt; |</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">ville</span><span class="plain-syntax">           &lt;</span><span class="identifier-syntax">modal</span><span class="plain-syntax">-</span><span class="identifier-syntax">conjugation</span><span class="plain-syntax">&gt; | ]</span>
+<span class="plain-syntax">        </span>
+<span class="comment-syntax">[ kunne ...  <to-be-able-to-auxiliary> |
+kunne      <to-be-able-to-conjugation> |
+kunne           <modal-conjugation> |
+måtte             <modal-conjugation> |
+skulle            <modal-conjugation> |
+burde          <modal-conjugation> |
+ville           <modal-conjugation> | ]</span>
 <span class="plain-syntax">        </span><span class="identifier-syntax">g</span><span class="plain-syntax">ø</span><span class="identifier-syntax">re</span><span class="plain-syntax">              &lt;</span><span class="identifier-syntax">to</span><span class="plain-syntax">-</span><span class="identifier-syntax">do</span><span class="plain-syntax">-</span><span class="identifier-syntax">conjugation</span><span class="plain-syntax">&gt; |</span>
 <span class="plain-syntax">            ...             &lt;</span><span class="identifier-syntax">regular</span><span class="plain-syntax">-</span><span class="identifier-syntax">verb</span><span class="plain-syntax">-</span><span class="identifier-syntax">conjugation</span><span class="plain-syntax">&gt;</span>
 
@@ -360,7 +333,9 @@ Or:
 <span class="plain-syntax">        </span><span class="constant-syntax">2</span><span class="plain-syntax"> </span><span class="constant-syntax">0</span><span class="identifier-syntax">nde</span><span class="plain-syntax"> |</span>
 <span class="plain-syntax">        </span><span class="constant-syntax">3</span><span class="plain-syntax"> </span><span class="identifier-syntax">haft</span><span class="plain-syntax"> |</span>
 <span class="plain-syntax">        </span><span class="constant-syntax">7</span><span class="plain-syntax"> </span><span class="constant-syntax">1</span><span class="plain-syntax"> |</span>
-<span class="plain-syntax">    </span><span class="comment-syntax">   &lt;auxiliary-verb-only&gt; </span><span class="extract"></span>
+<span class="plain-syntax">    </span><span class="comment-syntax">[    <pre class="displayed-code all-displayed-code code-font"><span class="plain-syntax">&lt;</span><span class="identifier-syntax">auxiliary</span><span class="plain-syntax">-</span><span class="identifier-syntax">verb</span><span class="plain-syntax">-</span><span class="identifier-syntax">only</span><span class="plain-syntax">&gt; | 
+</span></pre>
+ ]</span>
 <span class="plain-syntax">        &lt;</span><span class="identifier-syntax">not</span><span class="plain-syntax">-</span><span class="identifier-syntax">instance</span><span class="plain-syntax">-</span><span class="identifier-syntax">of</span><span class="plain-syntax">-</span><span class="identifier-syntax">verb</span><span class="plain-syntax">-</span><span class="identifier-syntax">at</span><span class="plain-syntax">-</span><span class="identifier-syntax">run</span><span class="plain-syntax">-</span><span class="identifier-syntax">time</span><span class="plain-syntax">&gt; |</span>
 <span class="plain-syntax">        &lt;</span><span class="identifier-syntax">to</span><span class="plain-syntax">-</span><span class="identifier-syntax">have</span><span class="plain-syntax">-</span><span class="identifier-syntax">tabulation</span><span class="plain-syntax">&gt;</span>
 
@@ -370,7 +345,7 @@ Or:
 <span class="plain-syntax">        </span><span class="identifier-syntax">a2</span><span class="plain-syntax">+        </span><span class="identifier-syntax">havde</span><span class="plain-syntax"> |</span>
 <span class="plain-syntax">        </span><span class="identifier-syntax">a2</span><span class="plain-syntax">-        </span><span class="identifier-syntax">havde</span><span class="plain-syntax"> </span><span class="identifier-syntax">ikke</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP15" class="paragraph-anchor"></a><b>&#167;15. </b></p>
+<p class="commentary firstcommentary"><a id="SP15" class="paragraph-anchor"></a><b>&#167;15. </b> </p>
 
 <pre class="displayed-code all-displayed-code code-font">
 <span class="plain-syntax">    &lt;</span><span class="identifier-syntax">regular</span><span class="plain-syntax">-</span><span class="identifier-syntax">verb</span><span class="plain-syntax">-</span><span class="identifier-syntax">conjugation</span><span class="plain-syntax">&gt; ::=</span>
@@ -392,20 +367,18 @@ Or:
 <span class="plain-syntax">        </span><span class="identifier-syntax">a5</span><span class="plain-syntax">-       </span><span class="identifier-syntax">vil</span><span class="plain-syntax"> </span><span class="identifier-syntax">ikke</span><span class="plain-syntax"> </span><span class="constant-syntax">1</span><span class="plain-syntax"> |</span>
 <span class="plain-syntax">        </span><span class="identifier-syntax">p</span><span class="plain-syntax">*        </span><span class="constant-syntax">3</span><span class="plain-syntax"> </span><span class="identifier-syntax">af</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP16" class="paragraph-anchor"></a><b>&#167;16. Verb conjugation grammar.</b>And finally we come to the Preform grammars that generates all of the above.
-</p>
-
-<p class="commentary">These tries have been generated based on the corpus <a href="https://ordregister.dk/doc/COR.html" class="external">Det Centrale Ordregister (COR)</a>
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP16" class="paragraph-anchor"></a><b>&#167;16. Verb conjugation grammar.</b>  And finally we come to the Preform grammars that generates all of the above.</p>
+<p>These tries have been generated based on the corpus <a href="https://ordregister.dk/doc/COR.html" class="external">Det Centrale Ordregister (COR)</a>
 created by <a href="https://dsn.dk" class="external">Dansk Sprognævn</a>, which contains 7493 Danish
-verbs.
-</p>
-
-<p class="commentary firstcommentary"><a id="SP17" class="paragraph-anchor"></a><b>&#167;17. Conjugating present participle.</b>Almost all present participles are formed in the same way, ending in -ende but
+verbs.</p>
+</div>
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP17" class="paragraph-anchor"></a><b>&#167;17. Conjugating present participle.</b>  Almost all present participles are formed in the same way, ending in -ende but
 without a double e if the infinitive already ends with it. The exceptions are a
 handful of words that do end up with -eende after all; really just a few
-one-syllable words, plus compound words ending in those one-syllable words.
-</p>
-
+one-syllable words, plus compound words ending in those one-syllable words.</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
 
 <span class="plain-syntax">    &lt;</span><span class="identifier-syntax">da</span><span class="plain-syntax">-</span><span class="identifier-syntax">trie</span><span class="plain-syntax">-</span><span class="identifier-syntax">present</span><span class="plain-syntax">-</span><span class="identifier-syntax">participle</span><span class="plain-syntax">&gt; ::=</span>
@@ -438,9 +411,9 @@ one-syllable words, plus compound words ending in those one-syllable words.
 <span class="plain-syntax">        </span><span class="identifier-syntax">h</span><span class="plain-syntax">å</span><span class="identifier-syntax">nle</span><span class="plain-syntax">       </span><span class="constant-syntax">0</span><span class="identifier-syntax">ende</span><span class="plain-syntax">  |</span>
 <span class="plain-syntax">        </span><span class="identifier-syntax">klukle</span><span class="plain-syntax">      </span><span class="constant-syntax">0</span><span class="identifier-syntax">ende</span><span class="plain-syntax">  |</span>
 <span class="plain-syntax">        *</span><span class="identifier-syntax">e</span><span class="plain-syntax">          </span><span class="constant-syntax">1</span><span class="identifier-syntax">nde</span><span class="plain-syntax">   |</span>
-<span class="plain-syntax">        *           </span><span class="constant-syntax">0</span><span class="identifier-syntax">ende</span><span class="plain-syntax">     </span><span class="comment-syntax">TODO check that this is correct</span>
+<span class="plain-syntax">        *           </span><span class="constant-syntax">0</span><span class="identifier-syntax">ende</span><span class="plain-syntax">     </span><span class="comment-syntax">[ TODO check that this is correct ]</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP18" class="paragraph-anchor"></a><b>&#167;18. Conjugating past participle.</b></p>
+<p class="commentary firstcommentary"><a id="SP18" class="paragraph-anchor"></a><b>&#167;18. Conjugating past participle.</b> </p>
 
 <pre class="displayed-code all-displayed-code code-font">
 
@@ -480,11 +453,11 @@ one-syllable words, plus compound words ending in those one-syllable words.
 <span class="plain-syntax">        *</span><span class="identifier-syntax">ibe</span><span class="plain-syntax">    </span><span class="constant-syntax">3</span><span class="identifier-syntax">ebet</span><span class="plain-syntax">   |</span>
 <span class="plain-syntax">        *</span><span class="identifier-syntax">ige</span><span class="plain-syntax">    </span><span class="constant-syntax">3</span><span class="identifier-syntax">eget</span><span class="plain-syntax">   |</span>
 <span class="plain-syntax">        *</span><span class="identifier-syntax">ide</span><span class="plain-syntax">    </span><span class="constant-syntax">3</span><span class="identifier-syntax">edet</span><span class="plain-syntax">   |</span>
-<span class="plain-syntax">        *æ</span><span class="identifier-syntax">de</span><span class="plain-syntax">    </span><span class="constant-syntax">3</span><span class="plain-syntax">å</span><span class="identifier-syntax">dt</span><span class="plain-syntax">    | </span><span class="comment-syntax">træde</span>
+<span class="plain-syntax">        *æ</span><span class="identifier-syntax">de</span><span class="plain-syntax">    </span><span class="constant-syntax">3</span><span class="plain-syntax">å</span><span class="identifier-syntax">dt</span><span class="plain-syntax">    | </span><span class="comment-syntax">[ træde ]</span>
 <span class="plain-syntax">        *</span><span class="identifier-syntax">fryse</span><span class="plain-syntax">  </span><span class="constant-syntax">3</span><span class="identifier-syntax">osset</span><span class="plain-syntax">  |</span>
 <span class="plain-syntax">        *</span><span class="identifier-syntax">ryge</span><span class="plain-syntax">   </span><span class="constant-syntax">3</span><span class="plain-syntax">ø</span><span class="identifier-syntax">get</span><span class="plain-syntax">   |</span>
 <span class="plain-syntax">        *</span><span class="identifier-syntax">sige</span><span class="plain-syntax">   </span><span class="constant-syntax">3</span><span class="identifier-syntax">agt</span><span class="plain-syntax">    |</span>
-<span class="plain-syntax">        *</span><span class="identifier-syntax">sv</span><span class="plain-syntax">æ</span><span class="identifier-syntax">lge</span><span class="plain-syntax"> </span><span class="constant-syntax">0</span><span class="identifier-syntax">t</span><span class="plain-syntax">      | </span><span class="comment-syntax">regular</span>
+<span class="plain-syntax">        *</span><span class="identifier-syntax">sv</span><span class="plain-syntax">æ</span><span class="identifier-syntax">lge</span><span class="plain-syntax"> </span><span class="constant-syntax">0</span><span class="identifier-syntax">t</span><span class="plain-syntax">      | </span><span class="comment-syntax">[ regular ]</span>
 <span class="plain-syntax">        *</span><span class="identifier-syntax">v</span><span class="plain-syntax">æ</span><span class="identifier-syntax">lge</span><span class="plain-syntax">  </span><span class="constant-syntax">4</span><span class="identifier-syntax">algt</span><span class="plain-syntax">   |</span>
 <span class="plain-syntax">        *</span><span class="identifier-syntax">s</span><span class="plain-syntax">æ</span><span class="identifier-syntax">lge</span><span class="plain-syntax">  </span><span class="constant-syntax">4</span><span class="identifier-syntax">olgt</span><span class="plain-syntax">   |</span>
 <span class="plain-syntax">        *</span><span class="identifier-syntax">f</span><span class="plain-syntax">ø</span><span class="identifier-syntax">lge</span><span class="plain-syntax">  </span><span class="constant-syntax">4</span><span class="identifier-syntax">ulgt</span><span class="plain-syntax">   |</span>
@@ -506,7 +479,7 @@ one-syllable words, plus compound words ending in those one-syllable words.
 <span class="plain-syntax">            </span><span class="identifier-syntax">te</span><span class="plain-syntax">      </span><span class="constant-syntax">0</span><span class="identifier-syntax">et</span><span class="plain-syntax"> |</span>
 <span class="plain-syntax">            </span><span class="identifier-syntax">skoggerle</span><span class="plain-syntax">   </span><span class="constant-syntax">0</span><span class="identifier-syntax">et</span><span class="plain-syntax"> |</span>
 <span class="plain-syntax">            </span><span class="identifier-syntax">sne</span><span class="plain-syntax">     </span><span class="constant-syntax">0</span><span class="identifier-syntax">et</span><span class="plain-syntax"> |</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">le</span><span class="plain-syntax">      </span><span class="constant-syntax">0</span><span class="identifier-syntax">et</span><span class="plain-syntax"> | </span><span class="comment-syntax">TODO lo</span>
+<span class="plain-syntax">            </span><span class="identifier-syntax">le</span><span class="plain-syntax">      </span><span class="constant-syntax">0</span><span class="identifier-syntax">et</span><span class="plain-syntax"> | </span><span class="comment-syntax">[ TODO lo ]</span>
 <span class="plain-syntax">            </span><span class="identifier-syntax">h</span><span class="plain-syntax">å</span><span class="identifier-syntax">nle</span><span class="plain-syntax">   </span><span class="constant-syntax">0</span><span class="identifier-syntax">et</span><span class="plain-syntax"> |</span>
 <span class="plain-syntax">            </span><span class="identifier-syntax">klukle</span><span class="plain-syntax">  </span><span class="constant-syntax">0</span><span class="identifier-syntax">et</span><span class="plain-syntax"> |</span>
 <span class="plain-syntax">            </span><span class="identifier-syntax">sm</span><span class="plain-syntax">å</span><span class="identifier-syntax">le</span><span class="plain-syntax">   </span><span class="constant-syntax">0</span><span class="identifier-syntax">et</span>
@@ -523,19 +496,23 @@ one-syllable words, plus compound words ending in those one-syllable words.
 
 
 <span class="plain-syntax">    </span>
-<span class="plain-syntax">        &lt;</span><span class="identifier-syntax">da</span><span class="plain-syntax">-</span><span class="identifier-syntax">trie</span><span class="plain-syntax">-</span><span class="identifier-syntax">double</span><span class="plain-syntax">-</span><span class="identifier-syntax">consonant</span><span class="plain-syntax">-</span><span class="identifier-syntax">past</span><span class="plain-syntax">-</span><span class="identifier-syntax">participle</span><span class="plain-syntax">&gt; ::=</span>
-<span class="plain-syntax">            *</span><span class="identifier-syntax">lle</span><span class="plain-syntax">    </span><span class="constant-syntax">0</span><span class="identifier-syntax">t</span><span class="plain-syntax">  |</span>
-<span class="plain-syntax">            *</span><span class="identifier-syntax">mme</span><span class="plain-syntax">    </span><span class="constant-syntax">0</span><span class="identifier-syntax">t</span><span class="plain-syntax">  |</span>
-<span class="plain-syntax">            *</span><span class="identifier-syntax">nne</span><span class="plain-syntax">    </span><span class="constant-syntax">0</span><span class="identifier-syntax">t</span><span class="plain-syntax">  |</span>
-<span class="plain-syntax">            *</span><span class="identifier-syntax">kke</span><span class="plain-syntax">    </span><span class="constant-syntax">0</span><span class="identifier-syntax">t</span><span class="plain-syntax">  |</span>
-<span class="plain-syntax">            *</span><span class="identifier-syntax">e</span><span class="plain-syntax">      </span><span class="constant-syntax">1</span><span class="identifier-syntax">t</span><span class="plain-syntax">  |</span>
-<span class="plain-syntax">            *</span><span class="identifier-syntax">e</span><span class="plain-syntax">      </span><span class="constant-syntax">0</span><span class="identifier-syntax">t</span>
-<span class="plain-syntax">    ]</span>
-</pre>
-<p class="commentary firstcommentary"><a id="SP19" class="paragraph-anchor"></a><b>&#167;19. Conjugating present tense.</b>The present tense is simple in Danish. There are just a handful of irregular
-exceptions.
-</p>
+<span class="comment-syntax">[
+        <pre class="displayed-code all-displayed-code code-font"><span class="plain-syntax">    &lt;</span><span class="identifier-syntax">da</span><span class="plain-syntax">-</span><span class="identifier-syntax">trie</span><span class="plain-syntax">-</span><span class="identifier-syntax">double</span><span class="plain-syntax">-</span><span class="identifier-syntax">consonant</span><span class="plain-syntax">-</span><span class="identifier-syntax">past</span><span class="plain-syntax">-</span><span class="identifier-syntax">participle</span><span class="plain-syntax">&gt; ::=
+        *</span><span class="identifier-syntax">lle</span><span class="plain-syntax">	</span><span class="constant-syntax">0</span><span class="identifier-syntax">t</span><span class="plain-syntax">	|
+        *</span><span class="identifier-syntax">mme</span><span class="plain-syntax">	</span><span class="constant-syntax">0</span><span class="identifier-syntax">t</span><span class="plain-syntax">	|
+        *</span><span class="identifier-syntax">nne</span><span class="plain-syntax">	</span><span class="constant-syntax">0</span><span class="identifier-syntax">t</span><span class="plain-syntax">	|
+        *</span><span class="identifier-syntax">kke</span><span class="plain-syntax">	</span><span class="constant-syntax">0</span><span class="identifier-syntax">t</span><span class="plain-syntax">	|
+        *</span><span class="identifier-syntax">e</span><span class="plain-syntax">		</span><span class="constant-syntax">1</span><span class="identifier-syntax">t</span><span class="plain-syntax">  |
+        *</span><span class="identifier-syntax">e</span><span class="plain-syntax">		</span><span class="constant-syntax">0</span><span class="identifier-syntax">t</span><span class="plain-syntax">
+</span></pre>
+    
+]</span>
 
+</pre>
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP19" class="paragraph-anchor"></a><b>&#167;19. Conjugating present tense.</b>  The present tense is simple in Danish. There are just a handful of irregular
+exceptions.</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
 <span class="plain-syntax">    &lt;</span><span class="identifier-syntax">da</span><span class="plain-syntax">-</span><span class="identifier-syntax">trie</span><span class="plain-syntax">-</span><span class="identifier-syntax">present</span><span class="plain-syntax">-</span><span class="identifier-syntax">verb</span><span class="plain-syntax">-</span><span class="identifier-syntax">form</span><span class="plain-syntax">&gt; ::=</span>
 <span class="plain-syntax">        </span><span class="identifier-syntax">ha</span><span class="plain-syntax">'     </span><span class="identifier-syntax">har</span><span class="plain-syntax">  |</span>
@@ -546,14 +523,14 @@ exceptions.
 <span class="plain-syntax">        </span><span class="identifier-syntax">kunne</span><span class="plain-syntax">   </span><span class="identifier-syntax">kan</span><span class="plain-syntax">  |</span>
 <span class="plain-syntax">        </span><span class="identifier-syntax">m</span><span class="plain-syntax">å</span><span class="identifier-syntax">tte</span><span class="plain-syntax">   </span><span class="identifier-syntax">m</span><span class="plain-syntax">å   |</span>
 <span class="plain-syntax">        </span><span class="identifier-syntax">v</span><span class="plain-syntax">æ</span><span class="identifier-syntax">re</span><span class="plain-syntax">    </span><span class="identifier-syntax">er</span><span class="plain-syntax">   |</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">vide</span><span class="plain-syntax">    </span><span class="identifier-syntax">ved</span><span class="plain-syntax">  | </span><span class="comment-syntax">There's also another verb "at vide (ud)" which we ignore</span>
+<span class="plain-syntax">        </span><span class="identifier-syntax">vide</span><span class="plain-syntax">    </span><span class="identifier-syntax">ved</span><span class="plain-syntax">  | </span><span class="comment-syntax">[ There's also another verb &quot;at vide (ud)&quot; which we ignore ]</span>
 <span class="plain-syntax">        </span><span class="identifier-syntax">ville</span><span class="plain-syntax">   </span><span class="identifier-syntax">vil</span><span class="plain-syntax">  |</span>
 <span class="plain-syntax">        *</span><span class="identifier-syntax">g</span><span class="plain-syntax">ø</span><span class="identifier-syntax">re</span><span class="plain-syntax">   </span><span class="constant-syntax">1</span><span class="plain-syntax">    |</span>
 <span class="plain-syntax">        </span><span class="identifier-syntax">sl</span><span class="plain-syntax">å</span><span class="identifier-syntax">s</span><span class="plain-syntax">    </span><span class="constant-syntax">0</span><span class="plain-syntax">    |</span>
-<span class="plain-syntax">        *</span><span class="identifier-syntax">es</span><span class="plain-syntax">     </span><span class="constant-syntax">0</span><span class="plain-syntax">    | </span><span class="comment-syntax">[ Passive verbs ]</span><span class="plain-syntax"> </span><span class="comment-syntax">or simply *s ?</span>
+<span class="plain-syntax">        *</span><span class="identifier-syntax">es</span><span class="plain-syntax">     </span><span class="constant-syntax">0</span><span class="plain-syntax">    | </span><span class="comment-syntax">[ Passive verbs ]</span><span class="plain-syntax"> </span><span class="comment-syntax">[ or simply *s ?]</span>
 <span class="plain-syntax">        *       </span><span class="constant-syntax">0</span><span class="identifier-syntax">r</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP20" class="paragraph-anchor"></a><b>&#167;20. Conjugating past tense.</b></p>
+<p class="commentary firstcommentary"><a id="SP20" class="paragraph-anchor"></a><b>&#167;20. Conjugating past tense.</b> </p>
 
 <pre class="displayed-code all-displayed-code code-font">
 <span class="plain-syntax">    &lt;</span><span class="identifier-syntax">da</span><span class="plain-syntax">-</span><span class="identifier-syntax">trie</span><span class="plain-syntax">-</span><span class="identifier-syntax">past</span><span class="plain-syntax">&gt; ::=</span>
@@ -628,7 +605,7 @@ exceptions.
 <span class="plain-syntax">        *       </span><span class="constant-syntax">0</span><span class="identifier-syntax">de</span><span class="plain-syntax">     |</span>
 <span class="plain-syntax">        *       </span><span class="constant-syntax">0</span><span class="identifier-syntax">ede</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP21" class="paragraph-anchor"></a><b>&#167;21. Conjugation imperative mood.</b></p>
+<p class="commentary firstcommentary"><a id="SP21" class="paragraph-anchor"></a><b>&#167;21. Conjugation imperative mood.</b> </p>
 
 <pre class="displayed-code all-displayed-code code-font">
 <span class="plain-syntax">    &lt;</span><span class="identifier-syntax">da</span><span class="plain-syntax">-</span><span class="identifier-syntax">trie</span><span class="plain-syntax">-</span><span class="identifier-syntax">imperative</span><span class="plain-syntax">&gt; ::=</span>
@@ -636,91 +613,91 @@ exceptions.
 
 <span class="plain-syntax">-) </span><span class="identifier-syntax">in</span><span class="plain-syntax"> </span><span class="identifier-syntax">the</span><span class="plain-syntax"> </span><span class="identifier-syntax">Preform</span><span class="plain-syntax"> </span><span class="identifier-syntax">grammar</span><span class="plain-syntax">.</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP22" class="paragraph-anchor"></a><b>&#167;22. </b>Other stuff.
-</p>
-
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP22" class="paragraph-anchor"></a><b>&#167;22. </b>  Other stuff.</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
 
 <span class="identifier-syntax">Include</span><span class="plain-syntax"> (-</span>
-<span class="plain-syntax">    </span><span class="comment-syntax">PrintVerb v;</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">WorldModelKit</span><span class="plain-syntax">`</span><span class="identifier-syntax">NO_VERB_VERB_EXISTS</span><span class="plain-syntax">) {</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">v</span><span class="plain-syntax"> == '</span><span class="identifier-syntax">no</span><span class="plain-syntax">.</span><span class="identifier-syntax">verb</span><span class="plain-syntax">') { </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"gøre noget med"</span><span class="plain-syntax">; </span><span class="identifier-syntax">rtrue</span><span class="plain-syntax">; }</span>
-<span class="plain-syntax">        }</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">rfalse</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">    ];</span>
+<span class="plain-syntax">    </span>
+<span class="comment-syntax">[ PrintVerb v;
+if (WorldModelKit`NO_VERB_VERB_EXISTS) {
+if (v == 'no.verb') { print &quot;gøre noget med&quot;; rtrue; }
+}
+rfalse;    
+]</span><span class="plain-syntax">;</span>
 <span class="plain-syntax">-) </span><span class="identifier-syntax">replacing</span><span class="plain-syntax"> </span><span class="string-syntax">"PrintVerb"</span><span class="plain-syntax">.</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP23" class="paragraph-anchor"></a><b>&#167;23. Print command so far.</b>TODO: This is commented out, but could be tailored to print the verb in the
-parser command so far in the infinitive rather than the imperative.
-</p>
-
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP23" class="paragraph-anchor"></a><b>&#167;23. Print command so far.</b>  TODO: This is commented out, but could be tailored to print the verb in the
+parser command so far in the infinitive rather than the imperative.</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
 <span class="identifier-syntax">To</span><span class="plain-syntax"> </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="identifier-syntax">parser</span><span class="plain-syntax"> </span><span class="identifier-syntax">command</span><span class="plain-syntax"> </span><span class="identifier-syntax">so</span><span class="plain-syntax"> </span><span class="identifier-syntax">far</span><span class="plain-syntax">:</span>
 <span class="plain-syntax">    (- </span><span class="identifier-syntax">PrintCommand</span><span class="plain-syntax">(0); -).</span>
 
 <span class="identifier-syntax">Include</span><span class="plain-syntax"> (-</span>
-<span class="plain-syntax">    </span><span class="comment-syntax">PrintCommand from i k spacing_flag;</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">from</span><span class="plain-syntax"> == </span><span class="constant-syntax">0</span><span class="plain-syntax">) {</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">i</span><span class="plain-syntax"> = </span><span class="identifier-syntax">verb_word</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">LanguageVerb</span><span class="plain-syntax">(</span><span class="identifier-syntax">i</span><span class="plain-syntax">) == </span><span class="constant-syntax">0</span><span class="plain-syntax">)</span>
-<span class="plain-syntax">                </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">PrintVerb</span><span class="plain-syntax">(</span><span class="identifier-syntax">i</span><span class="plain-syntax">) == </span><span class="constant-syntax">0</span><span class="plain-syntax">) { </span><span class="identifier-syntax">print</span><span class="plain-syntax"> (</span><span class="identifier-syntax">address</span><span class="plain-syntax">) </span><span class="identifier-syntax">i</span><span class="plain-syntax">; </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"e"</span><span class="plain-syntax">; } ! </span><span class="identifier-syntax">TODO</span><span class="plain-syntax"> </span><span class="identifier-syntax">if</span><span class="plain-syntax"> </span><span class="identifier-syntax">printverb</span><span class="plain-syntax"> </span><span class="identifier-syntax">didn</span><span class="plain-syntax">'</span><span class="identifier-syntax">t</span><span class="plain-syntax"> </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="identifier-syntax">anything</span><span class="plain-syntax"> </span><span class="identifier-syntax">we</span><span class="plain-syntax"> </span><span class="identifier-syntax">want</span><span class="plain-syntax"> </span><span class="identifier-syntax">to</span><span class="plain-syntax"> </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="identifier-syntax">the</span><span class="plain-syntax"> </span><span class="identifier-syntax">infinitive</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">from</span><span class="plain-syntax">++; </span><span class="identifier-syntax">spacing_flag</span><span class="plain-syntax"> = </span><span class="identifier-syntax">true</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">        }</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">for</span><span class="plain-syntax"> (</span><span class="identifier-syntax">k</span><span class="plain-syntax">=</span><span class="identifier-syntax">from</span><span class="plain-syntax"> : </span><span class="identifier-syntax">k</span><span class="plain-syntax">&lt;</span><span class="identifier-syntax">pcount</span><span class="plain-syntax"> : </span><span class="identifier-syntax">k</span><span class="plain-syntax">++) {</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">i</span><span class="plain-syntax"> = </span><span class="identifier-syntax">pattern</span><span class="plain-syntax">--&gt;</span><span class="identifier-syntax">k</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">i</span><span class="plain-syntax"> == </span><span class="identifier-syntax">PATTERN_NULL</span><span class="plain-syntax">) </span><span class="identifier-syntax">continue</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">spacing_flag</span><span class="plain-syntax">) </span><span class="identifier-syntax">print</span><span class="plain-syntax"> (</span><span class="identifier-syntax">char</span><span class="plain-syntax">) ' ';</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">i</span><span class="plain-syntax"> == </span><span class="constant-syntax">0</span><span class="plain-syntax">) { </span><span class="identifier-syntax">PARSER_CLARIF_INTERNAL_RM</span><span class="plain-syntax">('</span><span class="identifier-syntax">F</span><span class="plain-syntax">'); </span><span class="identifier-syntax">jump</span><span class="plain-syntax"> </span><span class="identifier-syntax">TokenPrinted</span><span class="plain-syntax">; }</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">i</span><span class="plain-syntax"> == </span><span class="constant-syntax">1</span><span class="plain-syntax">) { </span><span class="identifier-syntax">PARSER_CLARIF_INTERNAL_RM</span><span class="plain-syntax">('</span><span class="identifier-syntax">G</span><span class="plain-syntax">'); </span><span class="identifier-syntax">jump</span><span class="plain-syntax"> </span><span class="identifier-syntax">TokenPrinted</span><span class="plain-syntax">; }</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">i</span><span class="plain-syntax"> &gt;= </span><span class="identifier-syntax">REPARSE_CODE</span><span class="plain-syntax">)</span>
-<span class="plain-syntax">                </span><span class="identifier-syntax">print</span><span class="plain-syntax"> (</span><span class="identifier-syntax">address</span><span class="plain-syntax">) </span><span class="identifier-syntax">VM_NumberToDictionaryAddress</span><span class="plain-syntax">(</span><span class="identifier-syntax">i</span><span class="plain-syntax">-</span><span class="identifier-syntax">REPARSE_CODE</span><span class="plain-syntax">);</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">else</span><span class="plain-syntax"> {</span>
-<span class="plain-syntax">                </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">i</span><span class="plain-syntax"> </span><span class="identifier-syntax">ofclass</span><span class="plain-syntax"> </span><span class="identifier-syntax">K3_direction</span><span class="plain-syntax">) { ! &amp;&amp; </span><span class="identifier-syntax">LanguageVerbLikesAdverb</span><span class="plain-syntax">(</span><span class="identifier-syntax">i</span><span class="plain-syntax">)) {</span>
-<span class="plain-syntax">                    </span><span class="identifier-syntax">print</span><span class="plain-syntax"> (</span><span class="identifier-syntax">LanguageDirection</span><span class="plain-syntax">) </span><span class="identifier-syntax">i</span><span class="plain-syntax">; ! </span><span class="identifier-syntax">the</span><span class="plain-syntax"> </span><span class="identifier-syntax">direction</span><span class="plain-syntax"> </span><span class="identifier-syntax">name</span><span class="plain-syntax"> </span><span class="identifier-syntax">as</span><span class="plain-syntax"> </span><span class="identifier-syntax">adverb</span>
-<span class="plain-syntax">                } </span><span class="identifier-syntax">else</span><span class="plain-syntax"> {</span>
-<span class="plain-syntax">                    </span><span class="identifier-syntax">print</span><span class="plain-syntax"> (</span><span class="identifier-syntax">the</span><span class="plain-syntax">) </span><span class="identifier-syntax">i</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">                }</span>
-<span class="plain-syntax">            }</span>
-<span class="plain-syntax">        .</span><span class="identifier-syntax">TokenPrinted</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">spacing_flag</span><span class="plain-syntax"> = </span><span class="identifier-syntax">true</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">        }</span>
-<span class="plain-syntax">    ];</span>
+<span class="plain-syntax">    </span><span class="comment-syntax">[ PrintCommand from i k spacing_flag;</span>
+<span class="comment-syntax">        if (from == 0) {</span>
+<span class="comment-syntax">            i = verb_word;</span>
+<span class="comment-syntax">            if (LanguageVerb(i) == 0)</span>
+<span class="comment-syntax">                if (PrintVerb(i) == 0) { print (address) i; print "e"; } ! TODO if printverb didn't print anything we want to print the infinitive</span>
+<span class="comment-syntax">            from++; spacing_flag = true;</span>
+<span class="comment-syntax">        }</span>
+<span class="comment-syntax">        for (k=from : k&lt;pcount : k++) {</span>
+<span class="comment-syntax">            i = pattern--&gt;k;</span>
+<span class="comment-syntax">            if (i == PATTERN_NULL) continue;</span>
+<span class="comment-syntax">            if (spacing_flag) print (char) ' ';</span>
+<span class="comment-syntax">            if (i == 0) { PARSER_CLARIF_INTERNAL_RM('F'); jump TokenPrinted; }</span>
+<span class="comment-syntax">            if (i == 1) { PARSER_CLARIF_INTERNAL_RM('G'); jump TokenPrinted; }</span>
+<span class="comment-syntax">            if (i &gt;= REPARSE_CODE)</span>
+<span class="comment-syntax">                print (address) VM_NumberToDictionaryAddress(i-REPARSE_CODE);</span>
+<span class="comment-syntax">            else {</span>
+<span class="comment-syntax">                if (i ofclass K3_direction) { ! &amp;&amp; LanguageVerbLikesAdverb(i)) {</span>
+<span class="comment-syntax">                    print (LanguageDirection) i; ! the direction name as adverb</span>
+<span class="comment-syntax">                } else {</span>
+<span class="comment-syntax">                    print (the) i;</span>
+<span class="comment-syntax">                }</span>
+<span class="comment-syntax">            }</span>
+<span class="comment-syntax">        .TokenPrinted;</span>
+<span class="comment-syntax">            spacing_flag = true;</span>
+<span class="comment-syntax">        }</span>
+<span class="comment-syntax">    ]</span><span class="plain-syntax">;</span>
 <span class="plain-syntax">-) </span><span class="identifier-syntax">replacing</span><span class="plain-syntax"> </span><span class="string-syntax">"PrintCommand"</span><span class="plain-syntax">.</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP24" class="paragraph-anchor"></a><b>&#167;24. Showverb Command.</b>SHOWVERB is a holdover from old I6 days, but still quite useful. It writes
-out the I6 command verb grammar for the supplied command.
-</p>
-
-<p class="commentary">TODO: Add functionality to write out the I7 verb information too.
-</p>
-
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP24" class="paragraph-anchor"></a><b>&#167;24. Showverb Command.</b>  SHOWVERB is a holdover from old I6 days, but still quite useful. It writes
+out the I6 command verb grammar for the supplied command.</p>
+<p>TODO: Add functionality to write out the I7 verb information too.</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
 <span class="identifier-syntax">Section</span><span class="plain-syntax"> - </span><span class="identifier-syntax">Show</span><span class="plain-syntax"> </span><span class="identifier-syntax">Verb</span><span class="plain-syntax"> </span><span class="identifier-syntax">command</span><span class="plain-syntax"> (</span><span class="identifier-syntax">not</span><span class="plain-syntax"> </span><span class="identifier-syntax">for</span><span class="plain-syntax"> </span><span class="identifier-syntax">release</span><span class="plain-syntax">)</span>
 
 <span class="identifier-syntax">Include</span><span class="plain-syntax"> (-</span>
-<span class="plain-syntax">    </span><span class="comment-syntax">ShowVerbSub address lines i x;</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">wn</span><span class="plain-syntax"> = </span><span class="constant-syntax">2</span><span class="plain-syntax">; </span><span class="identifier-syntax">x</span><span class="plain-syntax"> = </span><span class="identifier-syntax">NextWordStopped</span><span class="plain-syntax">();</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">WordMarkedAsVerb</span><span class="plain-syntax">(</span><span class="identifier-syntax">x</span><span class="plain-syntax">) == </span><span class="identifier-syntax">false</span><span class="plain-syntax">)</span>
-<span class="plain-syntax">            </span><span class="string-syntax">"Try typing ~showverb~ and then the name of a verb."</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">i</span><span class="plain-syntax"> = </span><span class="identifier-syntax">DictionaryWordToVerbNum</span><span class="plain-syntax">(</span><span class="identifier-syntax">x</span><span class="plain-syntax">);</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">address</span><span class="plain-syntax"> = </span><span class="identifier-syntax">VM_CommandTableAddress</span><span class="plain-syntax">(</span><span class="identifier-syntax">i</span><span class="plain-syntax">);</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">lines</span><span class="plain-syntax"> = </span><span class="identifier-syntax">address</span><span class="plain-syntax">-&gt;0;</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">address</span><span class="plain-syntax">++;</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"Verb "</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">WordMarkedAsMeta</span><span class="plain-syntax">(</span><span class="identifier-syntax">x</span><span class="plain-syntax">)) </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"meta "</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">VM_PrintCommandWords</span><span class="plain-syntax">(</span><span class="identifier-syntax">i</span><span class="plain-syntax">);</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">new_line</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">lines</span><span class="plain-syntax"> == </span><span class="constant-syntax">0</span><span class="plain-syntax">) </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"has no grammar lines.^"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">for</span><span class="plain-syntax"> (: </span><span class="identifier-syntax">lines</span><span class="plain-syntax">&gt;0 : </span><span class="identifier-syntax">lines</span><span class="plain-syntax">-- ) {</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">address</span><span class="plain-syntax"> = </span><span class="identifier-syntax">UnpackGrammarLine</span><span class="plain-syntax">(</span><span class="identifier-syntax">address</span><span class="plain-syntax">);</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"    "</span><span class="plain-syntax">; </span><span class="identifier-syntax">DebugGrammarLine</span><span class="plain-syntax">(); </span><span class="identifier-syntax">new_line</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">        }</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">ParaContent</span><span class="plain-syntax">();</span>
-<span class="plain-syntax">    ];</span>
+<span class="plain-syntax">    </span>
+<span class="comment-syntax">[ ShowVerbSub address lines i x;
+wn = 2; x = NextWordStopped();
+if (WordMarkedAsVerb(x) == false)
+&quot;Try typing <del>showverb</del> and then the name of a verb.&quot;;
+i = DictionaryWordToVerbNum(x);
+address = VM_CommandTableAddress(i);
+lines = address-&gt;0;
+address++;
+print &quot;Verb &quot;;
+if (WordMarkedAsMeta(x)) print &quot;meta &quot;;
+VM_PrintCommandWords(i);
+new_line;
+if (lines == 0) print &quot;has no grammar lines.^&quot;;
+for (: lines&gt;0 : lines-- ) {
+address = UnpackGrammarLine(address);
+print &quot;    &quot;; DebugGrammarLine(); new_line;
+}
+ParaContent();    
+]</span><span class="plain-syntax">;</span>
 <span class="plain-syntax">-) </span><span class="identifier-syntax">replacing</span><span class="plain-syntax"> </span><span class="string-syntax">"ShowVerbSub"</span><span class="plain-syntax">.</span>
 </pre>
 <nav role="progress"><div class="progresscontainer">
-    <ul class="progressbar"><li class="progressprev"><a href="adjct.html">&#10094;</a></li><li class="progresssection"><a href="prmbl.html">prmbl</a></li><li class="progresssection"><a href="drctn.html">drctn</a></li><li class="progresssection"><a href="nmbrs.html">nmbrs</a></li><li class="progresssection"><a href="tm.html">tm</a></li><li class="progresssection"><a href="gndr.html">gndr</a></li><li class="progresssection"><a href="artcl.html">artcl</a></li><li class="progresssection"><a href="nns.html">nns</a></li><li class="progresssection"><a href="adjct.html">adjct</a></li><li class="progresscurrent">vrbs</li><li class="progresssection"><a href="prnns.html">prnns</a></li><li class="progresssection"><a href="cmgr.html">cmgr</a></li><li class="progresssection"><a href="rspns.html">rspns</a></li><li class="progresssection"><a href="msc.html">msc</a></li><li class="progressnext"><a href="prnns.html">&#10095;</a></li></ul></div>
+    <ul class="progressbar"><li class="progressprev"><span class="nav-popup">Adjectives</span><a href="adjct.html">&#10094;</a></li><li class="progresssection"><span class="fullname-popup">Preamble</span><a href="prmbl.html">prmbl</a></li><li class="progresssection"><span class="fullname-popup">Directions</span><a href="drctn.html">drctn</a></li><li class="progresssection"><span class="fullname-popup">Numbers</span><a href="nmbrs.html">nmbrs</a></li><li class="progresssection"><span class="fullname-popup">Time</span><a href="tm.html">tm</a></li><li class="progresssection"><span class="fullname-popup">Gender</span><a href="gndr.html">gndr</a></li><li class="progresssection"><span class="fullname-popup">Articles</span><a href="artcl.html">artcl</a></li><li class="progresssection"><span class="fullname-popup">Nouns</span><a href="nns.html">nns</a></li><li class="progresssection"><span class="fullname-popup">Adjectives</span><a href="adjct.html">adjct</a></li><li class="progresscurrent"><span class="current-fullname-popup">Verbs</span>vrbs</li><li class="progresssection"><span class="fullname-popup">Pronouns</span><a href="prnns.html">prnns</a></li><li class="progresssection"><span class="fullname-popup">Command Grammar</span><a href="cmgr.html">cmgr</a></li><li class="progresssection"><span class="fullname-popup">Responses</span><a href="rspns.html">rspns</a></li><li class="progresssection"><span class="fullname-popup">Misc</span><a href="msc.html">msc</a></li><li class="progressnext"><span class="nav-popup">Pronouns</span><a href="prnns.html">&#10095;</a></li></ul></div>
 </nav><!-- End of weave -->
 
 		</main>

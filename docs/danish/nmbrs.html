@@ -3,22 +3,27 @@
 	<head>
 		<title>Numbers</title>
 <link href="../docs-assets/Breadcrumbs.css" rel="stylesheet" rev="stylesheet" type="text/css">
-<link href="../docs-assets/Navigation.css" rel="stylesheet" rev="stylesheet" type="text/css">
-<link href="../docs-assets/Fonts.css" rel="stylesheet" rev="stylesheet" type="text/css">
-<link href="../docs-assets/Progress.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<link href="../docs-assets/Base.css" rel="stylesheet" rev="stylesheet" type="text/css">
 		<meta name="viewport" content="width=device-width initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta http-equiv="Content-Language" content="en-gb">
 
-<link href="../docs-assets/Base.css" rel="stylesheet" rev="stylesheet" type="text/css">
 <link href="../docs-assets/Contents.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<link href="../docs-assets/Fonts.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<link href="../docs-assets/Navigation.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<link href="../docs-assets/Progress.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<link href="../docs-assets/Bigfoot.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"
+	integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+<script src="../docs-assets/Bigfoot.js"></script>
 <link href="../docs-assets/Colours.css" rel="stylesheet" rev="stylesheet" type="text/css">
 		
 	</head>
 	<body class="commentary-font">
 		<nav role="navigation">
-		<h1><a href="../index.html"><img src="../docs-assets/logo.png" height=150> </a></h1>
-<h1><a href="../index.html">Inform<br>in Danish</a></h1>
+		<h1><a href="index"><img src="../docs-assets/logo.png" height=150> </a></h1>
+<h1><a href="index">Inform<br>in Danish</a></h1>
 <ul><li><a href="index.html"><span class="selectedlink">Danish Language</span></a></li>
 <li><a href="../dlk/index.html">DanishLanguageKit</a></li>
 </ul><h2>Examples</h2><ul>
@@ -37,69 +42,68 @@
 
 <ul class="toc"><li><a href="nmbrs.html#SP1">&#167;1. LanguageNumber</a></li><li><a href="nmbrs.html#SP2">&#167;2. Cardinals</a></li><li><a href="nmbrs.html#SP4">&#167;4. Say Number</a></li></ul><hr class="tocbar">
 
-<p class="commentary firstcommentary"><a id="SP1" class="paragraph-anchor"></a><b>&#167;1. LanguageNumber.</b>This routine prints out the given number <span class="extract"><span class="extract-syntax">n</span></span> in Danish words.
-</p>
-
-<p class="commentary">It should preferably be in <a href="../dlk/index.html" class="internal">DanishLanguageKit</a>, along with all the other <span class="extract"><span class="extract-syntax">Language</span></span>-prefixed overrides, but for historical reasons the
-routine it replaces is in <span class="extract"><span class="extract-syntax">BasicInformKit</span></span>.
-</p>
-
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP1" class="paragraph-anchor"></a><b>&#167;1. LanguageNumber.</b>  This routine prints out the given number |n| in Danish words.</p>
+<p>It should preferably be in <a href="../dlk/index.html" class="internal">DanishLanguageKit</a>, along with all the other |Language|-prefixed overrides, but for historical reasons the
+routine it replaces is in |BasicInformKit|.</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
 <span class="identifier-syntax">Include</span><span class="plain-syntax"> (-</span>
-<span class="plain-syntax">    </span><span class="comment-syntax">LanguageNumber n f;</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">n</span><span class="plain-syntax"> == </span><span class="constant-syntax">0</span><span class="plain-syntax">)    { </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"nul"</span><span class="plain-syntax">; </span><span class="identifier-syntax">rfalse</span><span class="plain-syntax">; }</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">n</span><span class="plain-syntax"> &lt; </span><span class="constant-syntax">0</span><span class="plain-syntax">)     { </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"minus "</span><span class="plain-syntax">; </span><span class="identifier-syntax">n</span><span class="plain-syntax"> = -</span><span class="identifier-syntax">n</span><span class="plain-syntax">; }</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">n</span><span class="plain-syntax"> &gt;= </span><span class="constant-syntax">1000</span><span class="plain-syntax">) {</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">n</span><span class="plain-syntax">/1000 == </span><span class="constant-syntax">1</span><span class="plain-syntax">) { </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"et"</span><span class="plain-syntax">; } </span><span class="identifier-syntax">else</span><span class="plain-syntax"> </span><span class="identifier-syntax">print</span><span class="plain-syntax"> (</span><span class="identifier-syntax">LanguageNumber</span><span class="plain-syntax">) </span><span class="identifier-syntax">n</span><span class="plain-syntax">/1000;</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">" tusinde"</span><span class="plain-syntax">; </span><span class="identifier-syntax">n</span><span class="plain-syntax"> = </span><span class="identifier-syntax">n</span><span class="plain-syntax">%1000; </span><span class="identifier-syntax">f</span><span class="plain-syntax"> = </span><span class="constant-syntax">1</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">        }</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">n</span><span class="plain-syntax"> &gt;= </span><span class="constant-syntax">100</span><span class="plain-syntax">)  {</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">f</span><span class="plain-syntax"> == </span><span class="constant-syntax">1</span><span class="plain-syntax">) </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">", "</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">print</span><span class="plain-syntax"> (</span><span class="identifier-syntax">LanguageNumber</span><span class="plain-syntax">) </span><span class="identifier-syntax">n</span><span class="plain-syntax">/100, </span><span class="string-syntax">" hundrede"</span><span class="plain-syntax">; </span><span class="identifier-syntax">n</span><span class="plain-syntax"> = </span><span class="identifier-syntax">n</span><span class="plain-syntax">%100; </span><span class="identifier-syntax">f</span><span class="plain-syntax"> = </span><span class="constant-syntax">1</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">        }</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">n</span><span class="plain-syntax"> == </span><span class="constant-syntax">0</span><span class="plain-syntax">) </span><span class="identifier-syntax">rfalse</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">f</span><span class="plain-syntax"> == </span><span class="constant-syntax">1</span><span class="plain-syntax">) </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">" og "</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">switch</span><span class="plain-syntax"> (</span><span class="identifier-syntax">n</span><span class="plain-syntax">) {</span>
-<span class="plain-syntax">            </span><span class="constant-syntax">1</span><span class="plain-syntax">:    </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"en"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="constant-syntax">2</span><span class="plain-syntax">:    </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"to"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="constant-syntax">3</span><span class="plain-syntax">:    </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"tre"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="constant-syntax">4</span><span class="plain-syntax">:    </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"fire"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="constant-syntax">5</span><span class="plain-syntax">:    </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"fem"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="constant-syntax">6</span><span class="plain-syntax">:    </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"seks"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="constant-syntax">7</span><span class="plain-syntax">:    </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"syv"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="constant-syntax">8</span><span class="plain-syntax">:    </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"otte"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="constant-syntax">9</span><span class="plain-syntax">:    </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"ni"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="constant-syntax">10</span><span class="plain-syntax">:   </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"ti"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="constant-syntax">11</span><span class="plain-syntax">:   </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"elleve"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="constant-syntax">12</span><span class="plain-syntax">:   </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"tolv"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="constant-syntax">13</span><span class="plain-syntax">:   </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"tretten"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="constant-syntax">14</span><span class="plain-syntax">:   </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"fjorten"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="constant-syntax">15</span><span class="plain-syntax">:   </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"femten"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="constant-syntax">16</span><span class="plain-syntax">:   </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"seksten"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="constant-syntax">17</span><span class="plain-syntax">:   </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"sytten"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="constant-syntax">18</span><span class="plain-syntax">:   </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"atten"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="constant-syntax">19</span><span class="plain-syntax">:   </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"nitten"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">default</span><span class="plain-syntax">:</span>
-<span class="plain-syntax">                </span><span class="identifier-syntax">if</span><span class="plain-syntax"> (</span><span class="identifier-syntax">n</span><span class="plain-syntax">%10 ~= </span><span class="constant-syntax">0</span><span class="plain-syntax">) </span><span class="identifier-syntax">print</span><span class="plain-syntax"> (</span><span class="identifier-syntax">LanguageNumber</span><span class="plain-syntax">) </span><span class="identifier-syntax">n</span><span class="plain-syntax">%10, </span><span class="string-syntax">"og"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">                </span><span class="identifier-syntax">switch</span><span class="plain-syntax"> (</span><span class="identifier-syntax">n</span><span class="plain-syntax">/10) {</span>
-<span class="plain-syntax">                    </span><span class="constant-syntax">2</span><span class="plain-syntax">:  </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"tyve"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">                    </span><span class="constant-syntax">3</span><span class="plain-syntax">:  </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"tredive"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">                    </span><span class="constant-syntax">4</span><span class="plain-syntax">:  </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"fyrre"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">                    </span><span class="constant-syntax">5</span><span class="plain-syntax">:  </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"halvtreds"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">                    </span><span class="constant-syntax">6</span><span class="plain-syntax">:  </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"tres"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">                    </span><span class="constant-syntax">7</span><span class="plain-syntax">:  </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"fjerds"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">                    </span><span class="constant-syntax">8</span><span class="plain-syntax">:  </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"firs"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">                    </span><span class="constant-syntax">9</span><span class="plain-syntax">:  </span><span class="identifier-syntax">print</span><span class="plain-syntax"> </span><span class="string-syntax">"halvfems"</span><span class="plain-syntax">;</span>
-<span class="plain-syntax">                }</span>
-<span class="plain-syntax">        }</span>
-<span class="plain-syntax">    ];</span>
+<span class="plain-syntax">    </span>
+<span class="comment-syntax">[ LanguageNumber n f;
+	if (n == 0)    { print &quot;nul&quot;; rfalse; }
+	if (n &lt; 0)     { print &quot;minus &quot;; n = -n; }
+	if (n &gt;= 1000) {
+		if (n/1000 == 1) { print &quot;et&quot;; } else print (LanguageNumber) n/1000;
+		print &quot; tusinde&quot;; n = n%1000; f = 1;
+	}
+	if (n &gt;= 100)  {
+		if (f == 1) print &quot;, &quot;;
+		print (LanguageNumber) n/100, &quot; hundrede&quot;; n = n%100; f = 1;
+	}
+	if (n == 0) rfalse;
+	if (f == 1) print &quot; og &quot;;
+	switch (n) {
+		1:    print &quot;en&quot;;
+		2:    print &quot;to&quot;;
+		3:    print &quot;tre&quot;;
+		4:    print &quot;fire&quot;;
+		5:    print &quot;fem&quot;;
+		6:    print &quot;seks&quot;;
+		7:    print &quot;syv&quot;;
+		8:    print &quot;otte&quot;;
+		9:    print &quot;ni&quot;;
+		10:   print &quot;ti&quot;;
+		11:   print &quot;elleve&quot;;
+		12:   print &quot;tolv&quot;;
+		13:   print &quot;tretten&quot;;
+		14:   print &quot;fjorten&quot;;
+		15:   print &quot;femten&quot;;
+		16:   print &quot;seksten&quot;;
+		17:   print &quot;sytten&quot;;
+		18:   print &quot;atten&quot;;
+		19:   print &quot;nitten&quot;;
+		default:
+			if (n%10 ~= 0) print (LanguageNumber) n%10, &quot;og&quot;;
+			switch (n/10) {
+				2:  print &quot;tyve&quot;;
+				3:  print &quot;tredive&quot;;
+				4:  print &quot;fyrre&quot;;
+				5:  print &quot;halvtreds&quot;;
+				6:  print &quot;tres&quot;;
+				7:  print &quot;fjerds&quot;;
+				8:  print &quot;firs&quot;;
+				9:  print &quot;halvfems&quot;;
+			}
+	}	
+]</span><span class="plain-syntax">;</span>
 <span class="plain-syntax">-) </span><span class="identifier-syntax">replacing</span><span class="plain-syntax"> </span><span class="string-syntax">"LanguageNumber"</span><span class="plain-syntax"> </span><span class="comment-syntax">[ (in BasicInformKit) ]</span><span class="plain-syntax">.</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP2" class="paragraph-anchor"></a><b>&#167;2. Cardinals.</b>Currently, these don't work and are commented out, because defining "to" as a
-cardinal number is not possible as long as the "Language of Syntax" is English,
-where "to" is the infinitive marker... This has been reported as bug <a href="https://inform7.atlassian.net/browse/I7-2643" class="external">I7-2643</a>.
-</p>
-
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP2" class="paragraph-anchor"></a><b>&#167;2. Cardinals.</b>  Currently, these don't work and are commented out, because defining &quot;to&quot; as a
+cardinal number is not possible as long as the &quot;Language of Syntax&quot; is English,
+where &quot;to&quot; is the infinitive marker... This has been reported as bug <a href="https://inform7.atlassian.net/browse/I7-2643" class="external">I7-2643</a>.</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
 <span class="identifier-syntax">Include</span><span class="plain-syntax"> (-</span>
 <span class="plain-syntax">    </span><span class="identifier-syntax">language</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span>
@@ -107,7 +111,7 @@ where "to" is the infinitive marker... This has been reported as bug <a href="ht
 <span class="plain-syntax">    &lt;</span><span class="identifier-syntax">cardinal</span><span class="plain-syntax">-</span><span class="identifier-syntax">number</span><span class="plain-syntax">-</span><span class="identifier-syntax">in</span><span class="plain-syntax">-</span><span class="identifier-syntax">words</span><span class="plain-syntax">&gt; ::=</span>
 <span class="plain-syntax">            </span><span class="identifier-syntax">nul</span><span class="plain-syntax"> |</span>
 <span class="plain-syntax">            </span><span class="identifier-syntax">en</span><span class="plain-syntax"> |</span>
-<span class="plain-syntax">            </span><span class="identifier-syntax">to</span><span class="plain-syntax"> | </span><span class="comment-syntax">TODO bug I7-2643</span>
+<span class="plain-syntax">            </span><span class="identifier-syntax">to</span><span class="plain-syntax"> | </span><span class="comment-syntax">[ TODO bug I7-2643 ]</span>
 <span class="plain-syntax">            </span><span class="identifier-syntax">tre</span><span class="plain-syntax"> |</span>
 <span class="plain-syntax">            </span><span class="identifier-syntax">fire</span><span class="plain-syntax"> |</span>
 <span class="plain-syntax">            </span><span class="identifier-syntax">fem</span><span class="plain-syntax"> |</span>
@@ -120,9 +124,9 @@ where "to" is the infinitive marker... This has been reported as bug <a href="ht
 <span class="plain-syntax">            </span><span class="identifier-syntax">tolv</span>
 <span class="plain-syntax">-) </span><span class="identifier-syntax">in</span><span class="plain-syntax"> </span><span class="identifier-syntax">the</span><span class="plain-syntax"> </span><span class="identifier-syntax">Preform</span><span class="plain-syntax"> </span><span class="identifier-syntax">grammar</span><span class="plain-syntax">.</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP3" class="paragraph-anchor"></a><b>&#167;3. </b>Ordinals.
-</p>
-
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP3" class="paragraph-anchor"></a><b>&#167;3. </b>  Ordinals.</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
 <span class="identifier-syntax">Include</span><span class="plain-syntax"> (-</span>
 <span class="plain-syntax">    </span><span class="identifier-syntax">language</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span>
@@ -142,17 +146,15 @@ where "to" is the infinitive marker... This has been reported as bug <a href="ht
 <span class="plain-syntax">            </span><span class="identifier-syntax">tolvte</span>
 <span class="plain-syntax">-) </span><span class="identifier-syntax">in</span><span class="plain-syntax"> </span><span class="identifier-syntax">the</span><span class="plain-syntax"> </span><span class="identifier-syntax">Preform</span><span class="plain-syntax"> </span><span class="identifier-syntax">grammar</span><span class="plain-syntax">.</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP4" class="paragraph-anchor"></a><b>&#167;4. Say Number.</b>The global variable <span class="extract"><span class="extract-syntax">say__n</span></span> is set to the numerical value of any quantity
-printed. In English it's used for the text substitution "[s]", so that
-"You have been awake for [turn count] turn[s]." will expand correctly.
-</p>
-
-<p class="commentary">In Danish we would probably want to conjugate the noun correctly instead?
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP4" class="paragraph-anchor"></a><b>&#167;4. Say Number.</b>  The global variable |say__n| is set to the numerical value of any quantity
+printed. In English it's used for the text substitution &quot;[s]&quot;, so that
+&quot;You have been awake for [turn count] turn[s].&quot; will expand correctly.</p>
+<p>In Danish we would probably want to conjugate the noun correctly instead?
 Also this variable isn't updated when the prior naming context is plural,
 only when a number is literally printed. See discussion at
-<a href="https://intfiction.org/t/text-substitution-regarding-number-does-not-affect-s/68942" class="external">https://intfiction.org/t/text-substitution-regarding-number-does-not-affect-s/68942</a>
-</p>
-
+https://intfiction.org/t/text-substitution-regarding-number-does-not-affect-s/68942</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
 <span class="identifier-syntax">The</span><span class="plain-syntax"> </span><span class="identifier-syntax">prior</span><span class="plain-syntax"> </span><span class="identifier-syntax">number</span><span class="plain-syntax"> </span><span class="identifier-syntax">printed</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">a</span><span class="plain-syntax"> </span><span class="identifier-syntax">number</span><span class="plain-syntax"> </span><span class="identifier-syntax">that</span><span class="plain-syntax"> </span><span class="identifier-syntax">varies</span><span class="plain-syntax">.</span>
 <span class="identifier-syntax">The</span><span class="plain-syntax"> </span><span class="identifier-syntax">prior</span><span class="plain-syntax"> </span><span class="identifier-syntax">number</span><span class="plain-syntax"> </span><span class="identifier-syntax">printed</span><span class="plain-syntax"> </span><span class="identifier-syntax">variable</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">defined</span><span class="plain-syntax"> </span><span class="identifier-syntax">by</span><span class="plain-syntax"> </span><span class="identifier-syntax">Inter</span><span class="plain-syntax"> </span><span class="identifier-syntax">as</span><span class="plain-syntax"> </span><span class="string-syntax">"say__n"</span><span class="plain-syntax">.</span>
@@ -182,7 +184,7 @@ only when a number is literally printed. See discussion at
 <span class="plain-syntax">        </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="string-syntax">"t"</span><span class="plain-syntax">.</span>
 </pre>
 <nav role="progress"><div class="progresscontainer">
-    <ul class="progressbar"><li class="progressprev"><a href="drctn.html">&#10094;</a></li><li class="progresssection"><a href="prmbl.html">prmbl</a></li><li class="progresssection"><a href="drctn.html">drctn</a></li><li class="progresscurrent">nmbrs</li><li class="progresssection"><a href="tm.html">tm</a></li><li class="progresssection"><a href="gndr.html">gndr</a></li><li class="progresssection"><a href="artcl.html">artcl</a></li><li class="progresssection"><a href="nns.html">nns</a></li><li class="progresssection"><a href="adjct.html">adjct</a></li><li class="progresssection"><a href="vrbs.html">vrbs</a></li><li class="progresssection"><a href="prnns.html">prnns</a></li><li class="progresssection"><a href="cmgr.html">cmgr</a></li><li class="progresssection"><a href="rspns.html">rspns</a></li><li class="progresssection"><a href="msc.html">msc</a></li><li class="progressnext"><a href="tm.html">&#10095;</a></li></ul></div>
+    <ul class="progressbar"><li class="progressprev"><span class="nav-popup">Directions</span><a href="drctn.html">&#10094;</a></li><li class="progresssection"><span class="fullname-popup">Preamble</span><a href="prmbl.html">prmbl</a></li><li class="progresssection"><span class="fullname-popup">Directions</span><a href="drctn.html">drctn</a></li><li class="progresscurrent"><span class="current-fullname-popup">Numbers</span>nmbrs</li><li class="progresssection"><span class="fullname-popup">Time</span><a href="tm.html">tm</a></li><li class="progresssection"><span class="fullname-popup">Gender</span><a href="gndr.html">gndr</a></li><li class="progresssection"><span class="fullname-popup">Articles</span><a href="artcl.html">artcl</a></li><li class="progresssection"><span class="fullname-popup">Nouns</span><a href="nns.html">nns</a></li><li class="progresssection"><span class="fullname-popup">Adjectives</span><a href="adjct.html">adjct</a></li><li class="progresssection"><span class="fullname-popup">Verbs</span><a href="vrbs.html">vrbs</a></li><li class="progresssection"><span class="fullname-popup">Pronouns</span><a href="prnns.html">prnns</a></li><li class="progresssection"><span class="fullname-popup">Command Grammar</span><a href="cmgr.html">cmgr</a></li><li class="progresssection"><span class="fullname-popup">Responses</span><a href="rspns.html">rspns</a></li><li class="progresssection"><span class="fullname-popup">Misc</span><a href="msc.html">msc</a></li><li class="progressnext"><span class="nav-popup">Time</span><a href="tm.html">&#10095;</a></li></ul></div>
 </nav><!-- End of weave -->
 
 		</main>

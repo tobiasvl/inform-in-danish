@@ -3,22 +3,27 @@
 	<head>
 		<title>Adjectives</title>
 <link href="../docs-assets/Breadcrumbs.css" rel="stylesheet" rev="stylesheet" type="text/css">
-<link href="../docs-assets/Navigation.css" rel="stylesheet" rev="stylesheet" type="text/css">
-<link href="../docs-assets/Fonts.css" rel="stylesheet" rev="stylesheet" type="text/css">
-<link href="../docs-assets/Progress.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<link href="../docs-assets/Base.css" rel="stylesheet" rev="stylesheet" type="text/css">
 		<meta name="viewport" content="width=device-width initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta http-equiv="Content-Language" content="en-gb">
 
-<link href="../docs-assets/Base.css" rel="stylesheet" rev="stylesheet" type="text/css">
 <link href="../docs-assets/Contents.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<link href="../docs-assets/Fonts.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<link href="../docs-assets/Navigation.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<link href="../docs-assets/Progress.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<link href="../docs-assets/Bigfoot.css" rel="stylesheet" rev="stylesheet" type="text/css">
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"
+	integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+<script src="../docs-assets/Bigfoot.js"></script>
 <link href="../docs-assets/Colours.css" rel="stylesheet" rev="stylesheet" type="text/css">
 		
 	</head>
 	<body class="commentary-font">
 		<nav role="navigation">
-		<h1><a href="../index.html"><img src="../docs-assets/logo.png" height=150> </a></h1>
-<h1><a href="../index.html">Inform<br>in Danish</a></h1>
+		<h1><a href="index"><img src="../docs-assets/logo.png" height=150> </a></h1>
+<h1><a href="index">Inform<br>in Danish</a></h1>
 <ul><li><a href="index.html"><span class="selectedlink">Danish Language</span></a></li>
 <li><a href="../dlk/index.html">DanishLanguageKit</a></li>
 </ul><h2>Examples</h2><ul>
@@ -37,55 +42,43 @@
 
 <ul class="toc"><li><a href="adjct.html#SP1">&#167;1. Adjectives</a></li><li><a href="adjct.html#SP4">&#167;4. Adjective declensions</a></li></ul><hr class="tocbar">
 
-<p class="commentary firstcommentary"><a id="SP1" class="paragraph-anchor"></a><b>&#167;1. Adjectives.</b>In theory, defining adjectives in Inform should be as simple as saying
-</p>
-
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP1" class="paragraph-anchor"></a><b>&#167;1. Adjectives.</b>  In theory, defining adjectives in Inform should be as simple as saying</p>
+</div>
 <blockquote>
     <p>In Danish lille is an adjective.</p>
 </blockquote>
 
-<p class="commentary">If this worked, we could not only define all adjectives used in adaptive
+<div class="lsmarkdown">
+<p>If this worked, we could not only define all adjectives used in adaptive
 responses like this and get all the declensions for free, but also define nouns
-with attributive adjectives in their names ("den lille pige") and decline them
-automatically as well!
-</p>
-
-<p class="commentary">However, this currently does not work, for unknown reasons. I assume it's a
-bug, which I have reported as <a href="https://inform7.atlassian.net/browse/I7-2626" class="external">I7-2626</a>.
-</p>
-
-<p class="commentary firstcommentary"><a id="SP2" class="paragraph-anchor"></a><b>&#167;2. </b>Still, let's wax poetic about Danish adjectives.
-</p>
-
-<p class="commentary">In English, Inform does not care about the difference between an adjective that
-is part of a noun's name, and a compound noun. It doesn't need to.
-</p>
-
-<p class="commentary">A "hot dog" is semantically ambiguous &mdash; it can either be a warm feline or a
-specific type of sausage &mdash; but syntactically it doesn't matter, since
-adjectives aren't inflected in English.
-</p>
-
-<p class="commentary">(Adjectives in English do inflect for degrees of comparison, so the dog can get
-hotter and hottest, which Inform does support &mdash; see <a href="index.html" class="internal">DanishLanguage</a> &mdash; but not
-when printing adjectives that are part of a noun's name.)
-</p>
-
-<p class="commentary">So in English, Inform simply inflects the last word in a noun's name for
+with attributive adjectives in their names (&quot;den lille pige&quot;) and decline them
+automatically as well!</p>
+<p>However, this currently does not work, for unknown reasons. I assume it's a
+bug, which I have reported as <a href="https://inform7.atlassian.net/browse/I7-2626" class="external">I7-2626</a>.</p>
+</div>
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP2" class="paragraph-anchor"></a><b>&#167;2. </b>  Still, let's wax poetic about Danish adjectives.</p>
+<p>In English, Inform does not care about the difference between an adjective that
+is part of a noun's name, and a compound noun. It doesn't need to.</p>
+<p>A &quot;hot dog&quot; is semantically ambiguous -- it can either be a warm feline or a
+specific type of sausage -- but syntactically it doesn't matter, since
+adjectives aren't inflected in English.</p>
+<p>(Adjectives in English do inflect for degrees of comparison, so the dog can get
+hotter and hottest, which Inform does support -- see <a href="index.html" class="internal">DanishLanguage</a> -- but not
+when printing adjectives that are part of a noun's name.)</p>
+<p>So in English, Inform simply inflects the last word in a noun's name for
 number, and leaves all other words alone: a hot dog, the hot dog, some hot
-dogs.
-</p>
-
-<p class="commentary">In Danish, however, we need to inflect adjectives for gender and
+dogs.</p>
+<p>In Danish, however, we need to inflect adjectives for gender and
 number/definiteness (an adjective inflected in the definite or in the plural
 looks the same). Unfortunately, I haven't managed to add bare adjectives (not
-connected to properties) to the dictionary.
-</p>
-
-<p class="commentary firstcommentary"><a id="SP3" class="paragraph-anchor"></a><b>&#167;3. </b>So as a fallback, we define say phrases for some adjectives used in
-<a href="rspns.html" class="internal">Responses</a>.
-</p>
-
+connected to properties) to the dictionary.</p>
+</div>
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP3" class="paragraph-anchor"></a><b>&#167;3. </b>  So as a fallback, we define say phrases for some adjectives used in
+<a href="rspns.html" class="internal">Responses</a>.</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
 <span class="identifier-syntax">To</span><span class="plain-syntax"> </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="identifier-syntax">tom</span><span class="plain-syntax">:</span>
 <span class="plain-syntax">    </span><span class="identifier-syntax">if</span><span class="plain-syntax"> </span><span class="identifier-syntax">the</span><span class="plain-syntax"> </span><span class="identifier-syntax">prior</span><span class="plain-syntax"> </span><span class="identifier-syntax">naming</span><span class="plain-syntax"> </span><span class="identifier-syntax">context</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">plural</span><span class="plain-syntax">:</span>
@@ -113,16 +106,16 @@ connected to properties) to the dictionary.
 <span class="plain-syntax">    </span><span class="identifier-syntax">otherwise</span><span class="plain-syntax"> </span><span class="identifier-syntax">if</span><span class="plain-syntax"> </span><span class="identifier-syntax">the</span><span class="plain-syntax"> </span><span class="identifier-syntax">prior</span><span class="plain-syntax"> </span><span class="identifier-syntax">named</span><span class="plain-syntax"> </span><span class="identifier-syntax">gender</span><span class="plain-syntax"> </span><span class="identifier-syntax">is</span><span class="plain-syntax"> </span><span class="identifier-syntax">neuter</span><span class="plain-syntax"> </span><span class="identifier-syntax">gender</span><span class="plain-syntax">:</span>
 <span class="plain-syntax">        </span><span class="identifier-syntax">say</span><span class="plain-syntax"> </span><span class="string-syntax">"åbent"</span><span class="plain-syntax">.</span>
 </pre>
-<p class="commentary firstcommentary"><a id="SP4" class="paragraph-anchor"></a><b>&#167;4. Adjective declensions.</b>Since declining adjectives currently doesn't work, the following grammar
-is incomplete, and should be extended if needed.
-</p>
-
+<div class="lsmarkdown">
+<p class="commentary firstcommentary"><a id="SP4" class="paragraph-anchor"></a><b>&#167;4. Adjective declensions.</b>  Since declining adjectives currently doesn't work, the following grammar
+is incomplete, and should be extended if needed.</p>
+</div>
 <pre class="displayed-code all-displayed-code code-font">
 <span class="identifier-syntax">Include</span><span class="plain-syntax"> (-</span>
 <span class="plain-syntax">    </span><span class="identifier-syntax">language</span><span class="plain-syntax"> </span><span class="identifier-syntax">Danish</span>
 
 <span class="plain-syntax">    &lt;</span><span class="identifier-syntax">s</span><span class="plain-syntax">-</span><span class="identifier-syntax">adjective</span><span class="plain-syntax">-</span><span class="identifier-syntax">list</span><span class="plain-syntax">&gt; ::=</span>
-<span class="plain-syntax">        </span><span class="identifier-syntax">non</span><span class="plain-syntax"> &lt;</span><span class="identifier-syntax">indefinite</span><span class="plain-syntax">-</span><span class="identifier-syntax">article</span><span class="plain-syntax">&gt; &lt;</span><span class="identifier-syntax">s</span><span class="plain-syntax">-</span><span class="identifier-syntax">adjective</span><span class="plain-syntax">-</span><span class="identifier-syntax">list</span><span class="plain-syntax">-</span><span class="identifier-syntax">unarticled</span><span class="plain-syntax">&gt; |    </span><span class="comment-syntax">This is from French Language and I'm not sure what it is.</span>
+<span class="plain-syntax">        </span><span class="identifier-syntax">non</span><span class="plain-syntax"> &lt;</span><span class="identifier-syntax">indefinite</span><span class="plain-syntax">-</span><span class="identifier-syntax">article</span><span class="plain-syntax">&gt; &lt;</span><span class="identifier-syntax">s</span><span class="plain-syntax">-</span><span class="identifier-syntax">adjective</span><span class="plain-syntax">-</span><span class="identifier-syntax">list</span><span class="plain-syntax">-</span><span class="identifier-syntax">unarticled</span><span class="plain-syntax">&gt; |    </span><span class="comment-syntax">[ This is from French Language and I'm not sure what it is. ]</span>
 <span class="plain-syntax">        &lt;</span><span class="identifier-syntax">indefinite</span><span class="plain-syntax">-</span><span class="identifier-syntax">article</span><span class="plain-syntax">&gt; &lt;</span><span class="identifier-syntax">s</span><span class="plain-syntax">-</span><span class="identifier-syntax">adjective</span><span class="plain-syntax">-</span><span class="identifier-syntax">list</span><span class="plain-syntax">-</span><span class="identifier-syntax">unarticled</span><span class="plain-syntax">&gt; |</span>
 <span class="plain-syntax">        &lt;</span><span class="identifier-syntax">s</span><span class="plain-syntax">-</span><span class="identifier-syntax">adjective</span><span class="plain-syntax">-</span><span class="identifier-syntax">list</span><span class="plain-syntax">-</span><span class="identifier-syntax">unarticled</span><span class="plain-syntax">&gt;</span>
 
@@ -162,7 +155,7 @@ is incomplete, and should be extended if needed.
 <span class="plain-syntax">-) </span><span class="identifier-syntax">in</span><span class="plain-syntax"> </span><span class="identifier-syntax">the</span><span class="plain-syntax"> </span><span class="identifier-syntax">Preform</span><span class="plain-syntax"> </span><span class="identifier-syntax">grammar</span><span class="plain-syntax">.</span>
 </pre>
 <nav role="progress"><div class="progresscontainer">
-    <ul class="progressbar"><li class="progressprev"><a href="nns.html">&#10094;</a></li><li class="progresssection"><a href="prmbl.html">prmbl</a></li><li class="progresssection"><a href="drctn.html">drctn</a></li><li class="progresssection"><a href="nmbrs.html">nmbrs</a></li><li class="progresssection"><a href="tm.html">tm</a></li><li class="progresssection"><a href="gndr.html">gndr</a></li><li class="progresssection"><a href="artcl.html">artcl</a></li><li class="progresssection"><a href="nns.html">nns</a></li><li class="progresscurrent">adjct</li><li class="progresssection"><a href="vrbs.html">vrbs</a></li><li class="progresssection"><a href="prnns.html">prnns</a></li><li class="progresssection"><a href="cmgr.html">cmgr</a></li><li class="progresssection"><a href="rspns.html">rspns</a></li><li class="progresssection"><a href="msc.html">msc</a></li><li class="progressnext"><a href="vrbs.html">&#10095;</a></li></ul></div>
+    <ul class="progressbar"><li class="progressprev"><span class="nav-popup">Nouns</span><a href="nns.html">&#10094;</a></li><li class="progresssection"><span class="fullname-popup">Preamble</span><a href="prmbl.html">prmbl</a></li><li class="progresssection"><span class="fullname-popup">Directions</span><a href="drctn.html">drctn</a></li><li class="progresssection"><span class="fullname-popup">Numbers</span><a href="nmbrs.html">nmbrs</a></li><li class="progresssection"><span class="fullname-popup">Time</span><a href="tm.html">tm</a></li><li class="progresssection"><span class="fullname-popup">Gender</span><a href="gndr.html">gndr</a></li><li class="progresssection"><span class="fullname-popup">Articles</span><a href="artcl.html">artcl</a></li><li class="progresssection"><span class="fullname-popup">Nouns</span><a href="nns.html">nns</a></li><li class="progresscurrent"><span class="current-fullname-popup">Adjectives</span>adjct</li><li class="progresssection"><span class="fullname-popup">Verbs</span><a href="vrbs.html">vrbs</a></li><li class="progresssection"><span class="fullname-popup">Pronouns</span><a href="prnns.html">prnns</a></li><li class="progresssection"><span class="fullname-popup">Command Grammar</span><a href="cmgr.html">cmgr</a></li><li class="progresssection"><span class="fullname-popup">Responses</span><a href="rspns.html">rspns</a></li><li class="progresssection"><span class="fullname-popup">Misc</span><a href="msc.html">msc</a></li><li class="progressnext"><span class="nav-popup">Verbs</span><a href="vrbs.html">&#10095;</a></li></ul></div>
 </nav><!-- End of weave -->
 
 		</main>
