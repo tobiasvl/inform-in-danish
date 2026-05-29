@@ -23,13 +23,11 @@ adjectives as neuter.
 (*) If the object is animate (ie. it is a person, in Inform parlance, which includes animals), and it is not neuter, then we set its grammatical gender according to its natural gender.
 (*) If the object is inanimate, or it's animate and neuter, we use its grammatical gender.
 
-@define NO_KNOWN_GENDERS 3
-@define COMMON_GENDER 1
-@define NEUTER_GENDER 2
-@define FEMININE_GENDER 3
-
 =
 Include (-
+    Constant COMMON_GENDER = 1;
+    Constant NEUTER_GENDER = 2;
+
     [ GetGNAOfObject obj case gender;
         if (obj == nothing) return 8;
         if (obj has animate && obj hasnt neuter) {
@@ -37,10 +35,8 @@ Include (-
             if (obj has female) gender = female;
         } else {
             case = 6;
-            if (obj.grammatical_gender == 1) gender = common; ![ TODO it probably makes stuff messed up that we reordered these ]
-            if (obj.grammatical_gender == 2) gender = neuter;
-            ! if (obj.grammatical_gender == COMMON_GENDER) gender = common;
-            ! if (obj.grammatical_gender == NEUTER_GENDER) gender = neuter;
+            if (obj.grammatical_gender == COMMON_GENDER) gender = common; ![ TODO it probably makes stuff messed up that we reordered these ]
+            if (obj.grammatical_gender == NEUTER_GENDER) gender = neuter;
         }
 
         if (gender == 0) {

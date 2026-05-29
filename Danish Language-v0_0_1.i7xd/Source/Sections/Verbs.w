@@ -260,17 +260,6 @@ As stated, Inform also reserves verb form type zero as the base form, but it
 will be identical to the infinitive (although that's not required to be the
 case). We then end up with these forms:
 
-@define BASE_FORM_TYPE 0
-@define INFINITIVE_FORM_TYPE 1
-@define PRESENT_PARTICIPLE_FORM_TYPE 2
-@define PAST_PARTICIPLE_FORM_TYPE 3
-@define ADJOINT_INFINITIVE_FORM_TYPE 4
-@define PRESENT_TENSE_FORM_TYPE 5
-@define PAST_TENSE_FORM_TYPE 6
-@define IMPERATIVE_FORM_TYPE 7
-
-Or:
-
 (1) Infinitive
 (2) Present participle (præsens partisipp) (syngende) -- TODO: Is this only used adjectivally in Danish?
 (3) Past participle (perfektum) (har + perfektum passiv partisipp)
