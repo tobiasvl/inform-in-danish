@@ -798,11 +798,6 @@ section 1 (confirmed)
 
 The generate action rule response (A) is "(considering the first sixteen objects only)[command clarification break]".
 The generate action rule response (B) is "Intet at gøre!".
-The parser error internal rule response (F) is "You seem to have said too little!".
-The parser error internal rule response (G) is "[Du] [bærer] det ikke!".
-The parser error internal rule response (I) is "You can only use multiple objects once on a line.".
-The parser error internal rule response (O) is "That's not something you need to refer to in the course of this game.".
-The parser error internal rule response (P) is "I didn't understand the way that finished.".
 The print obituary headline rule response (A) is " You have died ".
 The print obituary headline rule response (B) is " You have won ".
 
@@ -817,10 +812,6 @@ The immediately undo rule response (D) is "'Undo' failed. Sorry!".
 =
 The standard report opening rule response (C) is "[Substantivet] [åbner] sig.".
 The standard report closing rule response (C) is "[Substantivet] [lukker] sig.".
-
-@ Inform doesn't seem to mind excluding excluded things. Vestigal?
-=
-The parser error internal rule response (L) is "You excepted something not included anyway!".
 
 @ I can't recreate this. Inform returns "There is no reply."
 =
