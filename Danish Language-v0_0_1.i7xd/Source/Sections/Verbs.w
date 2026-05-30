@@ -277,15 +277,15 @@ Include (-
     language Danish
 
     <verb-conjugation-instructions> ::=
-        være            <to-be-conjugation> |
-        [ kunne ...  <to-be-able-to-auxiliary> |
+        være            <to-be-conjugation> | [
+        kunne ...  <to-be-able-to-auxiliary> |
         kunne      <to-be-able-to-conjugation> |
         kunne           <modal-conjugation> |
         måtte             <modal-conjugation> |
         skulle            <modal-conjugation> |
         burde          <modal-conjugation> |
-        ville           <modal-conjugation> | ]
-        gøre              <to-do-conjugation> |
+        ville           <modal-conjugation> |
+       ] gøre              <to-do-conjugation> |
             ...             <regular-verb-conjugation>
 
     <to-be-conjugation> ::=
@@ -303,9 +303,9 @@ Include (-
     <to-have-conjugation> ::=
         2 0nde |
         3 haft |
-        7 1 |
-    [    <auxiliary-verb-only> | ]
-        <not-instance-of-verb-at-run-time> |
+        7 1 | [
+        <auxiliary-verb-only> |
+]        <not-instance-of-verb-at-run-time> |
         <to-have-tabulation>
 
     <to-have-tabulation> ::=

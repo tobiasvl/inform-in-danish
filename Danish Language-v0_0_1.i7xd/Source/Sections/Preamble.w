@@ -64,12 +64,14 @@ past tense, perfect tense, past perfect tense, future tense and imperative tense
 Present tense translates into Danish as nutid.
 Past tense translates into Danish as datid.
 
+@h Narrative viewpoints.
+
+We add a new narrative viewpoint to allow the parser to be "Des" with the
+player, ie. addressing the player with the honorifics "De/Dem/Deres".
+=
 A narrative viewpoint is a kind of value. The narrative viewpoints are first
 person singular, second person singular, third person singular, first person
-plural, second person plural, third person plural, and
-[ We add a new narrative viewpoint to allow the parser to be "Des" with the
-player, ie. addressing the player with the honorifics "De/Dem/Deres". ]
-second person honorific.
+plural, second person plural, third person plural, and second person honorific.
 
 @ Uses the modern "vores" as the catch-all translation of "our(s)" instead of
 "vor/vort/vore" depending on grammatical gender and plurality.

@@ -444,10 +444,10 @@ To say possessive: [possessive / genitive ]
 		say "[din]";
 	otherwise if the printed name of the item is s-terminated:
 		say "[the item][apostrophe]";
-	[ otherwise if the printed name of the item is an acronym:
-		say "[the item][apostrophe]s";] [ TODO ]
 	otherwise:
 		say "[the item]s";
+	[ otherwise if the printed name of the item is an acronym:
+		say "[the item][apostrophe]s";] [ TODO ]
 
 To say Possessive: [ Possessive / Genitive]
 	let the item be the prior named object;
@@ -455,10 +455,10 @@ To say Possessive: [ Possessive / Genitive]
 		say "[Din]";
 	otherwise if the printed name of the item is s-terminated:
 		say "[The item][apostrophe]";
-	[ otherwise if the printed name of the item is an acronym:
-		say "[The item][apostrophe]s";] [ TODO ]
 	otherwise:
 		say "[The item]s".
+	[ otherwise if the printed name of the item is an acronym:
+		say "[The item][apostrophe]s";] [ TODO ]
 
 To say s:
 	say possessive.
@@ -493,6 +493,7 @@ Include (-
 		jer	jer
 
 	[
+	[ TODO oneself ]
 	<da-trie-plural-reflexive-pronouns> ::=
 		mig	os |
 		dig 	jere  |
@@ -501,7 +502,6 @@ Include (-
 		den 	dem  |
 		det 	dem  |
 		dem 	dem 
-	[ TODO oneself ]
 	]
 -) in the Preform grammar.
 

@@ -27,9 +27,9 @@ Include (-
 		f			en |
 		n           et
 
-	<singular-noun-to-its-plural> ::=
-	[        <da-singular-adjective-to-its-plural> <da-singular-noun-to-its-plural> |]
-			<da-singular-noun-to-its-plural>
+	<singular-noun-to-its-plural> ::= [
+	        <da-singular-adjective-to-its-plural> <da-singular-noun-to-its-plural> |
+	]		<da-singular-noun-to-its-plural>
 
 	<da-singular-np-to-its-plural> ::=
 		<da-singular-adjective-to-its-plural> <da-singular-noun-to-its-plural> |
