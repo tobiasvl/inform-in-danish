@@ -18,11 +18,12 @@ Section - Unindexed Standard Rules variables (in place of "Section 7 - Unindexed
 The story title, the story author, the story headline, the story genre
 and the story description are text variables.
 The release number and the story creation year are number variables.
-The story licence, the story copyright, the story origin URL, and the story rights history are text variables.
-
-The story title variable is defined by Inter as "Story".
+The story serial code, the project IFID, the story licence, the story copyright,
+the story origin URL, and the story rights history are text variables.
+The Inform version number and the Inform build code are text variables.
 
 The release number is usually 1.
+The story title variable is defined by Inter as "Story".
 
 @ The story headline could perhaps be "En interaktiv fiktion", but that's
 not a common Danish term. However, we could of course proliferate it by using
