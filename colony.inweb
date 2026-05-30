@@ -7,8 +7,8 @@ Colony {
     member: "Slør" at "Danish Language-v0_0_1.i7xd/Documentation/Examples/Et slør af mørke.md" to "examples/slor.html"
 
     Navigation {
-        [[Home "<logo.png@150>" -> index]]
-        [[Home "Inform<br>in Danish" -> index]]
+        [[Home "<logo.png@150>" -> //index//]]
+        [[Home "Inform<br>in Danish" -> //index//]]
         [[Item "Danish Language" -> //DanishLanguage//]]
         [[Item "DanishLanguageKit"]]
         [[Menu "Examples"]]
