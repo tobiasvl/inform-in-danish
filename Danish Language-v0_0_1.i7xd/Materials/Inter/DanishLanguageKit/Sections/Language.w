@@ -330,19 +330,28 @@ Constant LanguageInanimateGender = common;
 @h Articles.
 
 =
+Constant LanguageCases = 3;     ! The number of article cases; Danish has three
+
 Array LanguageArticles -->
 
-!   Cdef   Def    Indef
+!   Cdef   Def    CIndef  Indef
 
-    "Den " "den " "en "         ! 0: common singular
-    "Det " "det " "et "         ! 1: neuter singular
-    "De "  "de "  "nogle ";     ! 2: plural
+
+    "Den " "den " "En"    "en "         ! 0: common singular
+    "Det " "det " "Et"    "et "         ! 1: neuter singular
+    "De "  "de "  "Nogle" "nogle ";     ! 2: plural
 
                                 ! a           i
                                 ! s     p     s     p
                                 ! m f n m f n m f n m f n
 
 Array LanguageGNAsToArticles -->  0 0 1 2 2 2 0 0 1 2 2 2;
+
+Constant CDEFART_INDEX = 0;
+Constant DEFART_INDEX = 1;
+Constant CINDEFART_INDEX = 2;
+Constant INDEFART_INDEX = 3;
+Constant ARTBLOCK_LEN = 4;
 
 @h Commands.
 |LanguageVerbLikesAdverb| is called by |PrintCommand| when printing an |UPTO_PE|
